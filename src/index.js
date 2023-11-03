@@ -41,10 +41,10 @@ for (const stylesheet of stylesheets) {
   );
 }
 
-await git.add(["data"]);
+await git.add(["data/"]);
 
 const date = new Date();
 await git.commit(
   `${date.getDate()}/${date.getMonth()}/95 - ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`
 );
-await git.push();
+await git.push("origin", "main");
