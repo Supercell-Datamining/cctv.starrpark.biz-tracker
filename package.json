@@ -1,0 +1,20 @@
+{
+  "name": "cctv.starrpark.biz-tracker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "keywords": [],
+  "author": "xHyroM",
+  "license": "ISC",
+  "dependencies": {
+    "@xhyrom/configs": "^0.1.0",
+    "simple-git": "^3.20.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.8.10"
+  }
+}
