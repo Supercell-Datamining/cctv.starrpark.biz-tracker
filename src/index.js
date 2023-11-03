@@ -20,7 +20,10 @@ const stylesheets = res
   ?.map((s) => s.match(/href="[^"]+"/g)?.[0].slice(14, -1))
   .map((s) => new File(s));
 
-await rmdir("data", { recursive: true });
+try {
+  await rmdir("data", { recursive: true });
+} catch {}
+
 await mkdir("data");
 await mkdir("data/scripts");
 await mkdir("data/stylesheets");
