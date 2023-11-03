@@ -44,10 +44,20 @@ for (const stylesheet of stylesheets) {
 
 await git.add(["data/"]);
 
-const date = new Date();
-await git.commit(
-  `${date.getDate()}/${
-    date.getMonth() + 1
-  }/95 - ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`
-);
+const date = Intl.DateTimeFormat("ja", {
+  second: "2-digit",
+  minute: "2-digit",
+  hour: "2-digit",
+  day: "2-digit",
+  month: "2-digit",
+}).formatToParts(new Date());
+
+const month = date.find((d) => d.type === "month").value;
+const day = date.find((d) => d.type === "day").value;
+
+const hours = date.find((d) => d.type === "hour").value;
+const minutes = date.find((d) => d.type === "minute").value;
+const seconds = date.find((d) => d.type === "second").value;
+
+await git.commit(`${day}/${month}/95 - ${hours}:${minutes}:${seconds}`);
 await git.push("origin", "main");
