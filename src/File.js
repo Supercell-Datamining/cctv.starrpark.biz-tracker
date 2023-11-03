@@ -1,3 +1,5 @@
+import jsBeautify from "js-beautify";
+
 export class File {
   #content;
   path;
@@ -21,5 +23,16 @@ export class File {
       await fetch(`https://cctv.starrpark.biz/assets/${this.path}`)
     ).text();
     return this.#content;
+  }
+
+  async formattedContent() {
+    const content = await this.content();
+
+    switch (this.extension) {
+      case "js":
+        return jsBeautify.js(content);
+      case "css":
+        return jsBeautify.css(content);
+    }
   }
 }

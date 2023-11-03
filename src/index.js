@@ -33,12 +33,12 @@ for (const script of scripts) {
   await writeFile(`data/scripts/${script.path}`, await script.content());
 }
 
-await writeFile(`data/main.js`, await scripts[0].content());
+await writeFile(`data/main.js`, await scripts[0].formattedContent());
 
 for (const stylesheet of stylesheets) {
   await writeFile(
     `data/stylesheets/${stylesheet.path}`,
-    await stylesheet.content()
+    await stylesheet.formattedContent()
   );
 }
 
@@ -46,6 +46,8 @@ await git.add(["data/"]);
 
 const date = new Date();
 await git.commit(
-  `${date.getDate()}/${date.getMonth()}/95 - ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`
+  `${date.getDate()}/${
+    date.getMonth() + 1
+  }/95 - ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`
 );
 await git.push("origin", "main");

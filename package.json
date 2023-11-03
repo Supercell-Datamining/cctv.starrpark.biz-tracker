@@ -12,9 +12,11 @@
   "license": "ISC",
   "dependencies": {
     "@xhyrom/configs": "^0.1.0",
+    "js-beautify": "^1.14.9",
     "simple-git": "^3.20.0"
   },
   "devDependencies": {
+    "@types/js-beautify": "^1.14.2",
     "@types/node": "^20.8.10"
   }
 }
