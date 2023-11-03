@@ -1,8 +1,9 @@
 import { rmdir, mkdir, writeFile } from "node:fs/promises";
 import { File } from "./File.js";
 import simpleGit from "simple-git";
+import path from "node:path";
 
-const git = simpleGit();
+const git = simpleGit({ baseDir: path.resolve("..") });
 
 const res = await (
   await fetch(
