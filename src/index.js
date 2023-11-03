@@ -50,6 +50,8 @@ const date = Intl.DateTimeFormat("ja", {
   hour: "2-digit",
   day: "2-digit",
   month: "2-digit",
+  timeZone: "JST",
+  hour12: false,
 }).formatToParts(new Date());
 
 const month = date.find((d) => d.type === "month").value;
