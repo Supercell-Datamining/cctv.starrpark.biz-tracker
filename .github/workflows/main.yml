@@ -36,10 +36,9 @@ jobs:
       - name: Setup git
         run: |
           git config user.name "github-actions[bot]"
-          git config user.email "github@xhyrom.dev"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Install dependencies
         run: pnpm i
