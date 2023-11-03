@@ -35,11 +35,11 @@ jobs:
 
       - name: Setup git
         run: |
-          git config --global url.https://${{ secrets.GITHUB_TOKEN }}@github.com/.insteadOf https://github.com/
           git config user.name "github-actions[bot]"
           git config user.email "github@xhyrom.dev"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Install dependencies
         run: pnpm i
