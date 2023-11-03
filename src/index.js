@@ -3,7 +3,7 @@ import { File } from "./File.js";
 import simpleGit from "simple-git";
 import path from "node:path";
 
-const git = simpleGit({ baseDir: path.resolve("..") });
+const git = simpleGit();
 
 const res = await (
   await fetch(
