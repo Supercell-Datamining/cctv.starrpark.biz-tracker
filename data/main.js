@@ -91,7 +91,7 @@ function Wn(e, n) {
         c = o ? e : () => e(() => fe(() => ar(l)));
     ee = l, ae = null;
     try {
-        return Gt(c, !0)
+        return jt(c, !0)
     } finally {
         ae = t, ee = i
     }
@@ -128,7 +128,7 @@ function ke(e, n, t) {
 }
 
 function sr(e) {
-    return Gt(e, !1)
+    return jt(e, !1)
 }
 
 function fe(e) {
@@ -200,7 +200,7 @@ function Ko() {
         if (this.state === ut) gn(this);
         else {
             const e = ge;
-            ge = null, Gt(() => tr(this), !1), ge = e
+            ge = null, jt(() => tr(this), !1), ge = e
         } if (ae) {
         const e = this.observers ? this.observers.length : 0;
         ae.sources ? (ae.sources.push(this), ae.sourceSlots.push(e)) : (ae.sources = [this], ae.sourceSlots = [e]), this.observers ? (this.observers.push(ae), this.observerSlots.push(ae.sources.length - 1)) : (this.observers = [ae], this.observerSlots = [ae.sources.length - 1])
@@ -210,7 +210,7 @@ function Ko() {
 
 function Qo(e, n, t) {
     let i = e.value;
-    return (!e.comparator || !e.comparator(i, n)) && (e.value = n, e.observers && e.observers.length && Gt(() => {
+    return (!e.comparator || !e.comparator(i, n)) && (e.value = n, e.observers && e.observers.length && jt(() => {
         for (let o = 0; o < e.observers.length; o += 1) {
             const s = e.observers[o],
                 l = xr && xr.running;
@@ -266,11 +266,11 @@ function er(e) {
         if (e = n[t], e.state === ut) gn(e);
         else if (e.state === Jn) {
         const i = ge;
-        ge = null, Gt(() => tr(e, n[0]), !1), ge = i
+        ge = null, jt(() => tr(e, n[0]), !1), ge = i
     }
 }
 
-function Gt(e, n) {
+function jt(e, n) {
     if (ge) return e();
     let t = !1;
     n || (ge = []), Ge ? t = !0 : Ge = [], or++;
@@ -285,7 +285,7 @@ function Gt(e, n) {
 function za(e) {
     if (ge && (Jo(ge), ge = null), e) return;
     const n = Ge;
-    Ge = null, n.length && Gt(() => Zo(n), !1)
+    Ge = null, n.length && jt(() => Zo(n), !1)
 }
 
 function Jo(e) {
@@ -1021,7 +1021,7 @@ function nr(e, n) {
     }), t
 }
 
-function cn(e, n, t) {
+function ln(e, n, t) {
     if (e[n]) return e[n];
     const [i, o] = Y(t, {
         equals: !1,
@@ -1036,7 +1036,7 @@ function hl(e, n) {
 }
 
 function as(e) {
-    Xn() && cn(nr(e, Rt), os)()
+    Xn() && ln(nr(e, Rt), os)()
 }
 
 function ml(e) {
@@ -1053,12 +1053,12 @@ const gl = {
         if (n === Rt || n === Ue || n === "__proto__") return s;
         if (!o) {
             const l = Object.getOwnPropertyDescriptor(e, n);
-            Xn() && (typeof s != "function" || e.hasOwnProperty(n)) && !(l && l.get) && (s = cn(i, n, s)())
+            Xn() && (typeof s != "function" || e.hasOwnProperty(n)) && !(l && l.get) && (s = ln(i, n, s)())
         }
         return at(s) ? ss(s) : s
     },
     has(e, n) {
-        return n === Zr || n === Be || n === Ur || n === Rt || n === Ue || n === "__proto__" ? !0 : (Xn() && cn(nr(e, Ue), n)(), n in e)
+        return n === Zr || n === Be || n === Ur || n === Rt || n === Ue || n === "__proto__" ? !0 : (Xn() && ln(nr(e, Ue), n)(), n in e)
     },
     set() {
         return !0
@@ -1077,9 +1077,9 @@ function Oe(e, n, t, i = !1) {
     t === void 0 ? (delete e[n], e[Ue] && e[Ue][n] && o !== void 0 && e[Ue][n].$()) : (e[n] = t, e[Ue] && e[Ue][n] && o === void 0 && e[Ue][n].$());
     let l = nr(e, Rt),
         c;
-    if ((c = cn(l, n, o)) && c.$(() => t), Array.isArray(e) && e.length !== s) {
+    if ((c = ln(l, n, o)) && c.$(() => t), Array.isArray(e) && e.length !== s) {
         for (let u = e.length; u < s; u++)(c = l[u]) && c.$();
-        (c = cn(l, "length", s)) && c.$(e.length)
+        (c = ln(l, "length", s)) && c.$(e.length)
     }(c = l[os]) && c.$()
 }
 
@@ -1104,17 +1104,17 @@ function _l(e, n) {
     } else ls(e, n)
 }
 
-function on(e, n, t = []) {
+function rn(e, n, t = []) {
     let i, o = e;
     if (n.length > 1) {
         i = n.shift();
         const l = typeof i,
             c = Array.isArray(e);
         if (Array.isArray(i)) {
-            for (let u = 0; u < i.length; u++) on(e, [i[u]].concat(n), t);
+            for (let u = 0; u < i.length; u++) rn(e, [i[u]].concat(n), t);
             return
         } else if (c && l === "function") {
-            for (let u = 0; u < e.length; u++) i(e[u], u) && on(e, [u].concat(n), t);
+            for (let u = 0; u < e.length; u++) i(e[u], u) && rn(e, [u].concat(n), t);
             return
         } else if (c && l === "object") {
             const {
@@ -1122,10 +1122,10 @@ function on(e, n, t = []) {
                 to: d = e.length - 1,
                 by: p = 1
             } = i;
-            for (let r = u; r <= d; r += p) on(e, [r].concat(n), t);
+            for (let r = u; r <= d; r += p) rn(e, [r].concat(n), t);
             return
         } else if (n.length > 1) {
-            on(e[i], n, [i].concat(t));
+            rn(e[i], n, [i].concat(t));
             return
         }
         o = e[i], t = [i].concat(t)
@@ -1134,14 +1134,14 @@ function on(e, n, t = []) {
     typeof s == "function" && (s = s(o, t), s === o) || i === void 0 && s == null || (s = Ht(s), i === void 0 || at(o) && at(s) && !Array.isArray(s) ? ls(o, s) : Oe(e, i, s))
 }
 
-function Zt(...[e, n]) {
+function Gt(...[e, n]) {
     const t = Ht(e || {}),
         i = Array.isArray(t),
         o = ss(t);
 
     function s(...l) {
         sr(() => {
-            i && l.length === 1 ? _l(t, l[0]) : on(t, l)
+            i && l.length === 1 ? _l(t, l[0]) : rn(t, l)
         })
     }
     return [o, s]
@@ -1195,7 +1195,7 @@ function yl(e, n = {}) {
         return l === void 0 ? s : l
     }
 }
-const [bl, Wr] = Zt({
+const [bl, Wr] = Gt({
     mainApp: null
 }), wl = e => {
     Wr(e === "home" || e === "security-tape-archives" || e === "timecoder" ? {
@@ -1242,7 +1242,7 @@ function Sv(e) {
         })
     }), t
 }
-var un = {};
+var cn = {};
 /*!
  *  howler.js v2.2.4
  *  howlerjs.com
@@ -2191,21 +2191,21 @@ var un = {};
             i = i || "spatial", i === "spatial" ? (t._panner = Howler.ctx.createPanner(), t._panner.coneInnerAngle = t._pannerAttr.coneInnerAngle, t._panner.coneOuterAngle = t._pannerAttr.coneOuterAngle, t._panner.coneOuterGain = t._pannerAttr.coneOuterGain, t._panner.distanceModel = t._pannerAttr.distanceModel, t._panner.maxDistance = t._pannerAttr.maxDistance, t._panner.refDistance = t._pannerAttr.refDistance, t._panner.rolloffFactor = t._pannerAttr.rolloffFactor, t._panner.panningModel = t._pannerAttr.panningModel, typeof t._panner.positionX < "u" ? (t._panner.positionX.setValueAtTime(t._pos[0], Howler.ctx.currentTime), t._panner.positionY.setValueAtTime(t._pos[1], Howler.ctx.currentTime), t._panner.positionZ.setValueAtTime(t._pos[2], Howler.ctx.currentTime)) : t._panner.setPosition(t._pos[0], t._pos[1], t._pos[2]), typeof t._panner.orientationX < "u" ? (t._panner.orientationX.setValueAtTime(t._orientation[0], Howler.ctx.currentTime), t._panner.orientationY.setValueAtTime(t._orientation[1], Howler.ctx.currentTime), t._panner.orientationZ.setValueAtTime(t._orientation[2], Howler.ctx.currentTime)) : t._panner.setOrientation(t._orientation[0], t._orientation[1], t._orientation[2])) : (t._panner = Howler.ctx.createStereoPanner(), t._panner.pan.setValueAtTime(t._stereo, Howler.ctx.currentTime)), t._panner.connect(t._node), t._paused || t._parent.pause(t._id, !0).play(t._id, !0)
         }
     })()
-})(un);
+})(cn);
 const cs = () => {},
     us = e => e instanceof Function ? e() : e,
     qr = async e => new Promise(n => setTimeout(n, e)), xl = e => new URLSearchParams(window.location.search).get(e), to = xl("muted"), Sl = !to || to === "1", Tl = {
         muted: Sl
-    }, [li, fs] = Zt(Tl);
+    }, [li, fs] = Gt(Tl);
 mn(() => {
     document.addEventListener("visibilitychange", () => {
         const e = li.muted;
-        document.hidden ? un.Howler.mute(!0) : e || un.Howler.mute(!1)
+        document.hidden ? cn.Howler.mute(!0) : e || cn.Howler.mute(!1)
     })
 });
 _e(() => {
     const e = li.muted;
-    un.Howler.mute(e)
+    cn.Howler.mute(e)
 });
 const kl = () => {
         fs("muted", e => !e)
@@ -2224,7 +2224,7 @@ const kl = () => {
             const r = fe(t);
             r == null || r.unload(), i(null);
             const a = us(e);
-            !a || Array.isArray(a) && a.length === 0 || new un.Howl({
+            !a || Array.isArray(a) && a.length === 0 || new cn.Howl({
                 src: a,
                 html5: n.html5,
                 autoplay: n.autoplay,
@@ -2926,8 +2926,8 @@ const Nl = e => We(e),
     Hl = (e, n) => We(e).isSameOrBefore(n),
     ys = (e, n) => We(e).isAfter(n),
     Ul = void 0;
-Zt(Ul);
-const Yt = e => () => e,
+Gt(Ul);
+const Zt = e => () => e,
     Fl = "/assets/ambient-1-0f115a64.mp3",
     jl = "/assets/ambient-1-bb1f2cb4.webm",
     Gl = "/assets/logbook-1-0fb8b45d.jpg",
@@ -2945,7 +2945,7 @@ const Yt = e => () => e,
         "../../../content/assets/scenes/scene/transition-video.mp4": ql
     })["../../../content/assets/".concat(e)], self.location).href,
     Kl = Il,
-    Ql = Yt(Kl),
+    Ql = Zt(Kl),
     ro = () => {
         const e = Ql()[0];
         return ht(ye({}, e), {
@@ -2955,8 +2955,8 @@ const Yt = e => () => e,
     },
     Jl = [],
     Xl = Jl,
-    ec = Yt(Xl),
-    sn = () => {
+    ec = Zt(Xl),
+    on = () => {
         const e = ec()[0];
         if (e) return ht(ye({}, e), {
             srcWebm: Tt(e.src.webm),
@@ -3060,15 +3060,15 @@ function ac(e, n = {}) {
 }
 const lc = [],
     cc = lc,
-    uc = Yt(cc),
-    Ut = () => uc().map(n => ht(ye({}, n), {
+    uc = Zt(cc),
+    un = () => uc().map(n => ht(ye({}, n), {
         postDate: Nl(n.postDate).subtract(1, "day").format("YYYY-MM-DD")
     })),
     fc = {
         isInstructionsModalViewed: !1,
         isDataUsageWarningDialogAccepted: !1
     },
-    [lt, yn] = ac(Zt(fc), {
+    [lt, yn] = ac(Gt(fc), {
         name: "notifications-manager-data"
     }),
     dc = () => lt.isInstructionsModalViewed !== !0,
@@ -3080,22 +3080,22 @@ const lc = [],
         yn("isDataUsageWarningDialogAccepted", !0)
     },
     mc = () => {
-        const e = sn();
+        const e = on();
         return e ? lt.lastPlayedAnsweringMachineTrackDate ? ys(e.postDate, lt.lastPlayedAnsweringMachineTrackDate) : !0 : !1
     },
     gc = () => {
-        const e = sn();
+        const e = on();
         e && yn("lastPlayedAnsweringMachineTrackDate", e.postDate)
     },
     _c = () => {
-        const e = Ut()[0];
+        const e = un()[0];
         return e ? lt.lastPlayedArchiveDate ? ys(e.postDate, lt.lastPlayedArchiveDate) : !0 : !1
     },
     yc = e => {
         lt.lastPlayedArchiveDate && Hl(e, lt.lastPlayedArchiveDate) || yn("lastPlayedArchiveDate", e)
     },
     bc = () => {
-        const e = Ut()[0];
+        const e = un()[0];
         e && yn("lastPlayedArchiveDate", e.postDate)
     },
     Ze = {
@@ -3411,7 +3411,7 @@ function Nc() {
         addGlobalContexts: function(i) {
             for (var o = [], s = [], l = 0, c = i; l < c.length; l++) {
                 var u = c[l];
-                fo(u) ? o.push(u) : Ft(u) && s.push(u)
+                fo(u) ? o.push(u) : Ut(u) && s.push(u)
             }
             e = e.concat(s), n = n.concat(o)
         },
@@ -3422,7 +3422,7 @@ function Nc() {
             for (var o = function(u) {
                     fo(u) ? n = n.filter(function(d) {
                         return JSON.stringify(d) !== JSON.stringify(u)
-                    }) : Ft(u) && (e = e.filter(function(d) {
+                    }) : Ut(u) && (e = e.filter(function(d) {
                         return JSON.stringify(d) !== JSON.stringify(u)
                     }))
                 }, s = 0, l = i; s < l.length; s++) {
@@ -3526,16 +3526,16 @@ function rr(e) {
     return typeof e == "function" && e.length <= 1
 }
 
-function Ft(e) {
+function Ut(e) {
     return rr(e) || fn(e)
 }
 
 function Is(e) {
-    return Array.isArray(e) && e.length === 2 ? Array.isArray(e[1]) ? rr(e[0]) && e[1].every(Ft) : rr(e[0]) && Ft(e[1]) : !1
+    return Array.isArray(e) && e.length === 2 ? Array.isArray(e[1]) ? rr(e[0]) && e[1].every(Ut) : rr(e[0]) && Ut(e[1]) : !1
 }
 
 function Os(e) {
-    return Array.isArray(e) && e.length === 2 && jc(e[0]) ? Array.isArray(e[1]) ? e[1].every(Ft) : Ft(e[1]) : !1
+    return Array.isArray(e) && e.length === 2 && jc(e[0]) ? Array.isArray(e[1]) ? e[1].every(Ut) : Ut(e[1]) : !1
 }
 
 function fo(e) {
@@ -4481,7 +4481,7 @@ function Mu(e, n) {
     return e[yt] ? t = e[yt] : n ? (t = "", e[yt] = t) : (t = tt.v4(), e[yt] = t), t
 }
 
-function tn(e, n) {
+function en(e, n) {
     n === void 0 && (n = {
         memorizedVisitCount: 1
     });
@@ -4633,9 +4633,9 @@ function Fu(e, n, t, i, o, s) {
                 ze = (F = v.postPath) !== null && F !== void 0 ? F : "/com.snowplowanalytics.snowplow/tp2",
                 An = (L = v.appId) !== null && L !== void 0 ? L : "",
                 xn, $t = document.title,
-                qt, ca = (B = v.resetActivityTrackingOnPageView) !== null && B !== void 0 ? B : !0,
+                Wt, ca = (B = v.resetActivityTrackingOnPageView) !== null && B !== void 0 ? B : !0,
                 _i, yi, ua = (N = v.cookieName) !== null && N !== void 0 ? N : "_sp_",
-                Kt = (R = v.cookieDomain) !== null && R !== void 0 ? R : void 0,
+                qt = (R = v.cookieDomain) !== null && R !== void 0 ? R : void 0,
                 cr = "/",
                 Sn = (Q = v.cookieSameSite) !== null && Q !== void 0 ? Q : "None",
                 Tn = (de = v.cookieSecure) !== null && de !== void 0 ? de : !0,
@@ -4660,7 +4660,7 @@ function Fu(e, n, t, i, o, s) {
                 fa = (P = (pe = v.contexts) === null || pe === void 0 ? void 0 : pe.session) !== null && P !== void 0 ? P : !1,
                 Cn, Dn = v.onSessionUpdateCallback,
                 pr = !1;
-            v.hasOwnProperty("discoverRootDomain") && v.discoverRootDomain && (Kt = wu(Sn, Tn));
+            v.hasOwnProperty("discoverRootDomain") && v.discoverRootDomain && (qt = wu(Sn, Tn));
             var Mn = Br(),
                 da = Mn.browserLanguage,
                 pa = Mn.resolution,
@@ -4717,16 +4717,16 @@ function Fu(e, n, t, i, o, s) {
             }
 
             function Pi() {
-                pt(), Si = au((Kt || qe) + (cr || "/")).slice(0, 4)
+                pt(), Si = au((qt || qe) + (cr || "/")).slice(0, 4)
             }
 
-            function Qt() {
+            function Kt() {
                 var _ = new Date;
                 kn = _.getTime()
             }
 
             function _a() {
-                ya(), Qt()
+                ya(), Kt()
             }
 
             function Ei() {
@@ -4767,13 +4767,13 @@ function Fu(e, n, t, i, o, s) {
             }
 
             function Di(_, S, E) {
-                return Le && !It ? !1 : se == "localStorage" ? qn(_, S, E) : se == "cookie" || se == "cookieAndLocalStorage" ? (_t(_, S, E, cr, Kt, Sn, Tn), document.cookie.indexOf("".concat(_, "=")) !== -1) : !1
+                return Le && !It ? !1 : se == "localStorage" ? qn(_, S, E) : se == "cookie" || se == "cookieAndLocalStorage" ? (_t(_, S, E, cr, qt, Sn, Tn), document.cookie.indexOf("".concat(_, "=")) !== -1) : !1
             }
 
             function Mi(_) {
                 var S = Ot("id"),
                     E = Ot("ses");
-                _o(S), _o(E), ir(S, Kt, Sn, Tn), ir(E, Kt, Sn, Tn), _ != null && _.preserveSession || (De = tt.v4(), Me = 1), _ != null && _.preserveUser || (En = Le ? "" : tt.v4(), dt = null)
+                _o(S), _o(E), ir(S, qt, Sn, Tn), ir(E, qt, Sn, Tn), _ != null && _.preserveSession || (De = tt.v4(), Me = 1), _ != null && _.preserveUser || (En = Le ? "" : tt.v4(), dt = null)
             }
 
             function Bi(_) {
@@ -4783,12 +4783,12 @@ function Fu(e, n, t, i, o, s) {
             function Li() {
                 if (!(Le && !It)) {
                     var _ = se != "none" && !!vr("ses"),
-                        S = Jt();
-                    En = Mu(S, Le), _ ? De = Dr(S) : De = tn(S), Me = Mr(S), se != "none" && (hr(), Cr(S), mr(S))
+                        S = Qt();
+                    En = Mu(S, Le), _ ? De = Dr(S) : De = en(S), Me = Mr(S), se != "none" && (hr(), Cr(S), mr(S))
                 }
             }
 
-            function Jt() {
+            function Qt() {
                 if (se == "none") return Cu();
                 var _ = vr("id") || void 0;
                 return Du(_, En, De, Me)
@@ -4849,24 +4849,24 @@ function Fu(e, n, t, i, o, s) {
                 return {
                     beforeTrack: function(E) {
                         var he = vr("ses"),
-                            ce = Jt(),
+                            ce = Qt(),
                             Xe = Nu(ce) === 0;
                         if (ur ? Cn = !!_t(ur) : Cn = !1, wi || Cn) {
                             Mi();
                             return
                         }
-                        ni(ce) ? (!he && se != "none" ? De = tn(ce) : De = Dr(ce), Me = Mr(ce)) : new Date().getTime() - dr > xi * 1e3 && (Me++, De = tn(ce, {
+                        ni(ce) ? (!he && se != "none" ? De = en(ce) : De = Dr(ce), Me = Mr(ce)) : new Date().getTime() - dr > xi * 1e3 && (Me++, De = en(ce, {
                             memorizedVisitCount: Me
                         })), Cr(ce), Bu(ce, E), Lu(ce);
                         var Te = Br(),
                             Pt = Te.viewport,
-                            Xt = Te.documentSize;
-                        E.add("vp", Pt), E.add("ds", Xt), E.add("vid", S(Me)), E.add("sid", S(De)), E.add("duid", _(Vu(ce))), E.add("uid", _(dt)), pt(), E.add("refr", vt(Ke || ft)), E.add("url", vt(xn || Ce));
-                        var en = So(ce, se, Le);
-                        if (fa && (!Le || It) && xa(E, en), se != "none") {
+                            Jt = Te.documentSize;
+                        E.add("vp", Pt), E.add("ds", Jt), E.add("vid", S(Me)), E.add("sid", S(De)), E.add("duid", _(Vu(ce))), E.add("uid", _(dt)), pt(), E.add("refr", vt(Ke || ft)), E.add("url", vt(xn || Ce));
+                        var Xt = So(ce, se, Le);
+                        if (fa && (!Le || It) && xa(E, Xt), se != "none") {
                             mr(ce);
                             var yr = hr();
-                            (!he || Xe) && yr && Dn && !pr && (Dn(en), pr = !1)
+                            (!he || Xe) && yr && Dn && !pr && (Dn(Xt), pr = !1)
                         }
                         dr = new Date().getTime()
                     }
@@ -4882,8 +4882,8 @@ function Fu(e, n, t, i, o, s) {
             }
 
             function Sa() {
-                var _ = Jt();
-                if (ni(_) ? (se != "none" ? De = tn(_) : De = Dr(_), Me = Mr(_)) : (Me++, De = tn(_, {
+                var _ = Qt();
+                if (ni(_) ? (se != "none" ? De = en(_) : De = Dr(_), Me = Mr(_)) : (Me++, De = en(_, {
                         memorizedVisitCount: Me
                     })), Cr(_), se != "none") {
                     var S = So(_, se, Le);
@@ -4903,8 +4903,8 @@ function Fu(e, n, t, i, o, s) {
                     E = _.context,
                     he = _.timestamp,
                     ce = _.contextCallback;
-                pt(), ki && Vi(), ki = !0, $t = document.title, qt = S;
-                var Xe = wo(qt || $t);
+                pt(), ki && Vi(), ki = !0, $t = document.title, Wt = S;
+                var Xe = wo(Wt || $t);
                 re.track(nu({
                     pageUrl: vt(xn || Ce),
                     pageTitle: Xe,
@@ -4914,7 +4914,7 @@ function Fu(e, n, t, i, o, s) {
                     Pt = !1;
                 if (be.enabled && !be.installed) {
                     be.installed = !0, Pt = !0;
-                    var Xt = {
+                    var Jt = {
                         update: function() {
                             if (typeof window < "u" && typeof window.addEventListener == "function") {
                                 var Et = !1,
@@ -4925,19 +4925,19 @@ function Fu(e, n, t, i, o, s) {
                                         set: function() {}
                                     }),
                                     Fi = function() {};
-                                window.addEventListener("testPassiveEventSupport", Fi, Ln), window.removeEventListener("testPassiveEventSupport", Fi, Ln), Xt.hasSupport = Et
+                                window.addEventListener("testPassiveEventSupport", Fi, Ln), window.removeEventListener("testPassiveEventSupport", Fi, Ln), Jt.hasSupport = Et
                             }
                         }
                     };
-                    Xt.update();
-                    var en = "onwheel" in document.createElement("div") ? "wheel" : document.onmousewheel !== void 0 ? "mousewheel" : "DOMMouseScroll";
-                    Object.prototype.hasOwnProperty.call(Xt, "hasSupport") ? nt(document, en, Qt, {
+                    Jt.update();
+                    var Xt = "onwheel" in document.createElement("div") ? "wheel" : document.onmousewheel !== void 0 ? "mousewheel" : "DOMMouseScroll";
+                    Object.prototype.hasOwnProperty.call(Jt, "hasSupport") ? nt(document, Xt, Kt, {
                         passive: !0
-                    }) : nt(document, en, Qt), Ci();
+                    }) : nt(document, Xt, Kt), Ci();
                     var yr = ["click", "mouseup", "mousedown", "mousemove", "keypress", "keydown", "keyup", "touchend", "touchstart"],
                         Oa = ["resize", "focus", "blur"],
                         br = function(Pa, Et) {
-                            return Et === void 0 && (Et = Qt),
+                            return Et === void 0 && (Et = Kt),
                                 function(Ln) {
                                     return nt(document, Ln, Et)
                                 }
@@ -4995,9 +4995,9 @@ function Fu(e, n, t, i, o, s) {
                     ce = _.maxXOffset,
                     Xe = _.maxYOffset,
                     Te = document.title;
-                Te !== $t && ($t = Te, qt = void 0), re.track(ru({
+                Te !== $t && ($t = Te, Wt = void 0), re.track(ru({
                     pageUrl: vt(xn || Ce),
-                    pageTitle: wo(qt || $t),
+                    pageTitle: wo(Wt || $t),
                     referrer: vt(Ke || ft),
                     minXOffset: Bn(E),
                     maxXOffset: Bn(ce),
@@ -5024,10 +5024,10 @@ function Fu(e, n, t, i, o, s) {
                     return dt
                 },
                 getDomainUserId: function() {
-                    return Jt()[1]
+                    return Qt()[1]
                 },
                 getDomainUserInfo: function() {
-                    return Jt()
+                    return Qt()
                 },
                 setReferrerUrl: function(_) {
                     Ke = _
@@ -5036,7 +5036,7 @@ function Fu(e, n, t, i, o, s) {
                     pt(), xn = ma(Ce, _)
                 },
                 setDocumentTitle: function(_) {
-                    $t = document.title, qt = _
+                    $t = document.title, Wt = _
                 },
                 discardHashTag: function(_) {
                     _i = _
@@ -5068,7 +5068,7 @@ function Fu(e, n, t, i, o, s) {
                     Hi("callback")
                 },
                 updatePageActivity: function() {
-                    Qt()
+                    Kt()
                 },
                 setOptOutCookie: function(_) {
                     ur = _
@@ -5128,7 +5128,7 @@ function Fu(e, n, t, i, o, s) {
         (r = p.activateBrowserPlugin) === null || r === void 0 || r.call(p, d)
     }), d
 }
-var an = {};
+var sn = {};
 
 function pi(e, n) {
     try {
@@ -5139,15 +5139,15 @@ function pi(e, n) {
 }
 
 function ju(e, n, t, i, o, s) {
-    return an.hasOwnProperty(e) ? null : (an[e] = Fu(e, n, t, i, o, s), an[e])
+    return sn.hasOwnProperty(e) ? null : (sn[e] = Fu(e, n, t, i, o, s), sn[e])
 }
 
 function Gu(e) {
-    return Yu(e, an)
+    return Yu(e, sn)
 }
 
 function Zu() {
-    return Object.keys(an)
+    return Object.keys(sn)
 }
 
 function Yu(e, n) {
@@ -5271,7 +5271,7 @@ const ef = "brawlstars-cctv-prod",
         }
     }],
     af = sf,
-    lf = Yt(af),
+    lf = Zt(af),
     vi = () => {
         const e = lf()[0];
         return ht(ye({}, e), {
@@ -5296,7 +5296,7 @@ const ef = "brawlstars-cctv-prod",
         postDate: "2023-11-02"
     }],
     uf = cf,
-    ff = Yt(uf),
+    ff = Zt(uf),
     Hs = () => ff().map(n => ht(ye({}, n), {
         src: Tt(n.src.jpg)
     })),
@@ -5311,7 +5311,7 @@ const ef = "brawlstars-cctv-prod",
         const t = new Image;
         t.onload = () => n(t), t.src = e
     });
-var jt = (e => (e[e.initializing = 0] = "initializing", e[e["loading-assets"] = 1] = "loading-assets", e[e["video-transition"] = 2] = "video-transition", e[e.done = 3] = "done", e))(jt || {});
+var Ft = (e => (e[e.initializing = 0] = "initializing", e[e["loading-assets"] = 1] = "loading-assets", e[e["video-transition"] = 2] = "video-transition", e[e.done = 3] = "done", e))(Ft || {});
 const pf = vi(),
     vf = Hs(),
     hf = () => {
@@ -5488,7 +5488,7 @@ const ko = e => typeof e == "boolean" ? "".concat(e) : e === 0 ? "0" : e,
         postDate: "2023-11-02"
     }],
     jf = Ff,
-    Gf = Yt(jf),
+    Gf = Zt(jf),
     Zf = () => Gf()[0],
     Yf = (e = !0) => {
         let n = cs;
@@ -5542,7 +5542,7 @@ const ko = e => typeof e == "boolean" ? "".concat(e) : e === 0 ? "0" : e,
             H = async w => {
                 try {
                     const T = u(),
-                        O = await (await El(() => import("./player-625039b9.js"), [])).initPlayer({
+                        O = await (await El(() => import("./player-0da9186c.js"), [])).initPlayer({
                             refNode: w,
                             videoId: T.videoId,
                             adConfigId: T.videoId && T.adId,
@@ -5722,7 +5722,7 @@ const ko = e => typeof e == "boolean" ? "".concat(e) : e === 0 ? "0" : e,
             allEnded: rd,
             currentFeed: Jf
         }
-    }, cd = z('<div role="button" class="absolute top-0 left-0 wh-full">'), ud = z('<div class="absolute bottom-0 left-0 right-0 h-[228px] px-[158px] flex space-x-68 items-center"><button></button><button></button><button></button><button></button><button>'), nn = ["w-[330px] h-[100px] flex-center bg-player-control-btn text-green rounded-sm", "shadow-player-controls-btn active:shadow-player-controls-btn-pressed", "[&>span]:w-72 [&>span]:drop-shadow-terminal"], fd = () => {
+    }, cd = z('<div role="button" class="absolute top-0 left-0 wh-full">'), ud = z('<div class="absolute bottom-0 left-0 right-0 h-[228px] px-[158px] flex space-x-68 items-center"><button></button><button></button><button></button><button></button><button>'), tn = ["w-[330px] h-[100px] flex-center bg-player-control-btn text-green rounded-sm", "shadow-player-controls-btn active:shadow-player-controls-btn-pressed", "[&>span]:w-72 [&>span]:drop-shadow-terminal"], fd = () => {
         const e = st([kf, Tf], {
             sprite: {
                 "forward-click": [0, 234.67120181405895],
@@ -5775,11 +5775,11 @@ const ko = e => typeof e == "boolean" ? "".concat(e) : e === 0 ? "0" : e,
             }, C(l, x(gt, {
                 name: "live"
             })), X(c => {
-                const u = le(nn),
-                    d = le(nn),
-                    p = le(nn),
-                    r = le(nn),
-                    a = le(nn);
+                const u = le(tn),
+                    d = le(tn),
+                    p = le(tn),
+                    r = le(tn),
+                    a = le(tn);
                 return u !== c._v$ && te(t, c._v$ = u), d !== c._v$2 && te(i, c._v$2 = d), p !== c._v$3 && te(o, c._v$3 = p), r !== c._v$4 && te(s, c._v$4 = r), a !== c._v$5 && te(l, c._v$5 = a), c
             }, {
                 _v$: void 0,
@@ -5798,7 +5798,7 @@ const dd = (e, n) => {
     $o = e => e.touches.length === 2,
     Io = e => Math.hypot(e[0].pageX - e[1].pageX, e[0].pageY - e[1].pageY),
     pd = e => {
-        const [n, t] = Zt({
+        const [n, t] = Gt({
             isEnabled: !0,
             isZooming: !1,
             scale: 1,
@@ -5951,9 +5951,10 @@ const dd = (e, n) => {
         });
         const [o, s] = Y();
         _e(() => {
+            var f;
             if (!e.screen.isEnabled()) return;
-            const u = e.screen.feed().playlistId && Ut().find(f => f.playlistId === e.screen.feed().playlistId),
-                d = u ? gs(u.postDate, u.dropTime.hours, u.dropTime.minutes).add(e.screen.duration(), "seconds") : _s(ds),
+            const u = e.screen.feed().playlistId ? (f = e.screen.feed().metadata) == null ? void 0 : f.date : void 0,
+                d = u ? u.add(e.screen.duration(), "seconds") : _s(ds),
                 p = e.screen.time(),
                 r = e.screen.duration() - p,
                 a = d.subtract(r, "seconds");
@@ -6104,7 +6105,7 @@ const dd = (e, n) => {
                 targetRef: n
             });
         return _e(() => {
-            rt.currentStatus() === jt.done && Ze.dataUsageWarningDialog.accepted() && i && !e.screen.Player.isMounted() && e.screen.Player.mount(i)
+            rt.currentStatus() === Ft.done && Ze.dataUsageWarningDialog.accepted() && i && !e.screen.Player.isMounted() && e.screen.Player.mount(i)
         }), Ae(() => {
             e.screen.Player.unmount()
         }), _e(() => {
@@ -6249,7 +6250,7 @@ const Od = "/assets/answering-machine-button-glow-58ea4526.svg",
     })(),
     Vd = z('<div class="absolute top-0 left-0 wh-full isolate">'),
     Nd = e => {
-        const [n, t] = Y(!1), o = st(() => sn() ? [sn().srcWebm, sn().srcMp3] : []), l = st(() => [ro().srcWebm, ro().srcMp3], {
+        const [n, t] = Y(!1), o = st(() => on() ? [on().srcWebm, on().srcMp3] : []), l = st(() => [ro().srcWebm, ro().srcMp3], {
             loop: !0,
             autoplay: !0
         }), c = st([tc, nc]);
@@ -6292,7 +6293,7 @@ const Od = "/assets/answering-machine-button-glow-58ea4526.svg",
                 get children() {
                     return x(fd, {})
                 }
-            }), null), X(() => (rt.currentStatus() === jt.done ? "visible" : "hidden") != null ? p.style.setProperty("visibility", rt.currentStatus() === jt.done ? "visible" : "hidden") : p.style.removeProperty("visibility")), p
+            }), null), X(() => (rt.currentStatus() === Ft.done ? "visible" : "hidden") != null ? p.style.setProperty("visibility", rt.currentStatus() === Ft.done ? "visible" : "hidden") : p.style.removeProperty("visibility")), p
         })()
     },
     zd = z('<div class="absolute top-0 left-0 wh-full z-modal">'),
@@ -6309,7 +6310,7 @@ const Od = "/assets/answering-machine-button-glow-58ea4526.svg",
     Ud = "/assets/logbook-dccdaf17.ogg",
     Fd = z('<div><img><img><img class="absolute left-1/2 w-1/2 h-full"><img><img><div class="absolute top-0 left-0 wh-full flex"><button class="flex-1"></button><button class="flex-1"></button></div><button class="absolute top-20 left-20 w-100 h-100 flex-center">'),
     jd = () => [...Hs().map(e => e.src), null].reverse(),
-    rn = () => Gs(jd()).map((e, n) => ({
+    nn = () => Gs(jd()).map((e, n) => ({
         index: n,
         left: (e == null ? void 0 : e[0]) || null,
         right: (e == null ? void 0 : e[1]) || null
@@ -6328,13 +6329,13 @@ const Od = "/assets/answering-machine-button-glow-58ea4526.svg",
                 e.onClose()
             }
         });
-        const [o, s] = Y(rn().length - 1), [l, c] = Y([]), u = () => {
+        const [o, s] = Y(nn().length - 1), [l, c] = Y([]), u = () => {
             const h = o() - 1;
-            return rn()[h] ? !l().includes(h) : !1
+            return nn()[h] ? !l().includes(h) : !1
         };
         _e(() => {
             const h = o() - 1,
-                v = rn()[h];
+                v = nn()[h];
             if (!v || l().includes(h)) return;
             const g = [v == null ? void 0 : v.left, v == null ? void 0 : v.right].filter(m => !!m).map(m => {
                 if (m) return Zs(m)
@@ -6349,11 +6350,11 @@ const Od = "/assets/answering-machine-button-glow-58ea4526.svg",
                 }))
             },
             p = () => {
-                o() >= rn().length - 1 || (ie.trackClickEvent("pages", "next", "logbook"), f.play("page-turn", {
+                o() >= nn().length - 1 || (ie.trackClickEvent("pages", "next", "logbook"), f.play("page-turn", {
                     interrupt: !0
                 }), s(h => h + 1))
             },
-            r = () => rn()[o()],
+            r = () => nn()[o()],
             a = () => o() === 0,
             f = st([Ud, Hd], {
                 sprite: {
@@ -6425,7 +6426,7 @@ const Zd = e => x(lr, {
         })
     };
 
-function Wt() {
+function Yt() {
     const e = Wo(Xs);
     if (e === void 0) throw new Error("useAudio must be used within a AudioProvider");
     return e
@@ -6459,7 +6460,7 @@ const Kd = "\n      @@@@@@@@@@@@@@@@@@@@@@@@@@@@\n    @@                        
         }
     }),
     sp = e => {
-        const n = Wt(),
+        const n = Yt(),
             [t, i] = Y();
         let o;
         const s = l => {
@@ -6570,7 +6571,7 @@ const ap = z('<div class="absolute top-0 left-0 wh-full flex flex-col items-cent
     pp = z('<div><div class="flex w-full"><button><span>&lt;-</span></button><div class="flex items-center flex-1 h-full px-32 bg-blue-light text-blue-light shadow-terminal"></div></div><div class="flex-1 min-h-0 px-100">'),
     vp = "w-100 h-100 flex-center font-vt-220 font-medium leading-none text-shadow-terminal",
     Rr = e => {
-        const n = Wt(),
+        const n = Yt(),
             t = () => {
                 var o;
                 const i = n.play("click", {
@@ -6639,7 +6640,7 @@ const gp = "https://bmwryv10bd.execute-api.us-east-1.amazonaws.com",
         minutes: "00",
         seconds: "00"
     }, Fn = "text-blue-light text-[20px]", Ap = e => {
-        const [n, t] = Zt(wp), i = Wt(), o = {
+        const [n, t] = Gt(wp), i = Yt(), o = {
             "typing-1": [0, 200],
             "typing-2": [2e3, 166.66666666666652],
             "typing-3": [4e3, 183.33333333333357],
@@ -6800,7 +6801,7 @@ const gp = "https://bmwryv10bd.execute-api.us-east-1.amazonaws.com",
             }), null), X(() => b.disabled = u()), v
         })()
     }, Dt = e => {
-        const n = Wt(),
+        const n = Yt(),
             [t, i] = Y(0),
             o = u => {
                 const d = u.target,
@@ -6841,10 +6842,10 @@ const xp = z('<div class="wh-full flex flex-col w-full pb-48"><button class="inl
     Sp = z('<button class="py-16 px-32 text-green text-shadow-terminal">'),
     jn = 7,
     Tp = e => {
-        const n = Wt(),
+        const n = Yt(),
             [t, i] = Y(0),
-            o = () => Math.ceil(Ut().length / jn),
-            s = () => Ut().slice(t() * jn, t() * jn + jn);
+            o = () => Math.ceil(un().length / jn),
+            s = () => un().slice(t() * jn, t() * jn + jn);
         return (() => {
             const l = xp(),
                 c = l.firstChild,
@@ -6938,7 +6939,7 @@ const kp = z('<span class="text-black">Access Security System'),
         }
     }),
     Ep = e => {
-        const n = Wt(),
+        const n = Yt(),
             [t, i] = Y();
         let o;
         const s = l => {
@@ -6992,7 +6993,10 @@ const Cp = z('<div class="realtive wh-full flex flex-col bg-terminal">'),
                 var l;
                 me.Supervisor.switchFeed({
                     archivePlaylist: {
-                        playlistId: o.playlistId
+                        playlistId: o.playlistId,
+                        metadata: {
+                            date: gs(o.postDate, o.dropTime.hours, o.dropTime.minutes, o.dropTime.seconds)
+                        }
                     },
                     source: s
                 }), Ze.archive.setLastPlayed(o.postDate), (l = e.onPlaylistLoad) == null || l.call(e), we.closeApp()
@@ -7026,7 +7030,7 @@ const Cp = z('<div class="realtive wh-full flex flex-col bg-terminal">'),
                                     get children() {
                                         return x(Ep, {
                                             onLoadPlaylist: () => {
-                                                const s = Ut()[0];
+                                                const s = un()[0];
                                                 s && (ie.trackClickEvent("notification", "open-playlist", "terminal-notification-screen", {
                                                     playlistId: s.playlistId
                                                 }), i(s, "security-tape-archives"))
@@ -7338,11 +7342,11 @@ var St = function(e) {
         }
         return !1
     },
-    ln = typeof window < "u" ? window : {},
+    an = typeof window < "u" ? window : {},
     Gn = new WeakMap,
     Ro = /auto|scroll/,
     Wp = /^tb|vertical/,
-    qp = /msie|trident/i.test(ln.navigator && ln.navigator.userAgent),
+    qp = /msie|trident/i.test(an.navigator && an.navigator.userAgent),
     Re = function(e) {
         return parseFloat(e || "0")
     },
@@ -7522,16 +7526,16 @@ var St = function(e) {
                 t = function() {
                     return n.observer && n.observer.observe(document.body, iv)
                 };
-            document.body ? t() : ln.addEventListener("DOMContentLoaded", t)
+            document.body ? t() : an.addEventListener("DOMContentLoaded", t)
         }, e.prototype.start = function() {
             var n = this;
             this.stopped && (this.stopped = !1, this.observer = new MutationObserver(this.listener), this.observe(), zo.forEach(function(t) {
-                return ln.addEventListener(t, n.listener, !0)
+                return an.addEventListener(t, n.listener, !0)
             }))
         }, e.prototype.stop = function() {
             var n = this;
             this.stopped || (this.observer && this.observer.disconnect(), zo.forEach(function(t) {
-                return ln.removeEventListener(t, n.listener, !0)
+                return an.removeEventListener(t, n.listener, !0)
             }), this.stopped = !0)
         }, e
     }(),
@@ -7790,7 +7794,7 @@ const Hr = {
                 onEnded: () => rt.onVideoTransitionEnd()
             }), null), C(u, x(Ne, {
                 get when() {
-                    return rt.currentStatus() >= jt["video-transition"]
+                    return rt.currentStatus() >= Ft["video-transition"]
                 },
                 get children() {
                     return x(Nd, {
@@ -7799,7 +7803,7 @@ const Hr = {
                 }
             }), null), C(u, x(Ne, {
                 get when() {
-                    return rt.currentStatus() === jt.done
+                    return rt.currentStatus() === Ft.done
                 },
                 get children() {
                     return [(() => {
