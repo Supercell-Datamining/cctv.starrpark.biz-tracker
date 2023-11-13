@@ -524,6 +524,10 @@ body,
     margin-bottom: 56px
 }
 
+.ml-22 {
+    margin-left: 22px
+}
+
 .block {
     display: block
 }
@@ -561,12 +565,20 @@ body,
     min-height: 0px
 }
 
+.\!w-112 {
+    width: 112px !important
+}
+
 .w-1\/2 {
     width: 50%
 }
 
 .w-100 {
     width: 100px
+}
+
+.w-120 {
+    width: 120px
 }
 
 .w-192 {
@@ -1335,6 +1347,11 @@ body,
 
 .\[\&\>span\]\:text-shadow-none>span {
     text-shadow: none
+}
+
+.\[\&_\#path-2\]\:hidden #path-2,
+.\[\&_\#path-3\]\:hidden #path-3 {
+    display: none
 }
 
 @font-face {
