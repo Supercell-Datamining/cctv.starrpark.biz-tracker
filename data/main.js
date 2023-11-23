@@ -58,7 +58,7 @@ const ja = {
     Be = Symbol("solid-proxy"),
     Ur = Symbol("solid-track"),
     Na = Symbol("solid-dev-component"),
-    Jn = {
+    Qn = {
         equals: Va
     };
 let qi = ts;
@@ -98,7 +98,7 @@ function qn(e, n) {
 }
 
 function W(e, n) {
-    n = n ? Object.assign({}, Jn, n) : Jn;
+    n = n ? Object.assign({}, Qn, n) : Qn;
     const t = {
             value: e,
             observers: null,
@@ -117,12 +117,12 @@ function X(e, n, t) {
 function pe(e, n, t) {
     qi = Ga;
     const o = so(e, n, !1, ft),
-        i = Qo && Qi(Qo);
+        i = Jo && Ji(Jo);
     i && (o.suspense = i), (!t || !t.render) && (o.user = !0), Ge ? Ge.push(o) : _n(o)
 }
 
 function ke(e, n, t) {
-    t = t ? Object.assign({}, Jn, t) : Jn;
+    t = t ? Object.assign({}, Qn, t) : Qn;
     const o = so(e, n, !0, 0);
     return o.observers = null, o.observerSlots = null, o.comparator = t.equals || void 0, _n(o), Xi.bind(o)
 }
@@ -181,11 +181,11 @@ function Ha(e, n) {
     }
 }
 
-function Qi(e) {
+function Ji(e) {
     return ee && ee.context && ee.context[e.id] !== void 0 ? ee.context[e.id] : e.defaultValue
 }
 
-function Ji(e) {
+function Qi(e) {
     const n = ke(e),
         t = ke(() => Fr(n()));
     return t.toArray = () => {
@@ -193,7 +193,7 @@ function Ji(e) {
         return Array.isArray(o) ? o : o != null ? [o] : []
     }, t
 }
-let Qo;
+let Jo;
 
 function Xi() {
     if (this.sources && this.state)
@@ -371,12 +371,12 @@ function Ya(e, n) {
         let i;
         return X(() => i = fe(() => (ee.context = ht(ye({}, ee.context), {
             [e]: o.value
-        }), Ji(() => o.children))), void 0), i
+        }), Qi(() => o.children))), void 0), i
     }
 }
 const Wa = Symbol("fallback");
 
-function Jo(e) {
+function Qo(e) {
     for (let n = 0; n < e.length; n++) e[n]()
 }
 
@@ -386,13 +386,13 @@ function qa(e, n, t = {}) {
         s = [],
         l = 0,
         c = n.length > 1 ? [] : null;
-    return Ae(() => Jo(s)), () => {
+    return Ae(() => Qo(s)), () => {
         let u = e() || [],
             f, p;
         return u[Ur], fe(() => {
             let a = u.length,
                 d, g, v, m, h, y, w, b, P;
-            if (a === 0) l !== 0 && (Jo(s), s = [], o = [], i = [], l = 0, c && (c = [])), t.fallback && (o = [Wa], i[0] = qn(z => (s[0] = z, t.fallback())), l = 1);
+            if (a === 0) l !== 0 && (Qo(s), s = [], o = [], i = [], l = 0, c && (c = [])), t.fallback && (o = [Wa], i[0] = qn(z => (s[0] = z, t.fallback())), l = 1);
             else if (l === 0) {
                 for (i = new Array(a), p = 0; p < a; p++) o[p] = u[p], i[p] = qn(r);
                 l = a
@@ -460,7 +460,7 @@ function Ka() {
     }
 }
 
-function Qa(...e) {
+function Ja(...e) {
     let n = !1;
     for (let s = 0; s < e.length; s++) {
         const l = e[s];
@@ -547,11 +547,11 @@ function ao(e, ...n) {
     }
     return [...o, t]
 }
-let Ja = 0;
+let Qa = 0;
 
 function os() {
     const e = ja.context;
-    return e ? "".concat(e.id).concat(e.count++) : "cl-".concat(Ja++)
+    return e ? "".concat(e.id).concat(e.count++) : "cl-".concat(Qa++)
 }
 const is = e => "Stale read from <".concat(e, ">.");
 
@@ -583,7 +583,7 @@ function Ve(e) {
 function ss(e) {
     let n = !1;
     const t = (s, l) => s[0] === l[0] && (n ? s[1] === l[1] : !s[1] == !l[1]) && s[2] === l[2],
-        o = Ji(() => e.children),
+        o = Qi(() => e.children),
         i = ke(() => {
             let s = o();
             Array.isArray(s) || (s = [s]);
@@ -1561,8 +1561,8 @@ var un = {};
                         }
                     };
                     B.src === "data:audio/wav;base64,UklGRigAAABXQVZFZm10IBIAAAABAAEARKwAAIhYAQACABAAAABkYXRhAgAAAAEA" && (B.src = d._src, B.load());
-                    var Q = window && window.ejecta || !B.readyState && t._navigator.isCocoonJS;
-                    if (B.readyState >= 3 || Q) R();
+                    var J = window && window.ejecta || !B.readyState && t._navigator.isCocoonJS;
+                    if (B.readyState >= 3 || J) R();
                     else {
                         d._playLock = !0, d._state = "loading";
                         var de = function() {
@@ -2392,7 +2392,7 @@ var ms = {
         z[P] = y;
         var Y = "$isDayjsObject",
             L = function(M) {
-                return M instanceof Q || !(!M || !M[Y])
+                return M instanceof J || !(!M || !M[Y])
             },
             B = function M(I, k, x) {
                 var A;
@@ -2411,7 +2411,7 @@ var ms = {
             V = function(M, I) {
                 if (L(M)) return M.clone();
                 var k = typeof I == "object" ? I : {};
-                return k.date = M, k.args = arguments, new Q(k)
+                return k.date = M, k.args = arguments, new J(k)
             },
             R = b;
         R.l = B, R.i = L, R.w = function(M, I) {
@@ -2422,7 +2422,7 @@ var ms = {
                 $offset: I.$offset
             })
         };
-        var Q = function() {
+        var J = function() {
                 function M(k) {
                     this.$L = B(k.locale, null, !0), this.parse(k), this.$x = this.$x || k.x || {}, this[Y] = !0
                 }
@@ -2476,18 +2476,18 @@ var ms = {
                             return R.w(A.toDate()[U].apply(A.toDate("s"), (D ? [0, 0, 0, 0] : [23, 59, 59, 999]).slice(j)), A)
                         },
                         q = this.$W,
-                        J = this.$M,
+                        Q = this.$M,
                         re = this.$D,
                         _e = "set" + (this.$u ? "UTC" : "");
                     switch ($) {
                         case d:
                             return D ? H(1, 0) : H(31, 11);
                         case r:
-                            return D ? H(1, J) : H(0, J + 1);
+                            return D ? H(1, Q) : H(0, Q + 1);
                         case p:
                             var O = this.$locale().weekStart || 0,
                                 Z = (q < O ? q + 7 : q) - O;
-                            return H(D ? re - Z : re + (6 - Z), J);
+                            return H(D ? re - Z : re + (6 - Z), Q);
                         case f:
                         case g:
                             return F(_e + "Hours", 0);
@@ -2520,9 +2520,9 @@ var ms = {
                     var A, D = this;
                     k = Number(k);
                     var $ = R.p(x),
-                        H = function(J) {
+                        H = function(Q) {
                             var re = V(D);
-                            return R.w(re.date(re.date() + Math.round(J * k)), D)
+                            return R.w(re.date(re.date() + Math.round(Q * k)), D)
                         };
                     if ($ === r) return this.set(r, this.$M + k);
                     if ($ === d) return this.set(d, this.$y + k);
@@ -2542,7 +2542,7 @@ var ms = {
                         H = this.$H,
                         F = this.$m,
                         q = this.$M,
-                        J = A.weekdays,
+                        Q = A.weekdays,
                         re = A.months,
                         _e = A.meridiem,
                         O = function(j, G, K, ve) {
@@ -2577,11 +2577,11 @@ var ms = {
                                 case "d":
                                     return String(x.$W);
                                 case "dd":
-                                    return O(A.weekdaysMin, x.$W, J, 2);
+                                    return O(A.weekdaysMin, x.$W, Q, 2);
                                 case "ddd":
-                                    return O(A.weekdaysShort, x.$W, J, 3);
+                                    return O(A.weekdaysShort, x.$W, Q, 3);
                                 case "dddd":
-                                    return J[x.$W];
+                                    return Q[x.$W];
                                 case "H":
                                     return String(H);
                                 case "HH":
@@ -2617,7 +2617,7 @@ var ms = {
                         H = R.p(x),
                         F = V(k),
                         q = (F.utcOffset() - this.utcOffset()) * o,
-                        J = this - F,
+                        Q = this - F,
                         re = function() {
                             return R.m($, F)
                         };
@@ -2632,22 +2632,22 @@ var ms = {
                             D = re() / 3;
                             break;
                         case p:
-                            D = (J - q) / 6048e5;
+                            D = (Q - q) / 6048e5;
                             break;
                         case f:
-                            D = (J - q) / 864e5;
+                            D = (Q - q) / 864e5;
                             break;
                         case u:
-                            D = J / i;
+                            D = Q / i;
                             break;
                         case c:
-                            D = J / o;
+                            D = Q / o;
                             break;
                         case l:
-                            D = J / t;
+                            D = Q / t;
                             break;
                         default:
-                            D = J
+                            D = Q
                     }
                     return A ? D : R.a(D)
                 }, I.daysInMonth = function() {
@@ -2671,7 +2671,7 @@ var ms = {
                     return this.$d.toUTCString()
                 }, M
             }(),
-            de = Q.prototype;
+            de = J.prototype;
         return V.prototype = de, [
             ["$ms", s],
             ["$s", l],
@@ -2686,7 +2686,7 @@ var ms = {
                 return this.$g(I, M[0], M[1])
             }
         }), V.extend = function(M, I) {
-            return M.$i || (M(I, Q, V), M.$i = !0), V
+            return M.$i || (M(I, J, V), M.$i = !0), V
         }, V.locale = B, V.isDayjs = L, V.unix = function(M) {
             return V(1e3 * M)
         }, V.en = z[P], V.Ls = z, V.p = {}, V
@@ -2933,8 +2933,8 @@ const Zt = e => () => e,
     Wl = "/assets/logbook-1-0fb8b45d.jpg",
     ql = "/assets/logbook-10-bdea2a5b.jpg",
     Kl = "/assets/logbook-11-4c9da7f0.jpg",
-    Ql = "/assets/logbook-12-60bf2721.jpg",
-    Jl = "/assets/logbook-13-e5cbd10b.jpg",
+    Jl = "/assets/logbook-12-60bf2721.jpg",
+    Ql = "/assets/logbook-13-e5cbd10b.jpg",
     Xl = "/assets/logbook-14-27366e53.jpg",
     ec = "/assets/logbook-15-0adb8736.jpg",
     tc = "/assets/logbook-16-860ce45f.jpg",
@@ -2961,8 +2961,8 @@ const Zt = e => () => e,
         "../../../content/assets/logs/log/logbook-1.jpg": Wl,
         "../../../content/assets/logs/log/logbook-10.jpg": ql,
         "../../../content/assets/logs/log/logbook-11.jpg": Kl,
-        "../../../content/assets/logs/log/logbook-12.jpg": Ql,
-        "../../../content/assets/logs/log/logbook-13.jpg": Jl,
+        "../../../content/assets/logs/log/logbook-12.jpg": Jl,
+        "../../../content/assets/logs/log/logbook-13.jpg": Ql,
         "../../../content/assets/logs/log/logbook-14.jpg": Xl,
         "../../../content/assets/logs/log/logbook-15.jpg": ec,
         "../../../content/assets/logs/log/logbook-16.jpg": tc,
@@ -3244,23 +3244,23 @@ function tt(e, n, t) {
         for (var o = 0, i = n.length, s; o < i; o++)(s || !(o in n)) && (s || (s = Array.prototype.slice.call(n, 0, o)), s[o] = n[o]);
     return e.concat(s || Array.prototype.slice.call(n))
 }
-var Qr = {
+var Jr = {
         exports: {}
     },
     li = typeof crypto < "u" && crypto.getRandomValues && crypto.getRandomValues.bind(crypto) || typeof msCrypto < "u" && typeof window.msCrypto.getRandomValues == "function" && msCrypto.getRandomValues.bind(msCrypto);
 if (li) {
     var ci = new Uint8Array(16);
-    Qr.exports = function() {
+    Jr.exports = function() {
         return li(ci), ci
     }
 } else {
     var ui = new Array(16);
-    Qr.exports = function() {
+    Jr.exports = function() {
         for (var n = 0, t; n < 16; n++) n & 3 || (t = Math.random() * 4294967296), ui[n] = t >>> ((n & 3) << 3) & 255;
         return ui
     }
 }
-var Ss = Qr.exports,
+var Ss = Jr.exports,
     Ts = [];
 for (var Nn = 0; Nn < 256; ++Nn) Ts[Nn] = (Nn + 256).toString(16).substr(1);
 
@@ -3301,7 +3301,7 @@ var Wc = Yc,
     qc = Ss,
     Kc = ks;
 
-function Qc(e, n, t) {
+function Jc(e, n, t) {
     var o = n && t || 0;
     typeof e == "string" && (n = e === "binary" ? new Array(16) : null, e = null), e = e || {};
     var i = e.random || (e.rng || qc)();
@@ -3309,9 +3309,9 @@ function Qc(e, n, t) {
         for (var s = 0; s < 16; ++s) n[o + s] = i[s];
     return n || Kc(i)
 }
-var Jc = Qc,
+var Qc = Jc,
     Xc = Wc,
-    $s = Jc,
+    $s = Qc,
     uo = $s;
 uo.v1 = Xc;
 uo.v4 = $s;
@@ -3593,7 +3593,7 @@ function Es(e) {
     if (t !== null && Os(t[1])) return t.slice(1, 6)
 }
 
-function Jr(e) {
+function Qr(e) {
     var n = Es(e);
     if (n) {
         var t = n[0];
@@ -3610,8 +3610,8 @@ function du(e) {
 
 function di(e) {
     return du(e) ? e.every(function(n) {
-        return Jr(n)
-    }) : typeof e == "string" ? Jr(e) : !1
+        return Qr(n)
+    }) : typeof e == "string" ? Qr(e) : !1
 }
 
 function dn(e) {
@@ -3668,7 +3668,7 @@ function vu(e, n) {
 }
 
 function Hn(e, n) {
-    if (!Jr(e)) return !1;
+    if (!Qr(e)) return !1;
     var t = Es(e),
         o = uu(n);
     if (t && o) {
@@ -3830,16 +3830,16 @@ function xu(e) {
             B !== void 0 && b.addJson("cx", "co", B), f.forEach(function(R) {
                 try {
                     R.beforeTrack && R.beforeTrack(b)
-                } catch (Q) {
-                    je.error("Plugin beforeTrack", Q)
+                } catch (J) {
+                    je.error("Plugin beforeTrack", J)
                 }
             }), typeof p == "function" && p(b);
             var V = b.build();
             return f.forEach(function(R) {
                 try {
                     R.afterTrack && R.afterTrack(V)
-                } catch (Q) {
-                    je.error("Plugin afterTrack", Q)
+                } catch (J) {
+                    je.error("Plugin afterTrack", J)
                 }
             }), V
         }
@@ -4313,9 +4313,9 @@ function Yu() {
 var Wu = "iglu:com.snowplowanalytics.snowplow/web_page/jsonschema/1-0-0",
     qu = "iglu:com.snowplowanalytics.snowplow/browser_context/jsonschema/1-0-0",
     Ku = "iglu:com.snowplowanalytics.snowplow/client_session/jsonschema/1-0-2",
-    Qu = "iglu:com.snowplowanalytics.snowplow/payload_data/jsonschema/1-0-4";
+    Ju = "iglu:com.snowplowanalytics.snowplow/payload_data/jsonschema/1-0-4";
 
-function Ju(e, n, t, o, i, s, l, c, u, f, p, r, a, d, g, v, m) {
+function Qu(e, n, t, o, i, s, l, c, u, f, p, r, a, d, g, v, m) {
     var h = !1,
         y, w = [],
         b = !1;
@@ -4327,9 +4327,9 @@ function Ju(e, n, t, o, i, s, l, c, u, f, p, r, a, d, g, v, m) {
         B = !!(window.XMLHttpRequest && "withCredentials" in new XMLHttpRequest),
         V = !L && B && (o === "post" || P),
         R = V ? i : "/i",
-        Q = "snowplowOutQueue_".concat(e, "_").concat(V ? "post2" : "get");
+        J = "snowplowOutQueue_".concat(e, "_").concat(V ? "post2" : "get");
     if (P && (a = {}), s = t && Yu() && V && s || 1, t) try {
-        var de = window.localStorage.getItem(Q);
+        var de = window.localStorage.getItem(J);
         w = de ? JSON.parse(de) : []
     } catch (O) {}
     Array.isArray(w) || (w = []), n.outQueues.push(w), B && s > 1 && n.bufferFlushers.push(function(O) {
@@ -4375,7 +4375,7 @@ function Ju(e, n, t, o, i, s, l, c, u, f, p, r, a, d, g, v, m) {
 
     function A(O, Z) {
         var U = F(Z, !0, !1);
-        U.send(q(J([O.evt])))
+        U.send(q(Q([O.evt])))
     }
 
     function D(O, Z) {
@@ -4406,7 +4406,7 @@ function Ju(e, n, t, o, i, s, l, c, u, f, p, r, a, d, g, v, m) {
             w.push(G)
         }
         var xe = !1;
-        t && (xe = Kn(Q, JSON.stringify(w.slice(0, f)))), !h && (!xe || w.length >= s) && $()
+        t && (xe = Kn(J, JSON.stringify(w.slice(0, f)))), !h && (!xe || w.length >= s) && $()
     }
 
     function $(O) {
@@ -4436,7 +4436,7 @@ function Ju(e, n, t, o, i, s, l, c, u, f, p, r, a, d, g, v, m) {
                 }, p),
                 oe = function(Se) {
                     for (var Ne = 0; Ne < Se; Ne++) w.shift();
-                    t && Kn(Q, JSON.stringify(w.slice(0, f)))
+                    t && Kn(J, JSON.stringify(w.slice(0, f)))
                 },
                 xe = function(Se) {
                     oe(Se), $()
@@ -4452,7 +4452,7 @@ function Ju(e, n, t, o, i, s, l, c, u, f, p, r, a, d, g, v, m) {
                             return Se.evt
                         });
                     if (Y) {
-                        var dt = new Blob([q(J(Ce))], {
+                        var dt = new Blob([q(Q(Ce))], {
                             type: "application/json"
                         });
                         try {
@@ -4461,18 +4461,18 @@ function Ju(e, n, t, o, i, s, l, c, u, f, p, r, a, d, g, v, m) {
                             Ke = !1
                         }
                     }
-                    Ke === !0 ? xe(K) : G.send(q(J(Ce)))
+                    Ke === !0 ? xe(K) : G.send(q(Q(Ce)))
                 }
             }
         } else if (!r && !x(w)) {
-            var Qe = new Image(1, 1),
-                Je = !0;
-            Qe.onload = function() {
-                Je && (Je = !1, w.shift(), t && Kn(Q, JSON.stringify(w.slice(0, f))), $())
-            }, Qe.onerror = function() {
-                Je && (Je = !1, h = !1)
-            }, Qe.src = re(w[0]), setTimeout(function() {
-                Je && h && (Je = !1, $())
+            var Je = new Image(1, 1),
+                Qe = !0;
+            Je.onload = function() {
+                Qe && (Qe = !1, w.shift(), t && Kn(J, JSON.stringify(w.slice(0, f))), $())
+            }, Je.onerror = function() {
+                Qe && (Qe = !1, h = !1)
+            }, Je.src = re(w[0]), setTimeout(function() {
+                Qe && h && (Qe = !1, $())
             }, p)
         } else h = !1
     }
@@ -4490,12 +4490,12 @@ function Ju(e, n, t, o, i, s, l, c, u, f, p, r, a, d, g, v, m) {
 
     function q(O) {
         return JSON.stringify({
-            schema: Qu,
+            schema: Ju,
             data: O
         })
     }
 
-    function J(O) {
+    function Q(O) {
         for (var Z = new Date().getTime().toString(), U = 0; U < O.length; U++) O[U].stm = Z;
         return O
     }
@@ -4710,7 +4710,7 @@ function pf(e, n, t, o, i, s) {
     s === void 0 && (s = {});
     var l = [],
         c = function(p, r, a, d, g, v) {
-            var m, h, y, w, b, P, z, Y, L, B, V, R, Q, de, M, I, k, x, A, D, $, H, F, q, J, re, _e, O;
+            var m, h, y, w, b, P, z, Y, L, B, V, R, J, de, M, I, k, x, A, D, $, H, F, q, Q, re, _e, O;
             v.eventMethod = (m = v.eventMethod) !== null && m !== void 0 ? m : "post";
             var Z = function(_) {
                     var T;
@@ -4740,7 +4740,7 @@ function pf(e, n, t, o, i, s) {
                 Ke = xi(Ie[0]),
                 Ce = Ie[1],
                 dt = Ie[2],
-                Qe, Je = (z = v.platform) !== null && z !== void 0 ? z : "web",
+                Je, Qe = (z = v.platform) !== null && z !== void 0 ? z : "web",
                 Se = Vo(d),
                 Ne = (Y = v.postPath) !== null && Y !== void 0 ? Y : "/com.snowplowanalytics.snowplow/tp2",
                 xn = (L = v.appId) !== null && L !== void 0 ? L : "",
@@ -4749,7 +4749,7 @@ function pf(e, n, t, o, i, s) {
                 bo, wo, va = (V = v.cookieName) !== null && V !== void 0 ? V : "_sp_",
                 qt = (R = v.cookieDomain) !== null && R !== void 0 ? R : void 0,
                 ur = "/",
-                Tn = (Q = v.cookieSameSite) !== null && Q !== void 0 ? Q : "None",
+                Tn = (J = v.cookieSameSite) !== null && J !== void 0 ? J : "None",
                 kn = (de = v.cookieSecure) !== null && de !== void 0 ? de : !0,
                 Ao = navigator.doNotTrack || navigator.msDoNotTrack || window.doNotTrack,
                 xo = typeof v.respectDoNotTrack < "u" ? v.respectDoNotTrack && (Ao === "yes" || Ao === "1") : !1,
@@ -4761,7 +4761,7 @@ function pf(e, n, t, o, i, s) {
                 se = Z(v),
                 $n, pr = new Date().getTime(),
                 In, Pn, On, En, ko, Cn, De, Me = 1,
-                pt, Xe = Ju(p, g, se == "localStorage" || se == "cookieAndLocalStorage", v.eventMethod, Ne, (k = v.bufferSize) !== null && k !== void 0 ? k : 1, (x = v.maxPostBytes) !== null && x !== void 0 ? x : 4e4, (A = v.maxGetBytes) !== null && A !== void 0 ? A : 0, (D = v.useStm) !== null && D !== void 0 ? D : !0, ($ = v.maxLocalStorageQueueSize) !== null && $ !== void 0 ? $ : 1e3, (H = v.connectionTimeout) !== null && H !== void 0 ? H : 5e3, dr, (F = v.customHeaders) !== null && F !== void 0 ? F : {}, (q = v.withCredentials) !== null && q !== void 0 ? q : !0, (J = v.retryStatusCodes) !== null && J !== void 0 ? J : [], ((re = v.dontRetryStatusCodes) !== null && re !== void 0 ? re : []).concat([400, 401, 403, 410, 422]), v.idService),
+                pt, Xe = Qu(p, g, se == "localStorage" || se == "cookieAndLocalStorage", v.eventMethod, Ne, (k = v.bufferSize) !== null && k !== void 0 ? k : 1, (x = v.maxPostBytes) !== null && x !== void 0 ? x : 4e4, (A = v.maxGetBytes) !== null && A !== void 0 ? A : 0, (D = v.useStm) !== null && D !== void 0 ? D : !0, ($ = v.maxLocalStorageQueueSize) !== null && $ !== void 0 ? $ : 1e3, (H = v.connectionTimeout) !== null && H !== void 0 ? H : 5e3, dr, (F = v.customHeaders) !== null && F !== void 0 ? F : {}, (q = v.withCredentials) !== null && q !== void 0 ? q : !0, (Q = v.retryStatusCodes) !== null && Q !== void 0 ? Q : [], ((re = v.dontRetryStatusCodes) !== null && re !== void 0 ? re : []).concat([400, 401, 403, 410, 422]), v.idService),
                 $o = !1,
                 Io = !1,
                 be = {
@@ -4778,7 +4778,7 @@ function pf(e, n, t, o, i, s) {
                 ma = Bn.resolution,
                 _a = Bn.colorDepth,
                 ya = Bn.cookiesEnabled;
-            oe.setTrackerVersion(a), oe.setTrackerNamespace(r), oe.setAppId(xn), oe.setPlatform(Je), oe.addPayloadPair("cookie", ya ? "1" : "0"), oe.addPayloadPair("cs", xe), oe.addPayloadPair("lang", ha), oe.addPayloadPair("res", ma), oe.addPayloadPair("cd", _a), Co(), jo(), v.crossDomainLinker && Oo(v.crossDomainLinker);
+            oe.setTrackerVersion(a), oe.setTrackerNamespace(r), oe.setAppId(xn), oe.setPlatform(Qe), oe.addPayloadPair("cookie", ya ? "1" : "0"), oe.addPayloadPair("cs", xe), oe.addPayloadPair("lang", ha), oe.addPayloadPair("res", ma), oe.addPayloadPair("cd", _a), Co(), jo(), v.crossDomainLinker && Oo(v.crossDomainLinker);
 
             function vt() {
                 Ie = Si(window.location.hostname, window.location.href, Cr()), Ie[1] !== Ce && (dt = Cr(Ce)), Ke = xi(Ie[0]), Ce = Ie[1]
@@ -4895,12 +4895,12 @@ function pf(e, n, t, o, i, s) {
             function jo() {
                 if (!(Le && !$t)) {
                     var _ = se != "none" && !!gr("ses"),
-                        T = Qt();
+                        T = Jt();
                     Cn = rf(T, Le), _ ? De = Mr(T) : De = en(T), Me = Br(T), se != "none" && (hr(), Dr(T), mr(T))
                 }
             }
 
-            function Qt() {
+            function Jt() {
                 if (se == "none") return tf();
                 var _ = gr("id") || void 0;
                 return nf(_, Cn, De, Me)
@@ -4961,7 +4961,7 @@ function pf(e, n, t, o, i, s) {
                 return {
                     beforeTrack: function(E) {
                         var ge = gr("ses"),
-                            ue = Qt(),
+                            ue = Jt(),
                             et = cf(ue) === 0;
                         if (fr ? Dn = !!yt(fr) : Dn = !1, xo || Dn) {
                             Lo();
@@ -4972,8 +4972,8 @@ function pf(e, n, t, o, i, s) {
                         })), Dr(ue), of(ue, E), sf(ue);
                         var Te = Lr(),
                             Pt = Te.viewport,
-                            Jt = Te.documentSize;
-                        E.add("vp", Pt), E.add("ds", Jt), E.add("vid", T(Me)), E.add("sid", T(De)), E.add("duid", _(lf(ue))), E.add("uid", _(pt)), vt(), E.add("refr", gt(Qe || dt)), E.add("url", gt(Sn || Ce));
+                            Qt = Te.documentSize;
+                        E.add("vp", Pt), E.add("ds", Qt), E.add("vid", T(Me)), E.add("sid", T(De)), E.add("duid", _(lf(ue))), E.add("uid", _(pt)), vt(), E.add("refr", gt(Je || dt)), E.add("url", gt(Sn || Ce));
                         var Xt = Ti(ue, se, Le);
                         if (ga && (!Le || $t) && $a(E, Xt), se != "none") {
                             mr(ue);
@@ -4994,7 +4994,7 @@ function pf(e, n, t, o, i, s) {
             }
 
             function Ia() {
-                var _ = Qt();
+                var _ = Jt();
                 if (ro(_) ? (se != "none" ? De = en(_) : De = Mr(_), Me = Br(_)) : (Me++, De = en(_, {
                         memorizedVisitCount: Me
                     })), Dr(_), se != "none") {
@@ -5020,13 +5020,13 @@ function pf(e, n, t, o, i, s) {
                 oe.track(Tu({
                     pageUrl: gt(Sn || Ce),
                     pageTitle: et,
-                    referrer: gt(Qe || dt)
+                    referrer: gt(Je || dt)
                 }), yr(E, ue), ge);
                 var Te = new Date,
                     Pt = !1;
                 if (be.enabled && !be.installed) {
                     be.installed = !0, Pt = !0;
-                    var Jt = {
+                    var Qt = {
                         update: function() {
                             if (typeof window < "u" && typeof window.addEventListener == "function") {
                                 var Ot = !1,
@@ -5037,13 +5037,13 @@ function pf(e, n, t, o, i, s) {
                                         set: function() {}
                                     }),
                                     Go = function() {};
-                                window.addEventListener("testPassiveEventSupport", Go, Rn), window.removeEventListener("testPassiveEventSupport", Go, Rn), Jt.hasSupport = Ot
+                                window.addEventListener("testPassiveEventSupport", Go, Rn), window.removeEventListener("testPassiveEventSupport", Go, Rn), Qt.hasSupport = Ot
                             }
                         }
                     };
-                    Jt.update();
+                    Qt.update();
                     var Xt = "onwheel" in document.createElement("div") ? "wheel" : document.onmousewheel !== void 0 ? "mousewheel" : "DOMMouseScroll";
-                    Object.prototype.hasOwnProperty.call(Jt, "hasSupport") ? rt(document, Xt, Kt, {
+                    Object.prototype.hasOwnProperty.call(Qt, "hasSupport") ? rt(document, Xt, Kt, {
                         passive: !0
                     }) : rt(document, Xt, Kt), Mo();
                     var br = ["click", "mouseup", "mousedown", "mousemove", "keypress", "keydown", "keyup", "touchend", "touchstart"],
@@ -5110,7 +5110,7 @@ function pf(e, n, t, o, i, s) {
                 Te !== kt && (kt = Te, Wt = void 0), oe.track(ku({
                     pageUrl: gt(Sn || Ce),
                     pageTitle: Ai(Wt || kt),
-                    referrer: gt(Qe || dt),
+                    referrer: gt(Je || dt),
                     minXOffset: Ln(E),
                     maxXOffset: Ln(ue),
                     minYOffset: Ln(ge),
@@ -5136,13 +5136,13 @@ function pf(e, n, t, o, i, s) {
                     return pt
                 },
                 getDomainUserId: function() {
-                    return Qt()[1]
+                    return Jt()[1]
                 },
                 getDomainUserInfo: function() {
-                    return Qt()
+                    return Jt()
                 },
                 setReferrerUrl: function(_) {
-                    Qe = _
+                    Je = _
                 },
                 setCustomUrl: function(_) {
                     vt(), Sn = ba(Ce, _)
@@ -5529,28 +5529,28 @@ const Lf = ho(),
     Rf = Gs(),
     jf = () => {
         const e = [Zs, Ys],
-            n = [...Rf.map(i => i.src), null].reverse();
+            n = [...Rf.map(i => i.srcPng || i.srcJpg), null].reverse();
         n.length === 1 && e.push(Ws);
         const t = qs(n),
             o = t[t.length - 1];
-        return o && e.push(...o.map(i => (i == null ? void 0 : i.png) || (i == null ? void 0 : i.jpg)).filter(i => !!i)), e
+        return o && e.push(...o.filter(i => !!i)), e
     },
     Vf = [Lf.bgSrc, Bf, mo, oo, ...jf()],
-    [Qs, _o] = W(0),
+    [Js, _o] = W(0),
     [Nf, zf] = W(!1),
     [Hf, Uf] = W(!1),
     Ff = async () => {
         _o(1);
         const e = Vf.map(n => Ks(n));
         await Promise.allSettled(e), zf(!0)
-    }, Js = () => {
+    }, Qs = () => {
         window.location.href = "brawlstars-inbox://cctvloaded"
     };
 pe(() => {
-    Nf() && Hf() && (Js(), _o(2))
+    Nf() && Hf() && (Qs(), _o(2))
 });
 pe(() => {
-    Qs() === 3 && Js()
+    Js() === 3 && Qs()
 });
 const Gf = () => {
         Uf(!0)
@@ -5560,7 +5560,7 @@ const Gf = () => {
     },
     ot = {
         init: Ff,
-        currentStatus: Qs,
+        currentStatus: Js,
         onVideoTransitionLoaded: Gf,
         onVideoTransitionEnd: Zf
     },
@@ -5615,13 +5615,13 @@ const $i = e => typeof e == "boolean" ? "".concat(e) : e === 0 ? "0" : e,
     Wf = "/assets/player-8b9a1305.mp3",
     qf = "/assets/player-4aabf494.ogg",
     Kf = N('<svg viewBox="0 0 68 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path id="path-1" d="M8 36L25 24L8 12V36Z" fill="currentColor"></path><path id="path-2" d="M25 36L42 24L25 12V36Z" fill="currentColor"></path><path id="path-3" d="M42 36L59 24L42 12V36Z" fill="currentColor">'),
-    Qf = (e = {}) => (() => {
+    Jf = (e = {}) => (() => {
         const n = Kf();
         return We(n, e, !0, !0), n
     })(),
-    Jf = N('<svg viewBox="0 0 68 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path id="path-1" d="M26 36L9 24L26 12V36Z" fill="currentColor"></path><path id="path-2" d="M43 36L26 24L43 12V36Z" fill="currentColor"></path><path id="path-3" d="M60 36L43 24L60 12V36Z" fill="currentColor">'),
+    Qf = N('<svg viewBox="0 0 68 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path id="path-1" d="M26 36L9 24L26 12V36Z" fill="currentColor"></path><path id="path-2" d="M43 36L26 24L43 12V36Z" fill="currentColor"></path><path id="path-3" d="M60 36L43 24L60 12V36Z" fill="currentColor">'),
     Xf = (e = {}) => (() => {
-        const n = Jf();
+        const n = Qf();
         return We(n, e, !0, !0), n
     })(),
     ed = N('<svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 104 68"><path d="M60.66 16.06c-.57-.27-.85-.88-.85-1.83 0-.95.28-1.57.85-1.84s1.78-.4 3.63-.4c1.85 0 3.06.13 3.63.4.57.27.85.88.85 1.84 0 .96-.28 1.57-.85 1.83-.57.27-1.78.4-3.63.4-1.85 0-3.06-.13-3.63-.4Zm0 35.81c-.57-.27-.85-.88-.85-1.83 0-.95.28-1.57.85-1.84s1.78-.4 3.63-.4c1.85 0 3.06.13 3.63.4.57.27.85.88.85 1.84 0 .96-.28 1.57-.85 1.83-.57.27-1.78.4-3.63.4-1.85.01-3.06-.13-3.63-.4Zm9.54-26.81c-.96-.24-1.43-.86-1.43-1.88 0-1.01.48-1.64 1.43-1.88s3.46-.36 7.52-.36 6.57.12 7.52.36c.95.24 1.43.87 1.43 1.88 0 1.02-.48 1.64-1.43 1.88-.96.24-3.46.36-7.52.36-4.06-.01-6.57-.12-7.52-.36Zm0 17.9c-.96-.24-1.43-.86-1.43-1.88 0-1.01.48-1.64 1.43-1.88s3.46-.36 7.52-.36 6.57.12 7.52.36c.95.24 1.43.87 1.43 1.88 0 1.02-.48 1.64-1.43 1.88-.96.24-3.46.36-7.52.36s-6.57-.12-7.52-.36Zm3.89-8.99c-.57-.27-.85-.88-.85-1.83 0-.95.28-1.57.85-1.84s1.78-.4 3.63-.4c1.85 0 3.06.13 3.63.4.57.27.85.88.85 1.84 0 .95-.28 1.57-.85 1.83-.57.27-1.78.4-3.63.4-1.85 0-3.06-.14-3.63-.4Zm13.43-17.91c-.57-.27-.85-.88-.85-1.83 0-.95.28-1.57.85-1.84s1.78-.4 3.63-.4c1.85 0 3.06.13 3.63.4.57.27.85.88.85 1.84 0 .96-.28 1.57-.85 1.83-.57.27-1.78.4-3.63.4-1.85 0-3.06-.13-3.63-.4Zm0 35.81c-.57-.27-.85-.88-.85-1.83 0-.95.28-1.57.85-1.84s1.78-.4 3.63-.4c1.85 0 3.06.13 3.63.4.57.27.85.88.85 1.84 0 .96-.28 1.57-.85 1.83-.57.27-1.78.4-3.63.4-1.85.01-3.06-.13-3.63-.4ZM19.57 17.17c-.89-.22-1.34-.81-1.34-1.75 0-.95.45-1.53 1.34-1.75.89-.22 3.23-.33 7.01-.33s6.12.11 7.01.33c.89.22 1.34.81 1.34 1.75 0 .95-.45 1.53-1.34 1.75-.89.22-3.23.33-7.01.33s-6.12-.11-7.01-.33ZM27.24 9.83c-.89-.22-1.34-.81-1.34-1.75 0-.95.45-1.53 1.34-1.75.89-.22 3.23-.33 7.01-.33s6.12.11 7.01.33c.89.22 1.34.81 1.34 1.75 0 .95-.45 1.53-1.34 1.75-.89.22-3.23.33-7.01.33s-6.12-.11-7.01-.33ZM13.37 43.61c3.78 0 6.12.11 7.01.33.89.22 1.34.81 1.34 1.75 0 .95-.45 1.53-1.34 1.75-.89.22-3.23.33-7.01.33-3.79 0-6.12-.11-7.01-.33-.89-.22-1.34-.81-1.34-1.75 0-.95.45-1.53 1.34-1.75.89-.22 3.23-.33 7.01-.33ZM26.11 50.21c3.78 0 6.12.11 7.01.33.89.22 1.34.81 1.34 1.75 0 .95-.45 1.53-1.34 1.75-.89.22-3.23.33-7.01.33-3.79 0-6.12-.11-7.01-.33-.89-.22-1.34-.81-1.34-1.75 0-.95.45-1.53 1.34-1.75.88-.22 3.22-.33 7.01-.33ZM33.78 57.55c3.78 0 6.12.11 7.01.33.89.22 1.34.81 1.34 1.75 0 .95-.45 1.53-1.34 1.75-.89.22-3.23.33-7.01.33-3.79 0-6.12-.11-7.01-.33-.89-.22-1.34-.81-1.34-1.75 0-.95.45-1.53 1.34-1.75.88-.21 3.22-.33 7.01-.33ZM1.43 31.5c-.64-.3-.95-.99-.95-2.06s.32-1.76.95-2.06c.64-.3 1.99-.45 4.07-.45 2.07 0 3.43.15 4.07.45.64.3.95.99.95 2.06s-.32 1.76-.95 2.06c-.64.3-1.99.45-4.07.45-2.08.01-3.43-.14-4.07-.45ZM.95 39.78c-.64-.3-.95-.99-.95-2.06s.32-1.76.95-2.06c.64-.3 1.99-.45 4.07-.45 2.07 0 3.43.15 4.07.45.64.3.95.99.95 2.06s-.32 1.76-.95 2.06c-.64.3-1.99.45-4.07.45-2.07 0-3.43-.15-4.07-.45ZM38.54 17.82c-.64-.3-.95-.99-.95-2.06s.32-1.76.95-2.06c.64-.3 1.99-.45 4.07-.45 2.07 0 3.43.15 4.07.45.64.3.95.99.95 2.06s-.32 1.76-.95 2.06c-.64.3-1.99.45-4.07.45s-3.44-.15-4.07-.45ZM38.54 25.3c-.64-.3-.95-.99-.95-2.06s.32-1.76.95-2.06c.64-.3 1.99-.45 4.07-.45 2.07 0 3.43.15 4.07.45.64.3.95.99.95 2.06s-.32 1.76-.95 2.06c-.64.3-1.99.45-4.07.45s-3.44-.15-4.07-.45ZM38.54 32.79c-.64-.3-.95-.99-.95-2.06s.32-1.76.95-2.06c.64-.3 1.99-.45 4.07-.45 2.07 0 3.43.15 4.07.45.64.3.95.99.95 2.06s-.32 1.76-.95 2.06c-.64.3-1.99.45-4.07.45s-3.44-.15-4.07-.45ZM38.54 40.27c-.64-.3-.95-.99-.95-2.06s.32-1.76.95-2.06c.64-.3 1.99-.45 4.07-.45 2.07 0 3.43.15 4.07.45.64.3.95.99.95 2.06s-.32 1.76-.95 2.06c-.64.3-1.99.45-4.07.45s-3.44-.15-4.07-.45ZM38.54 47.75c-.64-.3-.95-.99-.95-2.06s.32-1.76.95-2.06c.64-.3 1.99-.45 4.07-.45 2.07 0 3.43.15 4.07.45.64.3.95.99.95 2.06s-.32 1.76-.95 2.06c-.64.3-1.99.45-4.07.45-2.08.01-3.44-.14-4.07-.45ZM8.47 23.97c-.89-.22-1.34-.81-1.34-1.75 0-.95.45-1.53 1.34-1.75.89-.22 3.23-.33 7.01-.33s6.12.11 7.01.33c.89.22 1.34.81 1.34 1.75 0 .95-.45 1.53-1.34 1.75-.89.22-3.23.33-7.01.33-3.79.01-6.12-.1-7.01-.33ZM38.54 55.24c-.64-.3-.95-.99-.95-2.06s.32-1.76.95-2.06c.64-.3 1.99-.45 4.07-.45 2.07 0 3.43.15 4.07.45.64.3.95.99.95 2.06s-.32 1.76-.95 2.06c-.64.3-1.99.45-4.07.45s-3.44-.15-4.07-.45Z" fill="currentColor">'),
@@ -5650,7 +5650,7 @@ const $i = e => typeof e == "boolean" ? "".concat(e) : e === 0 ? "0" : e,
         return We(n, e, !0, !0), n
     })(),
     ud = {
-        "fast-forward": Qf,
+        "fast-forward": Jf,
         "fast-rewind": Xf,
         mute: td,
         pause: rd,
@@ -5767,7 +5767,7 @@ const $i = e => typeof e == "boolean" ? "".concat(e) : e === 0 ? "0" : e,
             Y = async x => {
                 try {
                     const A = u(),
-                        $ = await (await Ml(() => import("./player-26a43821.js"), [])).initPlayer({
+                        $ = await (await Ml(() => import("./player-8cd84bd5.js"), [])).initPlayer({
                             refNode: x,
                             videoId: A.videoId,
                             adConfigId: A.videoId && A.adId,
@@ -5789,7 +5789,7 @@ const $i = e => typeof e == "boolean" ? "".concat(e) : e === 0 ? "0" : e,
                         adConfigId: x.adId,
                         type: x.videoId ? "video" : "playlist"
                     }, (F, q) => {
-                        var J, re, _e;
+                        var Q, re, _e;
                         if (F) d("error");
                         else {
                             const O = Array.isArray(q) ? q : [q];
@@ -5797,7 +5797,7 @@ const $i = e => typeof e == "boolean" ? "".concat(e) : e === 0 ? "0" : e,
                             const Z = O.length > 1,
                                 U = Object.values(ta).indexOf(g()),
                                 j = Z ? O[U % O.length] : O[0];
-                            (re = (J = p()) == null ? void 0 : J.catalog) == null || re.load(j), (_e = p()) == null || _e.one("canplay", () => {
+                            (re = (Q = p()) == null ? void 0 : Q.catalog) == null || re.load(j), (_e = p()) == null || _e.one("canplay", () => {
                                 var G;
                                 (G = p()) == null || G.play(), d("playing"), A()
                             })
@@ -5812,7 +5812,7 @@ const $i = e => typeof e == "boolean" ? "".concat(e) : e === 0 ? "0" : e,
                     var A;
                     (A = p()) == null || A.play(), x()
                 }), d("playing")
-            }, Q = async () => {
+            }, J = async () => {
                 await o.exec(x => {
                     var A;
                     (A = p()) == null || A.pause(), x()
@@ -5874,7 +5874,7 @@ const $i = e => typeof e == "boolean" ? "".concat(e) : e === 0 ? "0" : e,
                                 await R();
                                 break;
                             case "pause":
-                                await Q();
+                                await J();
                                 break;
                             case "fwd":
                                 await M(1), await de();
@@ -6120,7 +6120,7 @@ const Bd = (e, n) => {
     }),
     ie = e => {
         const [n, t] = ao(e, ["size", "as", "class", "children"]);
-        return S(as, Qa({
+        return S(as, Ja({
             get component() {
                 return n.as || "span"
             },
@@ -6426,7 +6426,7 @@ const Yd = N('<img class="absolute top-0 left-0 wh-full pointer-events-none">'),
             height: 333
         }
     }],
-    Qd = e => S(lo, {
+    Jd = e => S(lo, {
         each: Kd,
         children: n => (() => {
             const t = qd();
@@ -6443,7 +6443,7 @@ const Yd = N('<img class="absolute top-0 left-0 wh-full pointer-events-none">'),
         })()
     });
 $e(["click"]);
-const Jd = "/assets/answering-machine-button-glow-58ea4526.svg",
+const Qd = "/assets/answering-machine-button-glow-58ea4526.svg",
     Xd = N('<img class="absolute origin-bottom-left">'),
     ep = {
         "phone-button-light": {
@@ -6465,7 +6465,7 @@ const Jd = "/assets/answering-machine-button-glow-58ea4526.svg",
             },
             get children() {
                 const n = Xd();
-                return ce(n, "src", Jd), X(t => {
+                return ce(n, "src", Qd), X(t => {
                     const o = e.size.width,
                         i = e.size.width,
                         s = "translate(".concat(e.position.x, "px, ").concat(e.position.y, "px)");
@@ -6526,7 +6526,7 @@ const Jd = "/assets/answering-machine-button-glow-58ea4526.svg",
                         r.isEnabled() && r.position() === "c" ? (n() || (he.Supervisor.dispatch("play"), t(!0)), he.Supervisor.setControlsVisible(!0)) : he.Supervisor.positionScreenAtCenter(r), e.roomSound.play(Xs(["screen-tap-1", "screen-tap-2", "screen-tap-3"]))
                     }
                 })
-            }), null), C(p, S(sp, {}), null), C(p, S(Wd, {}), null), C(p, S(tp, {}), null), C(p, S(Qd, {
+            }), null), C(p, S(sp, {}), null), C(p, S(Wd, {}), null), C(p, S(tp, {}), null), C(p, S(Jd, {
                 onItemSelected: f
             }), null), C(p, S(Ve, {
                 get when() {
@@ -6625,11 +6625,11 @@ const Jd = "/assets/answering-machine-button-glow-58ea4526.svg",
                 const B = le("wh-full flex relative", !t() && "invisible"),
                     V = le("absolute w-[calc(50%+2px)] h-full", !a() && "invisible"),
                     R = le("absolute w-[calc(50%+2px)] h-full", a() && "invisible"),
-                    Q = ((k = r()) == null ? void 0 : k.left) || void 0,
+                    J = ((k = r()) == null ? void 0 : k.left) || void 0,
                     de = le("absolute w-1/2 h-full pointer-events-none pl-[99px] pr-52", !((x = r()) != null && x.left) && "invisible", ((D = (A = r()) == null ? void 0 : A.left) == null ? void 0 : D.endsWith(".jpg")) && "mix-blend-multiply"),
                     M = (($ = r()) == null ? void 0 : $.right) || void 0,
                     I = le("absolute w-1/2 left-1/2 h-full pointer-events-none pl-52 pr-[99px]", !((H = r()) != null && H.right) && "invisible", ((q = (F = r()) == null ? void 0 : F.right) == null ? void 0 : q.endsWith(".jpg")) && "mix-blend-multiply");
-                return B !== L._v$ && te(g, L._v$ = B), V !== L._v$2 && te(v, L._v$2 = V), R !== L._v$3 && te(m, L._v$3 = R), Q !== L._v$4 && ce(y, "src", L._v$4 = Q), de !== L._v$5 && te(y, L._v$5 = de), M !== L._v$6 && ce(w, "src", L._v$6 = M), I !== L._v$7 && te(w, L._v$7 = I), L
+                return B !== L._v$ && te(g, L._v$ = B), V !== L._v$2 && te(v, L._v$2 = V), R !== L._v$3 && te(m, L._v$3 = R), J !== L._v$4 && ce(y, "src", L._v$4 = J), de !== L._v$5 && te(y, L._v$5 = de), M !== L._v$6 && ce(w, "src", L._v$6 = M), I !== L._v$7 && te(w, L._v$7 = I), L
             }, {
                 _v$: void 0,
                 _v$2: void 0,
@@ -6669,7 +6669,7 @@ const gp = e => S(cr, {
     };
 
 function Yt() {
-    const e = Qi(ra);
+    const e = Ji(ra);
     if (e === void 0) throw new Error("useAudio must be used within a AudioProvider");
     return e
 }
@@ -7159,7 +7159,7 @@ const Zp = N('<div class="wh-full flex flex-col w-full pb-48"><button class="inl
 $e(["click"]);
 const qp = N('<span class="text-black">Access Security System'),
     Kp = N('<div class="wh-full flex flex-col items-center space-y-76 pt-76 "><img class="w-[872px] drop-shadow-terminal text-blue-light transform-gpu" width="873" height="621">'),
-    Qp = e => {
+    Jp = e => {
         const n = setTimeout(() => e.setCurrentOpenApp("home"), 2e3);
         return Ae(() => clearInterval(n)), (() => {
             const t = Kp(),
@@ -7173,7 +7173,7 @@ const qp = N('<span class="text-black">Access Security System'),
             }), null), t
         })()
     },
-    Jp = N('<span class="text-black">unwatched security footage'),
+    Qp = N('<span class="text-black">unwatched security footage'),
     Xp = N('<div class="flex-1 pt-144 pb-124 px-144"><div class="relative wh-full flex flex-col space-y-92 items-center justify-center border-x-2 border-b-2 border-purple"><div class="absolute top-0 left-0 wh-full flex items-start"><div class="flex-1 border-t-2 border-purple"></div><div class="flex-1 border-t-2 border-purple"></div></div><div class="flex space-x-184"><button><span>Dismiss</span></button><button><span>Open'),
     Ri = wn(["relative px-24 py-8", An({
         size: "terminal-md"
@@ -7215,7 +7215,7 @@ const qp = N('<span class="text-black">Access Security System'),
                 size: "terminal-xl",
                 class: "px-56 py-32 bg-orange text-orange shadow-terminal",
                 get children() {
-                    return Jp()
+                    return Qp()
                 }
             }), r), a.$$click = () => s("dismiss"), d.$$click = () => s("open"), X(g => {
                 const v = Ri({
@@ -7265,7 +7265,7 @@ const tv = N('<div class="realtive wh-full flex flex-col bg-terminal">'),
                         const i = tv();
                         return C(i, S(Bp, {}), null), C(i, S(ss, {
                             get fallback() {
-                                return S(Qp, {
+                                return S(Jp, {
                                     setCurrentOpenApp: s => we.openApp(s)
                                 })
                             },
@@ -7635,13 +7635,13 @@ var Tt = function(e) {
             B = o ? o.height : Re(t.height) - Y - b,
             V = L + m + P + y,
             R = B + h + b + w,
-            Q = Tt({
+            J = Tt({
                 devicePixelContentBoxSize: jt(Math.round(L * devicePixelRatio), Math.round(B * devicePixelRatio), s),
                 borderBoxSize: jt(V, R, s),
                 contentBoxSize: jt(L, B, s),
                 contentRect: new aa(r, u, L, B)
             });
-        return Zn.set(e, Q), Q
+        return Zn.set(e, J), J
     },
     ua = function(e, n, t) {
         var o = ca(e, t),
@@ -7728,9 +7728,9 @@ var Tt = function(e) {
             requestAnimationFrame(e)
         })
     },
-    Qn = 0,
+    Jn = 0,
     Tv = function() {
-        return !!Qn
+        return !!Jn
     },
     kv = 250,
     $v = {
@@ -7788,7 +7788,7 @@ var Tt = function(e) {
     }(),
     io = new Iv,
     Gi = function(e) {
-        !Qn && e > 0 && io.start(), Qn += e, !Qn && io.stop()
+        !Jn && e > 0 && io.start(), Jn += e, !Jn && io.stop()
     },
     Pv = function(e) {
         return !yo(e) && !hv(e) && getComputedStyle(e).display === "inline"
