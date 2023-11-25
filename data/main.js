@@ -2948,8 +2948,8 @@ const Zt = e => () => e,
     cc = "/assets/logbook-21-b4a77799.jpg",
     uc = "/assets/logbook-22-281b5db1.jpg",
     fc = "/assets/logbook-23-c9e4daa7.png",
-    dc = "/assets/logbook-24-2-c346b4e6.png",
-    pc = "/assets/logbook-24-b785439c.png",
+    dc = "/assets/logbook-24-b785439c.png",
+    pc = "/assets/logbook-25-22c36767.png",
     gc = "/assets/logbook-3-702b48ec.jpg",
     vc = "/assets/logbook-4-e1e4d6b8.jpg",
     hc = "/assets/logbook-5-b07340b1.jpg",
@@ -2957,8 +2957,8 @@ const Zt = e => () => e,
     _c = "/assets/logbook-7-447b8550.jpg",
     yc = "/assets/logbook-8-75782f09.jpg",
     bc = "/assets/logbook-9-5c82ced1.jpg",
-    wc = "/assets/bg-15a0c03a.png",
-    Ac = "/assets/transition-video-0906d295.mp4",
+    wc = "/assets/bg-80e3ab33.png",
+    Ac = "/assets/transition-video-e6bc33b4.mp4",
     ct = e => new URL(Object.assign({
         "../../../content/assets/ambient-tracks/ambient-track/ambient-3.mp3": Zl,
         "../../../content/assets/ambient-tracks/ambient-track/ambient-3.webm": Yl,
@@ -2980,8 +2980,8 @@ const Zt = e => () => e,
         "../../../content/assets/logs/log/logbook-21.jpg": cc,
         "../../../content/assets/logs/log/logbook-22.jpg": uc,
         "../../../content/assets/logs/log/logbook-23.png": fc,
-        "../../../content/assets/logs/log/logbook-24-2.png": dc,
-        "../../../content/assets/logs/log/logbook-24.png": pc,
+        "../../../content/assets/logs/log/logbook-24.png": dc,
+        "../../../content/assets/logs/log/logbook-25.png": pc,
         "../../../content/assets/logs/log/logbook-3.jpg": gc,
         "../../../content/assets/logs/log/logbook-4.jpg": vc,
         "../../../content/assets/logs/log/logbook-5.jpg": hc,
@@ -3113,6 +3113,14 @@ function Mc(e, n = {}) {
     }]
 }
 const Bc = [{
+        playlistId: "1783122161711370164",
+        postDate: "2023-11-26",
+        dropTime: {
+            hours: 12,
+            minutes: 2,
+            seconds: 25
+        }
+    }, {
         playlistId: "1783109930660655736",
         postDate: "2023-11-24",
         dropTime: {
@@ -5388,7 +5396,7 @@ const If = "brawlstars-cctv-prod",
         trackClickEvent: Cf
     },
     Df = [{
-        postDate: "2023-11-25",
+        postDate: "2023-11-26",
         bgSrc: {
             png: "scenes/scene/bg.png"
         },
@@ -5407,9 +5415,9 @@ const If = "brawlstars-cctv-prod",
     },
     Lf = [{
         src: {
-            png: "logs/log/logbook-24-2.png"
+            png: "logs/log/logbook-25.png"
         },
-        postDate: "2023-11-25"
+        postDate: "2023-11-26"
     }, {
         src: {
             png: "logs/log/logbook-24.png"
@@ -5791,7 +5799,7 @@ const $i = e => typeof e == "boolean" ? "".concat(e) : e === 0 ? "0" : e,
             Y = async x => {
                 try {
                     const A = u(),
-                        $ = await (await Ml(() => import("./player-52b303b6.js"), [])).initPlayer({
+                        $ = await (await Ml(() => import("./player-4c6f1ec3.js"), [])).initPlayer({
                             refNode: x,
                             videoId: A.videoId,
                             adConfigId: A.videoId && A.adId,
