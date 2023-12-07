@@ -702,7 +702,7 @@ const ei = "_$DX_DELEGATE";
 function cl(e, n, t, r = {}) {
     let i;
     return Qn(s => {
-        i = s, n === document ? e() : D(n, e(), n.firstChild ? null : void 0, t)
+        i = s, n === document ? e() : E(n, e(), n.firstChild ? null : void 0, t)
     }, r.owner), () => {
         i(), n.textContent = ""
     }
@@ -782,7 +782,7 @@ function $e(e, n, t) {
     return fe(() => e(n, t))
 }
 
-function D(e, n, t, r) {
+function E(e, n, t, r) {
     if (t !== void 0 && !r && (r = []), typeof n != "function") return Nt(e, n, r, t);
     K(i => Nt(e, n(), i, t), r)
 }
@@ -1221,7 +1221,7 @@ function bn(e) {
     return e && e.__esModule && Object.prototype.hasOwnProperty.call(e, "default") ? e.default : e
 }
 
-function pv(e) {
+function mv(e) {
     if (e.__esModule) return e;
     var n = e.default;
     if (typeof n == "function") {
@@ -2210,13 +2210,13 @@ pe(() => {
 const Ol = () => {
         vs("muted", e => !e)
     },
-    El = e => {
+    Dl = e => {
         vs("muted", e)
     },
     Tt = {
         options: fo,
         toggleMute: Ol,
-        setMute: El
+        setMute: Dl
     },
     ct = (e, n = {}) => {
         const [t, r] = W(null), [i, s] = W(!1);
@@ -2275,7 +2275,7 @@ const Ol = () => {
             setVolume: p
         }
     },
-    Dl = [{
+    El = [{
         src: {
             mp3: "ambient-tracks/ambient-track/ambient-5.mp3",
             webm: "ambient-tracks/ambient-track/ambient-5.webm"
@@ -2962,14 +2962,18 @@ const Wt = e => () => e,
     Sc = "/assets/logbook-34-21d5163f.jpg",
     Tc = "/assets/logbook-35-7418861b.jpg",
     kc = "/assets/logbook-36-945743f5.jpg",
-    $c = "/assets/logbook-4-e1e4d6b8.jpg",
-    Ic = "/assets/logbook-5-b07340b1.jpg",
-    Pc = "/assets/logbook-6-aad79ad3.jpg",
-    Oc = "/assets/logbook-7-447b8550.jpg",
+    $c = "/assets/logbook-37-683c1780.jpg",
+    Ic = "/assets/logbook-4-e1e4d6b8.jpg",
+    Pc = "/assets/logbook-5-b07340b1.jpg",
+    Oc = "/assets/logbook-6-aad79ad3.jpg",
+    Dc = "/assets/logbook-7-447b8550.jpg",
     Ec = "/assets/logbook-8-75782f09.jpg",
-    Dc = "/assets/logbook-9-5c82ced1.jpg",
-    Cc = "/assets/bg-12e1986e.png",
-    Mc = "/assets/transition-video-1357b0be.mp4",
+    Cc = "/assets/logbook-9-5c82ced1.jpg",
+    Mc = "/assets/bg-e7d0c64f.png",
+    jc = "/assets/overlay-video-924c1e58.mp4",
+    Bc = "/assets/overlay-video-b33f675a.png",
+    Lc = "/assets/overlay-video-b3ee19e3.webm",
+    Rc = "/assets/transition-video-0ece4261.mp4",
     je = e => new URL(Object.assign({
         "../../../content/assets/ambient-tracks/ambient-track/ambient-5.mp3": Yl,
         "../../../content/assets/ambient-tracks/ambient-track/ambient-5.webm": Wl,
@@ -3005,61 +3009,65 @@ const Wt = e => () => e,
         "../../../content/assets/logs/log/logbook-34.jpg": Sc,
         "../../../content/assets/logs/log/logbook-35.jpg": Tc,
         "../../../content/assets/logs/log/logbook-36.jpg": kc,
-        "../../../content/assets/logs/log/logbook-4.jpg": $c,
-        "../../../content/assets/logs/log/logbook-5.jpg": Ic,
-        "../../../content/assets/logs/log/logbook-6.jpg": Pc,
-        "../../../content/assets/logs/log/logbook-7.jpg": Oc,
+        "../../../content/assets/logs/log/logbook-37.jpg": $c,
+        "../../../content/assets/logs/log/logbook-4.jpg": Ic,
+        "../../../content/assets/logs/log/logbook-5.jpg": Pc,
+        "../../../content/assets/logs/log/logbook-6.jpg": Oc,
+        "../../../content/assets/logs/log/logbook-7.jpg": Dc,
         "../../../content/assets/logs/log/logbook-8.jpg": Ec,
-        "../../../content/assets/logs/log/logbook-9.jpg": Dc,
-        "../../../content/assets/scenes/scene/bg.png": Cc,
-        "../../../content/assets/scenes/scene/transition-video.mp4": Mc
+        "../../../content/assets/logs/log/logbook-9.jpg": Cc,
+        "../../../content/assets/scenes/scene/bg.png": Mc,
+        "../../../content/assets/scenes/scene/overlay-video.mp4": jc,
+        "../../../content/assets/scenes/scene/overlay-video.png": Bc,
+        "../../../content/assets/scenes/scene/overlay-video.webm": Lc,
+        "../../../content/assets/scenes/scene/transition-video.mp4": Rc
     })["../../../content/assets/".concat(e)], self.location).href,
-    jc = Dl,
-    Bc = Wt(jc),
+    Vc = El,
+    Nc = Wt(Vc),
     si = () => {
-        const e = Bc()[0];
+        const e = Nc()[0];
         return mt(ye({}, e), {
             srcWebm: je(e.src.webm),
             srcMp3: je(e.src.mp3)
         })
     },
-    Lc = [{
+    zc = [{
         src: {
             mp3: "answering-machine/message-track/answering-machine-colt.mp3",
             webm: "answering-machine/message-track/answering-machine-colt.webm"
         },
         postDate: "2023-12-04"
     }],
-    Rc = Lc,
-    Vc = Wt(Rc),
+    Uc = zc,
+    Hc = Wt(Uc),
     an = () => {
-        const e = Vc()[0];
+        const e = Hc()[0];
         if (e) return mt(ye({}, e), {
             srcWebm: je(e.src.webm),
             srcMp3: je(e.src.mp3)
         })
     },
-    Nc = "/assets/background-music-83982c9a.webm",
-    zc = "/assets/background-music-f98c94df.mp3";
+    Fc = "/assets/background-music-83982c9a.webm",
+    Gc = "/assets/background-music-f98c94df.mp3";
 
-function Uc(e) {
+function Zc(e) {
     return e !== null && (typeof e == "object" || typeof e == "function")
 }
 
 function ai(e, ...n) {
     return typeof e == "function" ? e(...n) : e
 }
-var Hc = (e => typeof require < "u" ? require : typeof Proxy < "u" ? new Proxy(e, {
+var Yc = (e => typeof require < "u" ? require : typeof Proxy < "u" ? new Proxy(e, {
         get: (n, t) => (typeof require < "u" ? require : n)[t]
     }) : e)(function(e) {
         if (typeof require < "u") return require.apply(this, arguments);
         throw Error('Dynamic require of "' + e + '" is not supported')
     }),
-    Fc = e => (typeof e.clear == "function" || (e.clear = () => {
+    Wc = e => (typeof e.clear == "function" || (e.clear = () => {
         let n;
         for (; n = e.key(0);) e.removeItem(n)
     }), e),
-    Gc = e => {
+    qc = e => {
         if (!e) return "";
         let n = "";
         for (const t in e) {
@@ -3071,7 +3079,7 @@ var Hc = (e => typeof require < "u" ? require : typeof Proxy < "u" ? new Proxy(e
     },
     li;
 try {
-    li = Hc("solid-start/server").useRequest
+    li = Yc("solid-start/server").useRequest
 } catch (e) {
     li = () => (console.warn("It seems you attempt to use cookieStorage on the server without having solid-start installed"), {
         request: {
@@ -3081,10 +3089,10 @@ try {
         }
     })
 }
-var _t = Fc({
+var _t = Wc({
     _read: () => document.cookie,
     _write: (e, n, t) => {
-        document.cookie = "".concat(e, "=").concat(n).concat(Gc(t))
+        document.cookie = "".concat(e, "=").concat(n).concat(qc(t))
     },
     getItem: (e, n) => {
         var t, r;
@@ -3118,7 +3126,7 @@ var _t = Fc({
     }
 });
 
-function Zc(e, n = {}) {
+function Qc(e, n = {}) {
     const t = n.storage || globalThis.localStorage;
     if (!t) return e;
     const r = n.name || "storage-".concat(is()),
@@ -3134,7 +3142,15 @@ function Zc(e, n = {}) {
         e[1](...f), t.setItem(r, i(fe(() => e[0])), n.storageOptions), u = !1
     }]
 }
-const Yc = [{
+const Kc = [{
+        playlistId: "1783122663501118808",
+        postDate: "2023-12-08",
+        dropTime: {
+            hours: 15,
+            minutes: 37,
+            seconds: 12
+        }
+    }, {
         playlistId: "1783122613423251565",
         postDate: "2023-12-06",
         dropTime: {
@@ -3247,73 +3263,73 @@ const Yc = [{
             seconds: 22
         }
     }],
-    Wc = Yc,
-    qc = Wt(Wc),
-    pn = () => qc().map(n => mt(ye({}, n), {
+    Jc = Kc,
+    Xc = Wt(Jc),
+    pn = () => Xc().map(n => mt(ye({}, n), {
         postDate: Hl(n.postDate).subtract(2, "day").format("YYYY-MM-DD")
     })),
-    Qc = uo("skip-data-usage-warning"),
-    Kc = {
+    eu = uo("skip-data-usage-warning"),
+    tu = {
         isInstructionsModalViewed: !1,
-        isDataUsageWarningDialogAccepted: Qc === "true"
+        isDataUsageWarningDialogAccepted: eu === "true"
     },
-    [ft, wn] = Zc(Yt(Kc), {
+    [ft, wn] = Qc(Yt(tu), {
         name: "notifications-manager-data"
     }),
-    Jc = () => ft.isInstructionsModalViewed !== !0,
-    Xc = () => {
+    nu = () => ft.isInstructionsModalViewed !== !0,
+    ru = () => {
         wn("isInstructionsModalViewed", !0)
     },
-    eu = () => ft.isDataUsageWarningDialogAccepted === !0,
-    tu = () => {
+    ou = () => ft.isDataUsageWarningDialogAccepted === !0,
+    iu = () => {
         wn("isDataUsageWarningDialogAccepted", !0)
     },
-    nu = () => {
+    su = () => {
         const e = an();
         return e ? ft.lastPlayedAnsweringMachineTrackDate ? xs(e.postDate, ft.lastPlayedAnsweringMachineTrackDate) : !0 : !1
     },
-    ru = () => {
+    au = () => {
         const e = an();
         e && wn("lastPlayedAnsweringMachineTrackDate", e.postDate)
     },
-    ou = () => {
+    lu = () => {
         const e = pn()[0];
         return e ? ft.lastPlayedArchiveDate ? xs(e.postDate, ft.lastPlayedArchiveDate) : !0 : !1
     },
-    iu = e => {
+    cu = e => {
         ft.lastPlayedArchiveDate && Gl(e, ft.lastPlayedArchiveDate) || wn("lastPlayedArchiveDate", e)
     },
-    su = () => {
+    uu = () => {
         const e = pn()[0];
         e && wn("lastPlayedArchiveDate", e.postDate)
     },
     We = {
         instructionsModal: {
-            isVisible: Jc,
-            setViewed: Xc
+            isVisible: nu,
+            setViewed: ru
         },
         dataUsageWarningDialog: {
-            accepted: eu,
-            setAccepted: tu
+            accepted: ou,
+            setAccepted: iu
         },
         answeringMachineTrack: {
-            hasNew: nu,
-            setLastPlayed: ru
+            hasNew: su,
+            setLastPlayed: au
         },
         archive: {
-            hasNew: ou,
-            setLastPlayed: iu,
-            dismissNotification: su
+            hasNew: lu,
+            setLastPlayed: cu,
+            dismissNotification: uu
         }
     };
-var Ee = function() {
-    return Ee = Object.assign || function(n) {
+var De = function() {
+    return De = Object.assign || function(n) {
         for (var t, r = 1, i = arguments.length; r < i; r++) {
             t = arguments[r];
             for (var s in t) Object.prototype.hasOwnProperty.call(t, s) && (n[s] = t[s])
         }
         return n
-    }, Ee.apply(this, arguments)
+    }, De.apply(this, arguments)
 };
 
 function rt(e, n, t) {
@@ -3341,25 +3357,25 @@ var Ss = Jr.exports,
     Ts = [];
 for (var zn = 0; zn < 256; ++zn) Ts[zn] = (zn + 256).toString(16).substr(1);
 
-function au(e, n) {
+function fu(e, n) {
     var t = n || 0,
         r = Ts;
     return [r[e[t++]], r[e[t++]], r[e[t++]], r[e[t++]], "-", r[e[t++]], r[e[t++]], "-", r[e[t++]], r[e[t++]], "-", r[e[t++]], r[e[t++]], "-", r[e[t++]], r[e[t++]], r[e[t++]], r[e[t++]], r[e[t++]], r[e[t++]]].join("")
 }
-var ks = au,
-    lu = Ss,
-    cu = ks,
+var ks = fu,
+    du = Ss,
+    pu = ks,
     di, $r, Ir = 0,
     Pr = 0;
 
-function uu(e, n, t) {
+function gu(e, n, t) {
     var r = n && t || 0,
         i = n || [];
     e = e || {};
     var s = e.node || di,
         l = e.clockseq !== void 0 ? e.clockseq : $r;
     if (s == null || l == null) {
-        var c = lu();
+        var c = du();
         s == null && (s = di = [c[0] | 1, c[1], c[2], c[3], c[4], c[5]]), l == null && (l = $r = (c[6] << 8 | c[7]) & 16383)
     }
     var u = e.msecs !== void 0 ? e.msecs : new Date().getTime(),
@@ -3372,35 +3388,35 @@ function uu(e, n, t) {
     var a = u / 4294967296 * 1e4 & 268435455;
     i[r++] = a >>> 8 & 255, i[r++] = a & 255, i[r++] = a >>> 24 & 15 | 16, i[r++] = a >>> 16 & 255, i[r++] = l >>> 8 | 128, i[r++] = l & 255;
     for (var d = 0; d < 6; ++d) i[r + d] = s[d];
-    return n || cu(i)
-}
-var fu = uu,
-    du = Ss,
-    pu = ks;
-
-function gu(e, n, t) {
-    var r = n && t || 0;
-    typeof e == "string" && (n = e === "binary" ? new Array(16) : null, e = null), e = e || {};
-    var i = e.random || (e.rng || du)();
-    if (i[6] = i[6] & 15 | 64, i[8] = i[8] & 63 | 128, n)
-        for (var s = 0; s < 16; ++s) n[r + s] = i[s];
     return n || pu(i)
 }
 var vu = gu,
-    hu = fu,
-    $s = vu,
+    hu = Ss,
+    mu = ks;
+
+function _u(e, n, t) {
+    var r = n && t || 0;
+    typeof e == "string" && (n = e === "binary" ? new Array(16) : null, e = null), e = e || {};
+    var i = e.random || (e.rng || hu)();
+    if (i[6] = i[6] & 15 | 64, i[8] = i[8] & 63 | 128, n)
+        for (var s = 0; s < 16; ++s) n[r + s] = i[s];
+    return n || mu(i)
+}
+var yu = _u,
+    bu = vu,
+    $s = yu,
     po = $s;
-po.v1 = hu;
+po.v1 = bu;
 po.v4 = $s;
-var mu = po;
+var wu = po;
 /*!
  * Core functionality for Snowplow JavaScript trackers v3.16.0 (http://bit.ly/sp-js)
  * Copyright 2022 Snowplow Analytics Ltd, 2010 Anthon Pang
  * Licensed under BSD-3-Clause
  */
-var _u = "3.16.0";
+var Au = "3.16.0";
 
-function yu(e) {
+function xu(e) {
     if (!e) return e;
     var n = 4 - e.length % 4;
     switch (n) {
@@ -3412,17 +3428,17 @@ function yu(e) {
             break
     }
     var t = e.replace(/-/g, "+").replace(/_/g, "/");
-    return Au(t)
+    return ku(t)
 }
 
-function bu(e) {
+function Su(e) {
     if (!e) return e;
-    var n = wu(e);
+    var n = Tu(e);
     return n.replace(/=/g, "").replace(/\+/g, "-").replace(/\//g, "_")
 }
 var at = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
 
-function wu(e) {
+function Tu(e) {
     var n, t, r, i, s, l, c, u, f = 0,
         p = 0,
         o = [];
@@ -3434,7 +3450,7 @@ function wu(e) {
     return (d ? a.slice(0, d - 3) : a) + "===".slice(d || 3)
 }
 
-function Au(e) {
+function ku(e) {
     var n = function(v) {
             return decodeURIComponent(v.split("").map(function(g) {
                 return "%" + ("00" + g.charCodeAt(0).toString(16)).slice(-2)
@@ -3494,14 +3510,14 @@ function go() {
     }
 }
 
-function xu(e) {
+function $u(e) {
     return function(n, t, r) {
         for (var i = function(a, d, v) {
                 var g = JSON.stringify(a);
-                e ? n.add(d, bu(g)) : n.add(v, g)
+                e ? n.add(d, Su(g)) : n.add(v, g)
             }, s = function() {
                 var a = n.getPayload();
-                if (e ? a.cx : a.co) return JSON.parse(e ? yu(a.cx) : a.co)
+                if (e ? a.cx : a.co) return JSON.parse(e ? xu(a.cx) : a.co)
             }, l = function(a, d) {
                 var v = a || s();
                 return v ? v.data = v.data.concat(d.data) : v = d, v
@@ -3535,9 +3551,9 @@ var Un = "Snowplow: ",
 (function(e) {
     e[e.none = 0] = "none", e[e.error = 1] = "error", e[e.warn = 2] = "warn", e[e.debug = 3] = "debug", e[e.info = 4] = "info"
 })(Ue || (Ue = {}));
-var Ne = Su();
+var Ne = Iu();
 
-function Su(e) {
+function Iu(e) {
     e === void 0 && (e = Ue.warn);
 
     function n(l) {
@@ -3578,16 +3594,16 @@ function Su(e) {
     }
 }
 
-function Tu() {
+function Pu() {
     var e = [],
         n = [],
         t = function(r) {
-            var i = Cu(r),
-                s = Mu(r),
+            var i = Lu(r),
+                s = Ru(r),
                 l = [],
                 c = eo(e, r, s, i);
             l.push.apply(l, c);
-            var u = Ru(n, r, s, i);
+            var u = Uu(n, r, s, i);
             return l.push.apply(l, u), l
         };
     return {
@@ -3625,7 +3641,7 @@ function Tu() {
     }
 }
 
-function ku(e) {
+function Ou(e) {
     return {
         addPluginContexts: function(n) {
             var t = n ? rt([], n, !0) : [];
@@ -3640,13 +3656,13 @@ function ku(e) {
     }
 }
 
-function $u(e) {
+function Du(e) {
     var n = new RegExp("^iglu:([a-zA-Z0-9-_.]+)/([a-zA-Z0-9-_]+)/jsonschema/([1-9][0-9]*)-(0|[1-9][0-9]*)-(0|[1-9][0-9]*)$"),
         t = n.exec(e);
     if (t !== null) return t.slice(1, 6)
 }
 
-function Iu(e) {
+function Eu(e) {
     if (e[0] === "*" || e[1] === "*") return !1;
     if (e.slice(2).length > 0) {
         for (var n = !1, t = 0, r = e.slice(2); t < r.length; t++) {
@@ -3661,17 +3677,17 @@ function Iu(e) {
 
 function Os(e) {
     var n = e.split(".");
-    return n && n.length > 1 ? Iu(n) : !1
+    return n && n.length > 1 ? Eu(n) : !1
 }
 
-function Es(e) {
+function Ds(e) {
     var n = new RegExp("^iglu:((?:(?:[a-zA-Z0-9-_]+|\\*).)+(?:[a-zA-Z0-9-_]+|\\*))/([a-zA-Z0-9-_.]+|\\*)/jsonschema/([1-9][0-9]*|\\*)-(0|[1-9][0-9]*|\\*)-(0|[1-9][0-9]*|\\*)$"),
         t = n.exec(e);
     if (t !== null && Os(t[1])) return t.slice(1, 6)
 }
 
 function Xr(e) {
-    var n = Es(e);
+    var n = Ds(e);
     if (n) {
         var t = n[0];
         return n.length === 5 && Os(t)
@@ -3679,14 +3695,14 @@ function Xr(e) {
     return !1
 }
 
-function Pu(e) {
+function Cu(e) {
     return Array.isArray(e) && e.every(function(n) {
         return typeof n == "string"
     })
 }
 
 function pi(e) {
-    return Pu(e) ? e.every(function(n) {
+    return Cu(e) ? e.every(function(n) {
         return Xr(n)
     }) : typeof e == "string" ? Xr(e) : !1
 }
@@ -3696,7 +3712,7 @@ function gn(e) {
     return Is(n) && "schema" in n && "data" in n ? typeof n.schema == "string" && typeof n.data == "object" : !1
 }
 
-function Ou(e) {
+function Mu(e) {
     var n = e,
         t = 0;
     if (e != null && typeof e == "object" && !Array.isArray(e)) {
@@ -3719,19 +3735,19 @@ function Ut(e) {
     return ir(e) || gn(e)
 }
 
-function Ds(e) {
+function Es(e) {
     return Array.isArray(e) && e.length === 2 ? Array.isArray(e[1]) ? ir(e[0]) && e[1].every(Ut) : ir(e[0]) && Ut(e[1]) : !1
 }
 
 function Cs(e) {
-    return Array.isArray(e) && e.length === 2 && Ou(e[0]) ? Array.isArray(e[1]) ? e[1].every(Ut) : Ut(e[1]) : !1
+    return Array.isArray(e) && e.length === 2 && Mu(e[0]) ? Array.isArray(e[1]) ? e[1].every(Ut) : Ut(e[1]) : !1
 }
 
 function gi(e) {
-    return Ds(e) || Cs(e)
+    return Es(e) || Cs(e)
 }
 
-function Eu(e, n) {
+function ju(e, n) {
     var t = 0,
         r = 0,
         i = e.accept;
@@ -3746,10 +3762,10 @@ function Eu(e, n) {
 
 function Hn(e, n) {
     if (!Xr(e)) return !1;
-    var t = Es(e),
-        r = $u(n);
+    var t = Ds(e),
+        r = Du(n);
     if (t && r) {
-        if (!Du(t[0], r[0])) return !1;
+        if (!Bu(t[0], r[0])) return !1;
         for (var i = 1; i < 5; i++)
             if (!Ms(t[i], r[i])) return !1;
         return !0
@@ -3757,7 +3773,7 @@ function Hn(e, n) {
     return !1
 }
 
-function Du(e, n) {
+function Bu(e, n) {
     var t = n.split("."),
         r = e.split(".");
     if (t && r) {
@@ -3773,7 +3789,7 @@ function Ms(e, n) {
     return e && n && e === "*" || e === n
 }
 
-function Cu(e) {
+function Lu(e) {
     for (var n = e.getJson(), t = 0, r = n; t < r.length; t++) {
         var i = r[t];
         if (i.keyIfEncoded === "ue_px" && typeof i.json.data == "object") {
@@ -3784,12 +3800,12 @@ function Cu(e) {
     return ""
 }
 
-function Mu(e) {
+function Ru(e) {
     var n = e.getPayload().e;
     return typeof n == "string" ? n : ""
 }
 
-function ju(e, n, t, r) {
+function Vu(e, n, t, r) {
     var i = void 0;
     try {
         var s = {
@@ -3811,7 +3827,7 @@ function js(e) {
 function eo(e, n, t, r) {
     var i, s = js(e),
         l = function(u) {
-            var f = Bu(u, n, t, r);
+            var f = Nu(u, n, t, r);
             if (f && f.length !== 0) return f
         },
         c = s.map(l);
@@ -3820,17 +3836,17 @@ function eo(e, n, t, r) {
     }))
 }
 
-function Bu(e, n, t, r) {
+function Nu(e, n, t, r) {
     if (gn(e)) return [e];
     if (ir(e)) {
-        var i = ju(e, n, t, r);
+        var i = Vu(e, n, t, r);
         if (gn(i)) return [i];
         if (Array.isArray(i)) return i
     }
 }
 
-function Lu(e, n, t, r) {
-    if (Ds(e)) {
+function zu(e, n, t, r) {
+    if (Es(e)) {
         var i = e[0],
             s = !1;
         try {
@@ -3844,14 +3860,14 @@ function Lu(e, n, t, r) {
             s = !1
         }
         if (s === !0) return eo(e[1], n, t, r)
-    } else if (Cs(e) && Eu(e[0], r)) return eo(e[1], n, t, r);
+    } else if (Cs(e) && ju(e[0], r)) return eo(e[1], n, t, r);
     return []
 }
 
-function Ru(e, n, t, r) {
+function Uu(e, n, t, r) {
     var i, s = js(e),
         l = function(u) {
-            var f = Lu(u, n, t, r);
+            var f = zu(u, n, t, r);
             if (f && f.length !== 0) return f
         },
         c = s.map(l);
@@ -3860,7 +3876,7 @@ function Ru(e, n, t, r) {
     }))
 }
 
-function Vu(e) {
+function Hu(e) {
     return e == null ? {
         type: "dtm",
         value: new Date().getTime()
@@ -3876,12 +3892,12 @@ function Vu(e) {
     }
 }
 
-function Nu(e) {
+function Fu(e) {
     e === void 0 && (e = {});
 
     function n(u, f, p) {
-        var o = ku(f),
-            a = Tu(),
+        var o = Ou(f),
+            a = Pu(),
             d = u,
             v = {};
 
@@ -3899,8 +3915,8 @@ function Nu(e) {
         }
 
         function h(b, P, z) {
-            b.withJsonProcessor(xu(d)), b.add("eid", mu.v4()), b.addDict(v);
-            var Y = Vu(z);
+            b.withJsonProcessor($u(d)), b.add("eid", wu.v4()), b.addDict(v);
+            var Y = Hu(z);
             b.add(Y.type, Y.value.toString());
             var B = m(b, o.addPluginContexts(P)),
                 j = g(B);
@@ -3992,7 +4008,7 @@ function Nu(e) {
         i = e.callback,
         s = r != null ? r : [],
         l = n(t != null ? t : !0, s, i),
-        c = Ee(Ee({}, l), {
+        c = De(De({}, l), {
             addPlugin: function(u) {
                 var f, p, o = u.plugin;
                 s.push(o), (f = o.logger) === null || f === void 0 || f.call(o, Ne), (p = o.activateCorePlugin) === null || p === void 0 || p.call(o, c)
@@ -4004,7 +4020,7 @@ function Nu(e) {
     }), c
 }
 
-function zu(e) {
+function Gu(e) {
     var n = e.event,
         t = n.schema,
         r = n.data,
@@ -4019,7 +4035,7 @@ function zu(e) {
     return i.add("e", "ue"), i.addJson("ue_px", "ue_pr", s), i
 }
 
-function Uu(e) {
+function Zu(e) {
     var n = e.pageUrl,
         t = e.pageTitle,
         r = e.referrer,
@@ -4027,7 +4043,7 @@ function Uu(e) {
     return i.add("e", "pv"), i.add("url", n), i.add("page", t), i.add("refr", r), i
 }
 
-function Hu(e) {
+function Yu(e) {
     var n = e.pageUrl,
         t = e.pageTitle,
         r = e.referrer,
@@ -4038,7 +4054,7 @@ function Hu(e) {
         u = go();
     return u.add("e", "pp"), u.add("url", n), u.add("page", t), u.add("refr", r), i && !isNaN(Number(i)) && u.add("pp_mix", i.toString()), s && !isNaN(Number(s)) && u.add("pp_max", s.toString()), l && !isNaN(Number(l)) && u.add("pp_miy", l.toString()), c && !isNaN(Number(c)) && u.add("pp_may", c.toString()), u
 }
-var Fu = _u,
+var Wu = Au,
     Bs = {
         exports: {}
     },
@@ -4092,7 +4108,7 @@ var Fu = _u,
         };
     Ls.exports = n
 })();
-var Gu = Ls.exports,
+var qu = Ls.exports,
     to = {
         utf8: {
             stringToBytes: function(e) {
@@ -4115,7 +4131,7 @@ var Gu = Ls.exports,
     },
     vi = to;
 (function() {
-    var e = Gu,
+    var e = qu,
         n = vi.utf8,
         t = vi.bin,
         r = function(s) {
@@ -4149,8 +4165,8 @@ var Gu = Ls.exports,
         };
     i._blocksize = 16, i._digestsize = 20, Bs.exports = i
 })();
-var Zu = Bs.exports;
-const Yu = bn(Zu);
+var Qu = Bs.exports;
+const Ku = bn(Qu);
 var no = {
         exports: {}
     },
@@ -4171,56 +4187,56 @@ var Rs = no.exports,
     Vs = [];
 for (var Fn = 0; Fn < 256; ++Fn) Vs[Fn] = (Fn + 256).toString(16).substr(1);
 
-function Wu(e, n) {
+function Ju(e, n) {
     var t = n || 0,
         r = Vs;
     return [r[e[t++]], r[e[t++]], r[e[t++]], r[e[t++]], "-", r[e[t++]], r[e[t++]], "-", r[e[t++]], r[e[t++]], "-", r[e[t++]], r[e[t++]], "-", r[e[t++]], r[e[t++]], r[e[t++]], r[e[t++]], r[e[t++]], r[e[t++]]].join("")
 }
-var Ns = Wu,
-    qu = Rs,
-    Qu = Ns,
-    yi, Or, Er = 0,
-    Dr = 0;
+var Ns = Ju,
+    Xu = Rs,
+    ef = Ns,
+    yi, Or, Dr = 0,
+    Er = 0;
 
-function Ku(e, n, t) {
+function tf(e, n, t) {
     var r = n && t || 0,
         i = n || [];
     e = e || {};
     var s = e.node || yi,
         l = e.clockseq !== void 0 ? e.clockseq : Or;
     if (s == null || l == null) {
-        var c = qu();
+        var c = Xu();
         s == null && (s = yi = [c[0] | 1, c[1], c[2], c[3], c[4], c[5]]), l == null && (l = Or = (c[6] << 8 | c[7]) & 16383)
     }
     var u = e.msecs !== void 0 ? e.msecs : new Date().getTime(),
-        f = e.nsecs !== void 0 ? e.nsecs : Dr + 1,
-        p = u - Er + (f - Dr) / 1e4;
-    if (p < 0 && e.clockseq === void 0 && (l = l + 1 & 16383), (p < 0 || u > Er) && e.nsecs === void 0 && (f = 0), f >= 1e4) throw new Error("uuid.v1(): Can't create more than 10M uuids/sec");
-    Er = u, Dr = f, Or = l, u += 122192928e5;
+        f = e.nsecs !== void 0 ? e.nsecs : Er + 1,
+        p = u - Dr + (f - Er) / 1e4;
+    if (p < 0 && e.clockseq === void 0 && (l = l + 1 & 16383), (p < 0 || u > Dr) && e.nsecs === void 0 && (f = 0), f >= 1e4) throw new Error("uuid.v1(): Can't create more than 10M uuids/sec");
+    Dr = u, Er = f, Or = l, u += 122192928e5;
     var o = ((u & 268435455) * 1e4 + f) % 4294967296;
     i[r++] = o >>> 24 & 255, i[r++] = o >>> 16 & 255, i[r++] = o >>> 8 & 255, i[r++] = o & 255;
     var a = u / 4294967296 * 1e4 & 268435455;
     i[r++] = a >>> 8 & 255, i[r++] = a & 255, i[r++] = a >>> 24 & 15 | 16, i[r++] = a >>> 16 & 255, i[r++] = l >>> 8 | 128, i[r++] = l & 255;
     for (var d = 0; d < 6; ++d) i[r + d] = s[d];
-    return n || Qu(i)
-}
-var Ju = Ku,
-    Xu = Rs,
-    ef = Ns;
-
-function tf(e, n, t) {
-    var r = n && t || 0;
-    typeof e == "string" && (n = e === "binary" ? new Array(16) : null, e = null), e = e || {};
-    var i = e.random || (e.rng || Xu)();
-    if (i[6] = i[6] & 15 | 64, i[8] = i[8] & 63 | 128, n)
-        for (var s = 0; s < 16; ++s) n[r + s] = i[s];
     return n || ef(i)
 }
 var nf = tf,
-    rf = Ju,
-    zs = nf,
+    rf = Rs,
+    of = Ns;
+
+function sf(e, n, t) {
+    var r = n && t || 0;
+    typeof e == "string" && (n = e === "binary" ? new Array(16) : null, e = null), e = e || {};
+    var i = e.random || (e.rng || rf)();
+    if (i[6] = i[6] & 15 | 64, i[8] = i[8] & 63 | 128, n)
+        for (var s = 0; s < 16; ++s) n[r + s] = i[s];
+    return n || of(i)
+}
+var af = sf,
+    lf = nf,
+    zs = af,
     vo = zs;
-vo.v1 = rf;
+vo.v1 = lf;
 vo.v4 = zs;
 var ot = vo;
 /*!
@@ -4228,7 +4244,7 @@ var ot = vo;
  * Copyright 2022 Snowplow Analytics Ltd, 2010 Anthon Pang
  * Licensed under BSD-3-Clause
  */
-function of(e) {
+function cf(e) {
     try {
         var n = window.localStorage,
             t = n.getItem(e + ".expires");
@@ -4268,7 +4284,7 @@ function wi(e) {
     }
 }
 
-function sf(e, n) {
+function uf(e, n) {
     try {
         return window.sessionStorage.setItem(e, n), !0
     } catch (t) {
@@ -4327,7 +4343,7 @@ function vn(e, n) {
     return t ? decodeURIComponent(t[1].replace(/\+/g, " ")) : null
 }
 
-function af(e, n, t) {
+function ff(e, n, t) {
     var r = n + "=" + t,
         i = e.split("#"),
         s = i[0].split("?"),
@@ -4344,12 +4360,12 @@ function af(e, n, t) {
     return i[0] = l + "?" + c, i.join("#")
 }
 
-function lf(e, n) {
+function df(e, n) {
     for (var t = window.location.hostname, r = "_sp_root_domain_test_", i = r + new Date().getTime(), s = "_test_value_" + new Date().getTime(), l = t.split("."), c = l.length - 2; c >= 0; c--) {
         var u = l.slice(c).join(".");
         if (bt(i, s, 0, "/", u, e, n), bt(i) === s) {
             sr(i, u, e, n);
-            for (var f = cf(r), p = 0; p < f.length; p++) sr(f[p], u, e, n);
+            for (var f = pf(r), p = 0; p < f.length; p++) sr(f[p], u, e, n);
             return u
         }
     }
@@ -4360,7 +4376,7 @@ function sr(e, n, t, r) {
     bt(e, "", -1, "/", n, t, r)
 }
 
-function cf(e) {
+function pf(e) {
     for (var n = document.cookie.split("; "), t = [], r = 0; r < n.length; r++) n[r].substring(0, e.length) === e && t.push(n[r]);
     return t
 }
@@ -4369,7 +4385,7 @@ function bt(e, n, t, r, i, s, l) {
     return arguments.length > 1 ? document.cookie = e + "=" + encodeURIComponent(n != null ? n : "") + (t ? "; Expires=" + new Date(+new Date + t * 1e3).toUTCString() : "") + (r ? "; Path=" + r : "") + (i ? "; Domain=" + i : "") + (s ? "; SameSite=" + s : "") + (l ? "; Secure" : "") : decodeURIComponent((("; " + document.cookie).split("; " + e + "=")[1] || "").split(";")[0])
 }
 
-function uf() {
+function gf() {
     try {
         return !!window.localStorage
     } catch (e) {
@@ -4377,9 +4393,9 @@ function uf() {
     }
 }
 
-function ff() {
+function vf() {
     var e = "modernizr";
-    if (!uf()) return !1;
+    if (!gf()) return !1;
     try {
         var n = window.localStorage;
         return n.setItem(e, e), n.removeItem(e), !0
@@ -4387,12 +4403,12 @@ function ff() {
         return !1
     }
 }
-var df = "iglu:com.snowplowanalytics.snowplow/web_page/jsonschema/1-0-0",
-    pf = "iglu:com.snowplowanalytics.snowplow/browser_context/jsonschema/1-0-0",
-    gf = "iglu:com.snowplowanalytics.snowplow/client_session/jsonschema/1-0-2",
-    vf = "iglu:com.snowplowanalytics.snowplow/payload_data/jsonschema/1-0-4";
+var hf = "iglu:com.snowplowanalytics.snowplow/web_page/jsonschema/1-0-0",
+    mf = "iglu:com.snowplowanalytics.snowplow/browser_context/jsonschema/1-0-0",
+    _f = "iglu:com.snowplowanalytics.snowplow/client_session/jsonschema/1-0-2",
+    yf = "iglu:com.snowplowanalytics.snowplow/payload_data/jsonschema/1-0-4";
 
-function hf(e, n, t, r, i, s, l, c, u, f, p, o, a, d, v, g, m) {
+function bf(e, n, t, r, i, s, l, c, u, f, p, o, a, d, v, g, m) {
     var h = !1,
         y, w = [],
         b = !1;
@@ -4405,7 +4421,7 @@ function hf(e, n, t, r, i, s, l, c, u, f, p, o, a, d, v, g, m) {
         N = !B && j && (r === "post" || P),
         L = N ? i : "/i",
         J = "snowplowOutQueue_".concat(e, "_").concat(N ? "post2" : "get");
-    if (P && (a = {}), s = t && ff() && N && s || 1, t) try {
+    if (P && (a = {}), s = t && vf() && N && s || 1, t) try {
         var de = window.localStorage.getItem(J);
         w = de ? JSON.parse(de) : []
     } catch (O) {}
@@ -4525,11 +4541,11 @@ function hf(e, n, t, r, i, s, l, c, u, f, p, o, a, d, v, g, m) {
                 var Pe = w.slice(0, Q);
                 if (Pe.length > 0) {
                     var Je = !1,
-                        De = Pe.map(function(Te) {
+                        Ee = Pe.map(function(Te) {
                             return Te.evt
                         });
                     if (Y) {
-                        var pt = new Blob([q(X(De))], {
+                        var pt = new Blob([q(X(Ee))], {
                             type: "application/json"
                         });
                         try {
@@ -4538,7 +4554,7 @@ function hf(e, n, t, r, i, s, l, c, u, f, p, o, a, d, v, g, m) {
                             Je = !1
                         }
                     }
-                    Je === !0 ? Se(Q) : G.send(q(X(De)))
+                    Je === !0 ? Se(Q) : G.send(q(X(Ee)))
                 }
             }
         } else if (!o && !x(w)) {
@@ -4567,7 +4583,7 @@ function hf(e, n, t, r, i, s, l, c, u, f, p, o, a, d, v, g, m) {
 
     function q(O) {
         return JSON.stringify({
-            schema: vf,
+            schema: yf,
             data: O
         })
     }
@@ -4622,7 +4638,7 @@ function hf(e, n, t, r, i, s, l, c, u, f, p, o, a, d, v, g, m) {
     }
 }
 
-function mf(e, n) {
+function wf(e, n) {
     var t = new RegExp("^(?:https?|ftp)(?::/*(?:[^?]+))([?][^#]+)"),
         r = t.exec(e);
     return r && (r == null ? void 0 : r.length) > 1 ? vn(n, r[1]) : null
@@ -4630,11 +4646,11 @@ function mf(e, n) {
 
 function Ti(e, n, t) {
     var r;
-    return e === "translate.googleusercontent.com" ? (t === "" && (t = n), n = (r = mf(n, "u")) !== null && r !== void 0 ? r : "", e = ro(n)) : (e === "cc.bingj.com" || e === "webcache.googleusercontent.com") && (n = document.links[0].href, e = ro(n)), [e, n, t]
+    return e === "translate.googleusercontent.com" ? (t === "" && (t = n), n = (r = wf(n, "u")) !== null && r !== void 0 ? r : "", e = ro(n)) : (e === "cc.bingj.com" || e === "webcache.googleusercontent.com") && (n = document.links[0].href, e = ro(n)), [e, n, t]
 }
 var Hs = 0,
     wt = 1,
-    _f = 2,
+    Af = 2,
     hn = 3,
     ho = 4,
     Fs = 5,
@@ -4644,12 +4660,12 @@ var Hs = 0,
     xt = 9,
     Ze = 10;
 
-function yf() {
+function xf() {
     var e = ["1", "", 0, 0, 0, void 0, "", "", "", void 0, 0];
     return e
 }
 
-function bf(e, n, t, r) {
+function Sf(e, n, t, r) {
     var i = new Date,
         s = Math.round(i.getTime() / 1e3),
         l;
@@ -4661,11 +4677,11 @@ function bf(e, n, t, r) {
         u = function(p) {
             return p ? c(p, void 0) : void 0
         },
-        f = [l[Hs], l[wt], c(l[_f], s), c(l[hn], r), c(l[ho], s), u(l[Fs]), l[lt], l[Lt], l[At], u(l[xt]), c(l[Ze], 0)];
+        f = [l[Hs], l[wt], c(l[Af], s), c(l[hn], r), c(l[ho], s), u(l[Fs]), l[lt], l[Lt], l[At], u(l[xt]), c(l[Ze], 0)];
     return f
 }
 
-function wf(e, n) {
+function Tf(e, n) {
     var t;
     return e[wt] ? t = e[wt] : n ? (t = "", e[wt] = t) : (t = ot.v4(), e[wt] = t), t
 }
@@ -4684,7 +4700,7 @@ function Mr(e) {
     e[ho] = Math.round(new Date().getTime() / 1e3)
 }
 
-function Af(e, n) {
+function kf(e, n) {
     if (e[Ze] === 0) {
         var t = n.build();
         e[At] = t.eid;
@@ -4693,11 +4709,11 @@ function Af(e, n) {
     }
 }
 
-function xf(e) {
+function $f(e) {
     e[Ze] += 1
 }
 
-function Sf(e) {
+function If(e) {
     return e.shift(), e.join(".")
 }
 
@@ -4720,7 +4736,7 @@ function jr(e) {
     return e[lt]
 }
 
-function Tf(e) {
+function Pf(e) {
     return e[wt]
 }
 
@@ -4732,16 +4748,16 @@ function oo(e) {
     return e[Hs] === "0"
 }
 
-function kf(e) {
+function Of(e) {
     return e[Ze]
 }
 var mn = "x";
 
 function Lr() {
     return {
-        viewport: Rr($f()),
-        documentSize: Rr(If()),
-        resolution: Rr(Pf()),
+        viewport: Rr(Df()),
+        documentSize: Rr(Ef()),
+        resolution: Rr(Cf()),
         colorDepth: screen.colorDepth,
         devicePixelRatio: window.devicePixelRatio,
         cookiesEnabled: window.navigator.cookieEnabled,
@@ -4754,7 +4770,7 @@ function Lr() {
     }
 }
 
-function $f() {
+function Df() {
     var e, n;
     if ("innerWidth" in window) e = window.innerWidth, n = window.innerHeight;
     else {
@@ -4764,7 +4780,7 @@ function $f() {
     return e >= 0 && n >= 0 ? e + mn + n : null
 }
 
-function If() {
+function Ef() {
     var e = document.documentElement,
         n = document.body,
         t = n ? Math.max(n.offsetHeight, n.scrollHeight) : 0,
@@ -4773,7 +4789,7 @@ function If() {
     return isNaN(r) || isNaN(i) ? "" : r + mn + i
 }
 
-function Pf() {
+function Cf() {
     return screen.width + mn + screen.height
 }
 
@@ -4783,7 +4799,7 @@ function Rr(e) {
     }).join(mn)
 }
 
-function Of(e, n, t, r, i, s) {
+function Mf(e, n, t, r, i, s) {
     s === void 0 && (s = {});
     var l = [],
         c = function(p, o, a, d, v, g) {
@@ -4794,12 +4810,12 @@ function Of(e, n, t, r, i, s) {
                     return (T = _.stateStorageStrategy) !== null && T !== void 0 ? T : "cookieAndLocalStorage"
                 },
                 H = function(_) {
-                    var T, E;
-                    return typeof _.anonymousTracking == "boolean" ? !1 : (E = ((T = _.anonymousTracking) === null || T === void 0 ? void 0 : T.withSessionTracking) === !0) !== null && E !== void 0 ? E : !1
+                    var T, D;
+                    return typeof _.anonymousTracking == "boolean" ? !1 : (D = ((T = _.anonymousTracking) === null || T === void 0 ? void 0 : T.withSessionTracking) === !0) !== null && D !== void 0 ? D : !1
                 },
                 R = function(_) {
-                    var T, E;
-                    return typeof _.anonymousTracking == "boolean" ? !1 : (E = ((T = _.anonymousTracking) === null || T === void 0 ? void 0 : T.withServerAnonymisation) === !0) !== null && E !== void 0 ? E : !1
+                    var T, D;
+                    return typeof _.anonymousTracking == "boolean" ? !1 : (D = ((T = _.anonymousTracking) === null || T === void 0 ? void 0 : T.withServerAnonymisation) === !0) !== null && D !== void 0 ? D : !1
                 },
                 G = function(_) {
                     return !!_.anonymousTracking
@@ -4807,7 +4823,7 @@ function Of(e, n, t, r, i, s) {
                 Q = (y = (h = g == null ? void 0 : g.contexts) === null || h === void 0 ? void 0 : h.browser) !== null && y !== void 0 ? y : !1,
                 ge = (b = (w = g == null ? void 0 : g.contexts) === null || w === void 0 ? void 0 : w.webPage) !== null && b !== void 0 ? b : !0;
             l.push(ka()), ge && l.push(Sa()), Q && l.push(Ta()), l.push.apply(l, (P = g.plugins) !== null && P !== void 0 ? P : []);
-            var oe = Nu({
+            var oe = Fu({
                     base64: g.encodeBase64,
                     corePlugins: l,
                     callback: wa
@@ -4815,7 +4831,7 @@ function Of(e, n, t, r, i, s) {
                 Se = document.characterSet || document.charset,
                 Pe = Ti(window.location.hostname, window.location.href, Cr()),
                 Je = Si(Pe[0]),
-                De = Pe[1],
+                Ee = Pe[1],
                 pt = Pe[2],
                 Xe, et = (z = g.platform) !== null && z !== void 0 ? z : "web",
                 Te = No(d),
@@ -4837,8 +4853,8 @@ function Of(e, n, t, r, i, s) {
                 Re = G(g),
                 ae = Z(g),
                 In, gr = new Date().getTime(),
-                Pn, On, En, Dn, $o, Cn, Ce, Me = 1,
-                gt, tt = hf(p, v, ae == "localStorage" || ae == "cookieAndLocalStorage", g.eventMethod, ze, (k = g.bufferSize) !== null && k !== void 0 ? k : 1, (x = g.maxPostBytes) !== null && x !== void 0 ? x : 4e4, (A = g.maxGetBytes) !== null && A !== void 0 ? A : 0, (C = g.useStm) !== null && C !== void 0 ? C : !0, ($ = g.maxLocalStorageQueueSize) !== null && $ !== void 0 ? $ : 1e3, (U = g.connectionTimeout) !== null && U !== void 0 ? U : 5e3, pr, (F = g.customHeaders) !== null && F !== void 0 ? F : {}, (q = g.withCredentials) !== null && q !== void 0 ? q : !0, (X = g.retryStatusCodes) !== null && X !== void 0 ? X : [], ((re = g.dontRetryStatusCodes) !== null && re !== void 0 ? re : []).concat([400, 401, 403, 410, 422]), g.idService),
+                Pn, On, Dn, En, $o, Cn, Ce, Me = 1,
+                gt, tt = bf(p, v, ae == "localStorage" || ae == "cookieAndLocalStorage", g.eventMethod, ze, (k = g.bufferSize) !== null && k !== void 0 ? k : 1, (x = g.maxPostBytes) !== null && x !== void 0 ? x : 4e4, (A = g.maxGetBytes) !== null && A !== void 0 ? A : 0, (C = g.useStm) !== null && C !== void 0 ? C : !0, ($ = g.maxLocalStorageQueueSize) !== null && $ !== void 0 ? $ : 1e3, (U = g.connectionTimeout) !== null && U !== void 0 ? U : 5e3, pr, (F = g.customHeaders) !== null && F !== void 0 ? F : {}, (q = g.withCredentials) !== null && q !== void 0 ? q : !0, (X = g.retryStatusCodes) !== null && X !== void 0 ? X : [], ((re = g.dontRetryStatusCodes) !== null && re !== void 0 ? re : []).concat([400, 401, 403, 410, 422]), g.idService),
                 Io = !1,
                 Po = !1,
                 be = {
@@ -4849,28 +4865,28 @@ function Of(e, n, t, r, i, s) {
                 va = (O = (_e = g.contexts) === null || _e === void 0 ? void 0 : _e.session) !== null && O !== void 0 ? O : !1,
                 Mn, jn = g.onSessionUpdateCallback,
                 vr = !1;
-            g.hasOwnProperty("discoverRootDomain") && g.discoverRootDomain && (Kt = lf(kn, $n));
+            g.hasOwnProperty("discoverRootDomain") && g.discoverRootDomain && (Kt = df(kn, $n));
             var Bn = Lr(),
                 ha = Bn.browserLanguage,
                 ma = Bn.resolution,
                 _a = Bn.colorDepth,
                 ya = Bn.cookiesEnabled;
-            oe.setTrackerVersion(a), oe.setTrackerNamespace(o), oe.setAppId(Sn), oe.setPlatform(et), oe.addPayloadPair("cookie", ya ? "1" : "0"), oe.addPayloadPair("cs", Se), oe.addPayloadPair("lang", ha), oe.addPayloadPair("res", ma), oe.addPayloadPair("cd", _a), Co(), Vo(), g.crossDomainLinker && Eo(g.crossDomainLinker);
+            oe.setTrackerVersion(a), oe.setTrackerNamespace(o), oe.setAppId(Sn), oe.setPlatform(et), oe.addPayloadPair("cookie", ya ? "1" : "0"), oe.addPayloadPair("cs", Se), oe.addPayloadPair("lang", ha), oe.addPayloadPair("res", ma), oe.addPayloadPair("cd", _a), Co(), Vo(), g.crossDomainLinker && Do(g.crossDomainLinker);
 
             function vt() {
-                Pe = Ti(window.location.hostname, window.location.href, Cr()), Pe[1] !== De && (pt = Cr(De)), Je = Si(Pe[0]), De = Pe[1]
+                Pe = Ti(window.location.hostname, window.location.href, Cr()), Pe[1] !== Ee && (pt = Cr(Ee)), Je = Si(Pe[0]), Ee = Pe[1]
             }
 
             function Oo(_) {
                 var T = new Date().getTime(),
-                    E = _.currentTarget;
-                E != null && E.href && (E.href = af(E.href, "_sp", Cn + "." + T))
+                    D = _.currentTarget;
+                D != null && D.href && (D.href = ff(D.href, "_sp", Cn + "." + T))
             }
 
-            function Eo(_) {
+            function Do(_) {
                 for (var T = 0; T < document.links.length; T++) {
-                    var E = document.links[T];
-                    !E.spDecorationEnabled && _(E) && (it(E, "click", Oo, !0), it(E, "mousedown", Oo, !0), E.spDecorationEnabled = !0)
+                    var D = document.links[T];
+                    !D.spDecorationEnabled && _(D) && (it(D, "click", Oo, !0), it(D, "mousedown", Oo, !0), D.spDecorationEnabled = !0)
                 }
             }
 
@@ -4879,16 +4895,16 @@ function Of(e, n, t, r, i, s) {
                 return wo && (T = new RegExp("#.*"), _ = _.replace(T, "")), Ao && (T = new RegExp("[{}]", "g"), _ = _.replace(T, "")), _
             }
 
-            function Do(_) {
+            function Eo(_) {
                 var T = new RegExp("^([a-z]+):"),
-                    E = T.exec(_);
-                return E ? E[1] : null
+                    D = T.exec(_);
+                return D ? D[1] : null
             }
 
             function ba(_, T) {
-                var E = Do(T),
+                var D = Eo(T),
                     ve;
-                return E ? T : T.slice(0, 1) === "/" ? Do(_) + "://" + ro(_) + T : (_ = ht(_), (ve = _.indexOf("?")) >= 0 && (_ = _.slice(0, ve)), (ve = _.lastIndexOf("/")) !== _.length - 1 && (_ = _.slice(0, ve + 1)), _ + T)
+                return D ? T : T.slice(0, 1) === "/" ? Eo(_) + "://" + ro(_) + T : (_ = ht(_), (ve = _.indexOf("?")) >= 0 && (_ = _.slice(0, ve)), (ve = _.lastIndexOf("/")) !== _.length - 1 && (_ = _.slice(0, ve + 1)), _ + T)
             }
 
             function wa(_) {
@@ -4901,12 +4917,12 @@ function Of(e, n, t, r, i, s) {
 
             function hr(_) {
                 var T = Ot(_);
-                if (ae == "localStorage") return of(T);
+                if (ae == "localStorage") return cf(T);
                 if (ae == "cookie" || ae == "cookieAndLocalStorage") return bt(T)
             }
 
             function Co() {
-                vt(), $o = Yu((Kt || Je) + (fr || "/")).slice(0, 4)
+                vt(), $o = Ku((Kt || Je) + (fr || "/")).slice(0, 4)
             }
 
             function Jt() {
@@ -4927,16 +4943,16 @@ function Of(e, n, t, r, i, s) {
                 var _ = Mo(),
                     T = _[0];
                 Pn = T, On = T;
-                var E = _[1];
-                En = E, Dn = E
+                var D = _[1];
+                Dn = D, En = D
             }
 
             function xa() {
                 var _ = Mo(),
                     T = _[0];
                 T < Pn ? Pn = T : T > On && (On = T);
-                var E = _[1];
-                E < En ? En = E : E > Dn && (Dn = E)
+                var D = _[1];
+                D < Dn ? Dn = D : D > En && (En = D)
             }
 
             function Ln(_) {
@@ -4951,18 +4967,18 @@ function Of(e, n, t, r, i, s) {
 
             function _r(_) {
                 var T = Ot("id"),
-                    E = Sf(_);
-                return Bo(T, E, To)
+                    D = If(_);
+                return Bo(T, D, To)
             }
 
-            function Bo(_, T, E) {
-                return Re && !Pt ? !1 : ae == "localStorage" ? Kn(_, T, E) : ae == "cookie" || ae == "cookieAndLocalStorage" ? (bt(_, T, E, fr, Kt, kn, $n), document.cookie.indexOf("".concat(_, "=")) !== -1) : !1
+            function Bo(_, T, D) {
+                return Re && !Pt ? !1 : ae == "localStorage" ? Kn(_, T, D) : ae == "cookie" || ae == "cookieAndLocalStorage" ? (bt(_, T, D, fr, Kt, kn, $n), document.cookie.indexOf("".concat(_, "=")) !== -1) : !1
             }
 
             function Lo(_) {
                 var T = Ot("id"),
-                    E = Ot("ses");
-                bi(T), bi(E), sr(T, Kt, kn, $n), sr(E, Kt, kn, $n), _ != null && _.preserveSession || (Ce = ot.v4(), Me = 1), _ != null && _.preserveUser || (Cn = Re ? "" : ot.v4(), gt = null)
+                    D = Ot("ses");
+                bi(T), bi(D), sr(T, Kt, kn, $n), sr(D, Kt, kn, $n), _ != null && _.preserveSession || (Ce = ot.v4(), Me = 1), _ != null && _.preserveUser || (Cn = Re ? "" : ot.v4(), gt = null)
             }
 
             function Ro(_) {
@@ -4973,14 +4989,14 @@ function Of(e, n, t, r, i, s) {
                 if (!(Re && !Pt)) {
                     var _ = ae != "none" && !!hr("ses"),
                         T = Xt();
-                    Cn = wf(T, Re), _ ? Ce = jr(T) : Ce = nn(T), Me = Br(T), ae != "none" && (mr(), Mr(T), _r(T))
+                    Cn = Tf(T, Re), _ ? Ce = jr(T) : Ce = nn(T), Me = Br(T), ae != "none" && (mr(), Mr(T), _r(T))
                 }
             }
 
             function Xt() {
-                if (ae == "none") return yf();
+                if (ae == "none") return xf();
                 var _ = hr("id") || void 0;
-                return bf(_, Cn, Ce, Me)
+                return Sf(_, Cn, Ce, Me)
             }
 
             function No(_) {
@@ -4999,14 +5015,14 @@ function Of(e, n, t, r, i, s) {
                 if (ae === "none" || Re || !ge) return null;
                 var _ = "_sp_tab_id",
                     T = wi(_);
-                return T || (sf(_, ot.v4()), T = wi(_)), T || null
+                return T || (uf(_, ot.v4()), T = wi(_)), T || null
             }
 
             function Sa() {
                 return {
                     contexts: function() {
                         return [{
-                            schema: df,
+                            schema: hf,
                             data: {
                                 id: yr()
                             }
@@ -5019,8 +5035,8 @@ function Of(e, n, t, r, i, s) {
                 return {
                     contexts: function() {
                         return [{
-                            schema: pf,
-                            data: Ee(Ee({}, Lr()), {
+                            schema: mf,
+                            data: De(De({}, Lr()), {
                                 tabId: Uo()
                             })
                         }]
@@ -5029,30 +5045,30 @@ function Of(e, n, t, r, i, s) {
             }
 
             function ka() {
-                var _ = function(E) {
-                        return Re ? null : E
+                var _ = function(D) {
+                        return Re ? null : D
                     },
-                    T = function(E) {
-                        return Pt ? E : _(E)
+                    T = function(D) {
+                        return Pt ? D : _(D)
                     };
                 return {
-                    beforeTrack: function(E) {
+                    beforeTrack: function(D) {
                         var ve = hr("ses"),
                             ue = Xt(),
-                            nt = kf(ue) === 0;
+                            nt = Of(ue) === 0;
                         if (dr ? Mn = !!bt(dr) : Mn = !1, So || Mn) {
                             Lo();
                             return
                         }
                         oo(ue) ? (!ve && ae != "none" ? Ce = nn(ue) : Ce = jr(ue), Me = Br(ue)) : new Date().getTime() - gr > ko * 1e3 && (Me++, Ce = nn(ue, {
                             memorizedVisitCount: Me
-                        })), Mr(ue), Af(ue, E), xf(ue);
+                        })), Mr(ue), kf(ue, D), $f(ue);
                         var ke = Lr(),
-                            Et = ke.viewport,
+                            Dt = ke.viewport,
                             en = ke.documentSize;
-                        E.add("vp", Et), E.add("ds", en), E.add("vid", T(Me)), E.add("sid", T(Ce)), E.add("duid", _(Tf(ue))), E.add("uid", _(gt)), vt(), E.add("refr", ht(Xe || pt)), E.add("url", ht(Tn || De));
+                        D.add("vp", Dt), D.add("ds", en), D.add("vid", T(Me)), D.add("sid", T(Ce)), D.add("duid", _(Pf(ue))), D.add("uid", _(gt)), vt(), D.add("refr", ht(Xe || pt)), D.add("url", ht(Tn || Ee));
                         var tn = ki(ue, ae, Re);
-                        if (va && (!Re || Pt) && $a(E, tn), ae != "none") {
+                        if (va && (!Re || Pt) && $a(D, tn), ae != "none") {
                             _r(ue);
                             var wr = mr();
                             (!ve || nt) && wr && jn && !vr && (jn(tn), vr = !1)
@@ -5063,11 +5079,11 @@ function Of(e, n, t, r, i, s) {
             }
 
             function $a(_, T) {
-                var E = {
-                    schema: gf,
+                var D = {
+                    schema: _f,
                     data: T
                 };
-                _.addContextEntity(E)
+                _.addContextEntity(D)
             }
 
             function Ia() {
@@ -5077,8 +5093,8 @@ function Of(e, n, t, r, i, s) {
                     })), Mr(_), ae != "none") {
                     var T = ki(_, ae, Re);
                     _r(_);
-                    var E = mr();
-                    E && jn && (vr = !0, jn(T))
+                    var D = mr();
+                    D && jn && (vr = !0, jn(T))
                 }
                 gr = new Date().getTime()
             }
@@ -5089,32 +5105,32 @@ function Of(e, n, t, r, i, s) {
 
             function Pa(_) {
                 var T = _.title,
-                    E = _.context,
+                    D = _.context,
                     ve = _.timestamp,
                     ue = _.contextCallback;
                 vt(), Po && zo(), Po = !0, It = document.title, Qt = T;
                 var nt = xi(Qt || It);
-                oe.track(Uu({
-                    pageUrl: ht(Tn || De),
+                oe.track(Zu({
+                    pageUrl: ht(Tn || Ee),
                     pageTitle: nt,
                     referrer: ht(Xe || pt)
-                }), br(E, ue), ve);
+                }), br(D, ue), ve);
                 var ke = new Date,
-                    Et = !1;
+                    Dt = !1;
                 if (be.enabled && !be.installed) {
-                    be.installed = !0, Et = !0;
+                    be.installed = !0, Dt = !0;
                     var en = {
                         update: function() {
                             if (typeof window < "u" && typeof window.addEventListener == "function") {
-                                var Dt = !1,
+                                var Et = !1,
                                     Rn = Object.defineProperty({}, "passive", {
                                         get: function() {
-                                            Dt = !0
+                                            Et = !0
                                         },
                                         set: function() {}
                                     }),
                                     Zo = function() {};
-                                window.addEventListener("testPassiveEventSupport", Zo, Rn), window.removeEventListener("testPassiveEventSupport", Zo, Rn), en.hasSupport = Dt
+                                window.addEventListener("testPassiveEventSupport", Zo, Rn), window.removeEventListener("testPassiveEventSupport", Zo, Rn), en.hasSupport = Et
                             }
                         }
                     };
@@ -5125,70 +5141,70 @@ function Of(e, n, t, r, i, s) {
                     }) : it(document, tn, Jt), jo();
                     var wr = ["click", "mouseup", "mousedown", "mousemove", "keypress", "keydown", "keyup", "touchend", "touchstart"],
                         Ca = ["resize", "focus", "blur"],
-                        Ar = function(Ma, Dt) {
-                            return Dt === void 0 && (Dt = Jt),
+                        Ar = function(Ma, Et) {
+                            return Et === void 0 && (Et = Jt),
                                 function(Rn) {
-                                    return it(document, Rn, Dt)
+                                    return it(document, Rn, Et)
                                 }
                         };
                     wr.forEach(Ar(document)), Ca.forEach(Ar(window)), Ar(window, Aa)("scroll")
                 }
-                if (be.enabled && (pa || Et)) {
+                if (be.enabled && (pa || Dt)) {
                     In = ke.getTime();
                     var Go = void 0;
                     for (Go in be.configurations) {
                         var xr = be.configurations[Go];
-                        xr && (window.clearInterval(xr.activityInterval), Oa(xr, E, ue))
+                        xr && (window.clearInterval(xr.activityInterval), Oa(xr, D, ue))
                     }
                 }
             }
 
-            function Oa(_, T, E) {
-                var ve = function(ke, Et) {
+            function Oa(_, T, D) {
+                var ve = function(ke, Dt) {
                         vt(), ke({
-                            context: Et,
+                            context: Dt,
                             pageViewId: yr(),
                             minXOffset: Pn,
-                            minYOffset: En,
+                            minYOffset: Dn,
                             maxXOffset: On,
-                            maxYOffset: Dn
+                            maxYOffset: En
                         }), jo()
                     },
                     ue = function() {
                         var ke = new Date;
-                        In + _.configMinimumVisitLength > ke.getTime() && ve(_.callback, br(T, E)), _.activityInterval = window.setInterval(nt, _.configHeartBeatTimer)
+                        In + _.configMinimumVisitLength > ke.getTime() && ve(_.callback, br(T, D)), _.activityInterval = window.setInterval(nt, _.configHeartBeatTimer)
                     },
                     nt = function() {
                         var ke = new Date;
-                        In + _.configHeartBeatTimer > ke.getTime() && ve(_.callback, br(T, E))
+                        In + _.configHeartBeatTimer > ke.getTime() && ve(_.callback, br(T, D))
                     };
                 _.configMinimumVisitLength === 0 ? _.activityInterval = window.setInterval(nt, _.configHeartBeatTimer) : _.activityInterval = window.setTimeout(ue, _.configMinimumVisitLength)
             }
 
             function Ho(_) {
                 var T = _.minimumVisitLength,
-                    E = _.heartbeatDelay,
+                    D = _.heartbeatDelay,
                     ve = _.callback;
-                if (Ai(T) && Ai(E)) return {
+                if (Ai(T) && Ai(D)) return {
                     configMinimumVisitLength: T * 1e3,
-                    configHeartBeatTimer: E * 1e3,
+                    configHeartBeatTimer: D * 1e3,
                     callback: ve
                 };
                 Ne.error("Activity tracking minimumVisitLength & heartbeatDelay must be integers")
             }
 
-            function Ea(_) {
+            function Da(_) {
                 var T = _.context,
-                    E = _.minXOffset,
+                    D = _.minXOffset,
                     ve = _.minYOffset,
                     ue = _.maxXOffset,
                     nt = _.maxYOffset,
                     ke = document.title;
-                ke !== It && (It = ke, Qt = void 0), oe.track(Hu({
-                    pageUrl: ht(Tn || De),
+                ke !== It && (It = ke, Qt = void 0), oe.track(Yu({
+                    pageUrl: ht(Tn || Ee),
                     pageTitle: xi(Qt || It),
                     referrer: ht(Xe || pt),
-                    minXOffset: Ln(E),
+                    minXOffset: Ln(D),
                     maxXOffset: Ln(ue),
                     minYOffset: Ln(ve),
                     maxYOffset: Ln(nt)
@@ -5199,7 +5215,7 @@ function Of(e, n, t, r, i, s) {
                 var T = be.configurations[_];
                 (T == null ? void 0 : T.configMinimumVisitLength) === 0 ? window.clearTimeout(T == null ? void 0 : T.activityInterval) : window.clearInterval(T == null ? void 0 : T.activityInterval), be.configurations[_] = void 0
             }
-            var Da = {
+            var Ea = {
                 getDomainSessionIndex: function() {
                     return Me
                 },
@@ -5222,7 +5238,7 @@ function Of(e, n, t, r, i, s) {
                     Xe = _
                 },
                 setCustomUrl: function(_) {
-                    vt(), Tn = ba(De, _)
+                    vt(), Tn = ba(Ee, _)
                 },
                 setDocumentTitle: function(_) {
                     It = document.title, Qt = _
@@ -5240,11 +5256,11 @@ function Of(e, n, t, r, i, s) {
                     To = _
                 },
                 crossDomainLinker: function(_) {
-                    Eo(_)
+                    Do(_)
                 },
                 enableActivityTracking: function(_) {
-                    be.configurations.pagePing || (be.enabled = !0, be.configurations.pagePing = Ho(Ee(Ee({}, _), {
-                        callback: Ea
+                    be.configurations.pagePing || (be.enabled = !0, be.configurations.pagePing = Ho(De(De({}, _), {
+                        callback: Da
                     })))
                 },
                 enableActivityTrackingCallback: function(_) {
@@ -5266,7 +5282,7 @@ function Of(e, n, t, r, i, s) {
                     gt = _
                 },
                 setUserIdFromLocation: function(_) {
-                    vt(), gt = vn(_, De)
+                    vt(), gt = vn(_, Ee)
                 },
                 setUserIdFromReferrer: function(_) {
                     vt(), gt = vn(_, pt)
@@ -5298,7 +5314,7 @@ function Of(e, n, t, r, i, s) {
                 },
                 clearUserData: Lo
             };
-            return Ee(Ee({}, Da), {
+            return De(De({}, Ea), {
                 id: p,
                 namespace: o,
                 core: oe,
@@ -5306,7 +5322,7 @@ function Of(e, n, t, r, i, s) {
             })
         },
         u = c(e, n, t, r, i, s),
-        f = Ee(Ee({}, u), {
+        f = De(De({}, u), {
             addPlugin: function(p) {
                 var o, a;
                 f.core.addPlugin(p), (a = (o = p.plugin).activateBrowserPlugin) === null || a === void 0 || a.call(o, f)
@@ -5321,40 +5337,40 @@ var ln = {};
 
 function mo(e, n) {
     try {
-        Df(e != null ? e : Cf()).forEach(n)
+        Bf(e != null ? e : Lf()).forEach(n)
     } catch (t) {
         Ne.error("Function failed", t)
     }
 }
 
-function Ef(e, n, t, r, i, s) {
-    return ln.hasOwnProperty(e) ? null : (ln[e] = Of(e, n, t, r, i, s), ln[e])
+function jf(e, n, t, r, i, s) {
+    return ln.hasOwnProperty(e) ? null : (ln[e] = Mf(e, n, t, r, i, s), ln[e])
 }
 
-function Df(e) {
-    return Mf(e, ln)
+function Bf(e) {
+    return Rf(e, ln)
 }
 
-function Cf() {
+function Lf() {
     return Object.keys(ln)
 }
 
-function Mf(e, n) {
+function Rf(e, n) {
     for (var t = [], r = 0, i = e; r < i.length; r++) {
         var s = i[r];
         n.hasOwnProperty(s) ? t.push(n[s]) : Ne.warn(s + " not configured")
     }
     return t
 }
-var jf = function() {
+var Vf = function() {
     function e() {
         this.outQueues = [], this.bufferFlushers = [], this.hasLoaded = !1, this.registeredOnLoadHandlers = []
     }
     return e
 }();
 
-function Bf() {
-    var e = new jf,
+function Nf() {
+    var e = new Vf,
         n = document,
         t = window;
 
@@ -5391,44 +5407,44 @@ function Bf() {
  * Copyright 2022 Snowplow Analytics Ltd, 2010 Anthon Pang
  * Licensed under BSD-3-Clause
  */
-function Lf(e, n) {
+function zf(e, n) {
     mo(n, function(t) {
         t.enableActivityTracking(e)
     })
 }
 
-function Rf(e, n) {
+function Uf(e, n) {
     mo(n, function(t) {
         t.trackPageView(e)
     })
 }
 
-function Vf(e, n) {
+function Hf(e, n) {
     mo(n, function(t) {
-        t.core.track(zu({
+        t.core.track(Gu({
             event: e.event
         }), e.context, e.timestamp)
     })
 }
-var $i = typeof window < "u" ? Bf() : void 0;
+var $i = typeof window < "u" ? Nf() : void 0;
 
-function Nf(e, n, t) {
-    if (t === void 0 && (t = {}), $i) return Ef(e, e, "js-".concat(Fu), n, $i, t)
+function Ff(e, n, t) {
+    if (t === void 0 && (t = {}), $i) return jf(e, e, "js-".concat(Wu), n, $i, t)
 }
-const zf = "brawlstars-cctv-prod",
-    Uf = "https://collector.snowplow.supercell.com",
-    Hf = () => {
-        Nf("sp1", Uf, {
-            appId: zf,
+const Gf = "brawlstars-cctv-prod",
+    Zf = "https://collector.snowplow.supercell.com",
+    Yf = () => {
+        Ff("sp1", Zf, {
+            appId: Gf,
             plugins: []
         })
     },
-    Ff = () => Lf({
+    Wf = () => zf({
         minimumVisitLength: 5,
         heartbeatDelay: 20
     }),
-    Gf = (e, n, t, r = {}) => {
-        Vf({
+    qf = (e, n, t, r = {}) => {
+        Hf({
             event: {
                 schema: "iglu:com.supercell/button_click/jsonschema/1-0-0",
                 data: {
@@ -5445,25 +5461,30 @@ const zf = "brawlstars-cctv-prod",
         })
     },
     ne = {
-        init: Hf,
-        setupActivityTracking: Ff,
-        trackPageView: Rf,
-        trackClickEvent: Gf
+        init: Yf,
+        setupActivityTracking: Wf,
+        trackPageView: Uf,
+        trackClickEvent: qf
     },
-    Zf = [{
-        postDate: "2023-12-07",
+    Qf = [{
+        postDate: "2023-12-08",
         bgSrc: {
             png: "scenes/scene/bg.png"
+        },
+        overlayVideoSrc: {
+            mp4: "scenes/scene/overlay-video.mp4",
+            png: "scenes/scene/overlay-video.png",
+            webm: "scenes/scene/overlay-video.webm"
         },
         transitionVideoSrc: {
             mp4: "scenes/scene/transition-video.mp4"
         }
     }],
-    Yf = Zf,
-    Wf = Wt(Yf),
+    Kf = Qf,
+    Jf = Wt(Kf),
     Fe = () => {
         var n, t, r;
-        const e = Wf()[0];
+        const e = Jf()[0];
         return mt(ye({}, e), {
             bgSrc: je(e.bgSrc.png),
             transitionVideoSrc: je(e.transitionVideoSrc.mp4),
@@ -5472,7 +5493,12 @@ const zf = "brawlstars-cctv-prod",
             overlayVideoPoster: ((r = e.overlayVideoSrc) == null ? void 0 : r.png) && je(e.overlayVideoSrc.png)
         })
     },
-    qf = [{
+    Xf = [{
+        src: {
+            jpg: "logs/log/logbook-37.jpg"
+        },
+        postDate: "2023-12-08"
+    }, {
         src: {
             jpg: "logs/log/logbook-36.jpg"
         },
@@ -5653,13 +5679,13 @@ const zf = "brawlstars-cctv-prod",
         },
         postDate: "2023-11-02"
     }],
-    Qf = qf,
-    Kf = Wt(Qf),
-    Gs = () => Kf().map(n => mt(ye({}, n), {
+    ed = Xf,
+    td = Wt(ed),
+    Gs = () => td().map(n => mt(ye({}, n), {
         srcJpg: n.src.jpg ? je(n.src.jpg) : void 0,
         srcPng: n.src.png ? je(n.src.png) : void 0
     })),
-    Jf = "/assets/instructions-modal-overlay-b0399863.png",
+    nd = "/assets/instructions-modal-overlay-b0399863.png",
     _o = "/assets/terminal-logo-7a935f92.png",
     Zs = "/assets/logbook-page-bg-left-d97e3458.jpg",
     Ys = "/assets/logbook-page-bg-right-98ad4729.jpg",
@@ -5671,45 +5697,45 @@ const zf = "brawlstars-cctv-prod",
         t.onload = () => n(t), t.src = e
     });
 var Ht = (e => (e[e.initializing = 0] = "initializing", e[e["loading-assets"] = 1] = "loading-assets", e[e["video-transition"] = 2] = "video-transition", e[e.done = 3] = "done", e))(Ht || {});
-const Xf = Fe(),
-    ed = Gs(),
-    td = () => {
+const rd = Fe(),
+    od = Gs(),
+    id = () => {
         const e = [Zs, Ys],
-            n = [...ed.map(i => i.srcPng || i.srcJpg), null].reverse();
+            n = [...od.map(i => i.srcPng || i.srcJpg), null].reverse();
         n.length === 1 && e.push(Ws);
         const t = qs(n),
             r = t[t.length - 1];
         return r && e.push(...r.filter(i => !!i)), e
     },
-    nd = [Xf.bgSrc, Jf, _o, io, ...td()],
+    sd = [rd.bgSrc, nd, _o, io, ...id()],
     [Ks, yo] = W(0),
-    [rd, od] = W(!1),
-    [id, sd] = W(!1),
-    ad = uo("standalone"),
-    ld = async () => {
+    [ad, ld] = W(!1),
+    [cd, ud] = W(!1),
+    fd = uo("standalone"),
+    dd = async () => {
         yo(1);
-        const e = nd.map(n => Qs(n));
-        await Promise.allSettled(e), od(!0)
+        const e = sd.map(n => Qs(n));
+        await Promise.allSettled(e), ld(!0)
     }, Js = () => {
-        ad || (window.location.href = "brawlstars-inbox://cctvloaded")
+        fd || (window.location.href = "brawlstars-inbox://cctvloaded")
     };
 pe(() => {
-    rd() && id() && (Js(), yo(2))
+    ad() && cd() && (Js(), yo(2))
 });
 pe(() => {
     Ks() === 3 && Js()
 });
-const cd = () => {
-        sd(!0)
+const pd = () => {
+        ud(!0)
     },
-    ud = () => {
+    gd = () => {
         yo(3)
     },
     st = {
-        init: ld,
+        init: dd,
         currentStatus: Ks,
-        onVideoTransitionLoaded: cd,
-        onVideoTransitionEnd: ud
+        onVideoTransitionLoaded: pd,
+        onVideoTransitionEnd: gd
     },
     Xs = e => e[Math.floor(Math.random() * e.length)];
 
@@ -5724,12 +5750,12 @@ function ea(e) {
     return r
 }
 
-function fd() {
+function vd() {
     for (var e, n, t = 0, r = ""; t < arguments.length;)(e = arguments[t++]) && (n = ea(e)) && (r && (r += " "), r += n);
     return r
 }
 const Ii = e => typeof e == "boolean" ? "".concat(e) : e === 0 ? "0" : e,
-    ce = fd,
+    ce = vd,
     An = (e, n) => t => {
         var r;
         if ((n == null ? void 0 : n.variants) == null) return ce(e, t == null ? void 0 : t.class, t == null ? void 0 : t.className);
@@ -5759,60 +5785,60 @@ const Ii = e => typeof e == "boolean" ? "".concat(e) : e === 0 ? "0" : e,
         }, []);
         return ce(e, l, u, t == null ? void 0 : t.class, t == null ? void 0 : t.className)
     },
-    dd = "/assets/player-8b9a1305.mp3",
-    pd = "/assets/player-4aabf494.ogg",
-    gd = V('<svg viewBox="0 0 68 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path id="path-1" d="M8 36L25 24L8 12V36Z" fill="currentColor"></path><path id="path-2" d="M25 36L42 24L25 12V36Z" fill="currentColor"></path><path id="path-3" d="M42 36L59 24L42 12V36Z" fill="currentColor">'),
-    vd = (e = {}) => (() => {
-        const n = gd();
-        return Qe(n, e, !0, !0), n
-    })(),
-    hd = V('<svg viewBox="0 0 68 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path id="path-1" d="M26 36L9 24L26 12V36Z" fill="currentColor"></path><path id="path-2" d="M43 36L26 24L43 12V36Z" fill="currentColor"></path><path id="path-3" d="M60 36L43 24L60 12V36Z" fill="currentColor">'),
-    md = (e = {}) => (() => {
-        const n = hd();
-        return Qe(n, e, !0, !0), n
-    })(),
-    _d = V('<svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 104 68"><path d="M60.66 16.06c-.57-.27-.85-.88-.85-1.83 0-.95.28-1.57.85-1.84s1.78-.4 3.63-.4c1.85 0 3.06.13 3.63.4.57.27.85.88.85 1.84 0 .96-.28 1.57-.85 1.83-.57.27-1.78.4-3.63.4-1.85 0-3.06-.13-3.63-.4Zm0 35.81c-.57-.27-.85-.88-.85-1.83 0-.95.28-1.57.85-1.84s1.78-.4 3.63-.4c1.85 0 3.06.13 3.63.4.57.27.85.88.85 1.84 0 .96-.28 1.57-.85 1.83-.57.27-1.78.4-3.63.4-1.85.01-3.06-.13-3.63-.4Zm9.54-26.81c-.96-.24-1.43-.86-1.43-1.88 0-1.01.48-1.64 1.43-1.88s3.46-.36 7.52-.36 6.57.12 7.52.36c.95.24 1.43.87 1.43 1.88 0 1.02-.48 1.64-1.43 1.88-.96.24-3.46.36-7.52.36-4.06-.01-6.57-.12-7.52-.36Zm0 17.9c-.96-.24-1.43-.86-1.43-1.88 0-1.01.48-1.64 1.43-1.88s3.46-.36 7.52-.36 6.57.12 7.52.36c.95.24 1.43.87 1.43 1.88 0 1.02-.48 1.64-1.43 1.88-.96.24-3.46.36-7.52.36s-6.57-.12-7.52-.36Zm3.89-8.99c-.57-.27-.85-.88-.85-1.83 0-.95.28-1.57.85-1.84s1.78-.4 3.63-.4c1.85 0 3.06.13 3.63.4.57.27.85.88.85 1.84 0 .95-.28 1.57-.85 1.83-.57.27-1.78.4-3.63.4-1.85 0-3.06-.14-3.63-.4Zm13.43-17.91c-.57-.27-.85-.88-.85-1.83 0-.95.28-1.57.85-1.84s1.78-.4 3.63-.4c1.85 0 3.06.13 3.63.4.57.27.85.88.85 1.84 0 .96-.28 1.57-.85 1.83-.57.27-1.78.4-3.63.4-1.85 0-3.06-.13-3.63-.4Zm0 35.81c-.57-.27-.85-.88-.85-1.83 0-.95.28-1.57.85-1.84s1.78-.4 3.63-.4c1.85 0 3.06.13 3.63.4.57.27.85.88.85 1.84 0 .96-.28 1.57-.85 1.83-.57.27-1.78.4-3.63.4-1.85.01-3.06-.13-3.63-.4ZM19.57 17.17c-.89-.22-1.34-.81-1.34-1.75 0-.95.45-1.53 1.34-1.75.89-.22 3.23-.33 7.01-.33s6.12.11 7.01.33c.89.22 1.34.81 1.34 1.75 0 .95-.45 1.53-1.34 1.75-.89.22-3.23.33-7.01.33s-6.12-.11-7.01-.33ZM27.24 9.83c-.89-.22-1.34-.81-1.34-1.75 0-.95.45-1.53 1.34-1.75.89-.22 3.23-.33 7.01-.33s6.12.11 7.01.33c.89.22 1.34.81 1.34 1.75 0 .95-.45 1.53-1.34 1.75-.89.22-3.23.33-7.01.33s-6.12-.11-7.01-.33ZM13.37 43.61c3.78 0 6.12.11 7.01.33.89.22 1.34.81 1.34 1.75 0 .95-.45 1.53-1.34 1.75-.89.22-3.23.33-7.01.33-3.79 0-6.12-.11-7.01-.33-.89-.22-1.34-.81-1.34-1.75 0-.95.45-1.53 1.34-1.75.89-.22 3.23-.33 7.01-.33ZM26.11 50.21c3.78 0 6.12.11 7.01.33.89.22 1.34.81 1.34 1.75 0 .95-.45 1.53-1.34 1.75-.89.22-3.23.33-7.01.33-3.79 0-6.12-.11-7.01-.33-.89-.22-1.34-.81-1.34-1.75 0-.95.45-1.53 1.34-1.75.88-.22 3.22-.33 7.01-.33ZM33.78 57.55c3.78 0 6.12.11 7.01.33.89.22 1.34.81 1.34 1.75 0 .95-.45 1.53-1.34 1.75-.89.22-3.23.33-7.01.33-3.79 0-6.12-.11-7.01-.33-.89-.22-1.34-.81-1.34-1.75 0-.95.45-1.53 1.34-1.75.88-.21 3.22-.33 7.01-.33ZM1.43 31.5c-.64-.3-.95-.99-.95-2.06s.32-1.76.95-2.06c.64-.3 1.99-.45 4.07-.45 2.07 0 3.43.15 4.07.45.64.3.95.99.95 2.06s-.32 1.76-.95 2.06c-.64.3-1.99.45-4.07.45-2.08.01-3.43-.14-4.07-.45ZM.95 39.78c-.64-.3-.95-.99-.95-2.06s.32-1.76.95-2.06c.64-.3 1.99-.45 4.07-.45 2.07 0 3.43.15 4.07.45.64.3.95.99.95 2.06s-.32 1.76-.95 2.06c-.64.3-1.99.45-4.07.45-2.07 0-3.43-.15-4.07-.45ZM38.54 17.82c-.64-.3-.95-.99-.95-2.06s.32-1.76.95-2.06c.64-.3 1.99-.45 4.07-.45 2.07 0 3.43.15 4.07.45.64.3.95.99.95 2.06s-.32 1.76-.95 2.06c-.64.3-1.99.45-4.07.45s-3.44-.15-4.07-.45ZM38.54 25.3c-.64-.3-.95-.99-.95-2.06s.32-1.76.95-2.06c.64-.3 1.99-.45 4.07-.45 2.07 0 3.43.15 4.07.45.64.3.95.99.95 2.06s-.32 1.76-.95 2.06c-.64.3-1.99.45-4.07.45s-3.44-.15-4.07-.45ZM38.54 32.79c-.64-.3-.95-.99-.95-2.06s.32-1.76.95-2.06c.64-.3 1.99-.45 4.07-.45 2.07 0 3.43.15 4.07.45.64.3.95.99.95 2.06s-.32 1.76-.95 2.06c-.64.3-1.99.45-4.07.45s-3.44-.15-4.07-.45ZM38.54 40.27c-.64-.3-.95-.99-.95-2.06s.32-1.76.95-2.06c.64-.3 1.99-.45 4.07-.45 2.07 0 3.43.15 4.07.45.64.3.95.99.95 2.06s-.32 1.76-.95 2.06c-.64.3-1.99.45-4.07.45s-3.44-.15-4.07-.45ZM38.54 47.75c-.64-.3-.95-.99-.95-2.06s.32-1.76.95-2.06c.64-.3 1.99-.45 4.07-.45 2.07 0 3.43.15 4.07.45.64.3.95.99.95 2.06s-.32 1.76-.95 2.06c-.64.3-1.99.45-4.07.45-2.08.01-3.44-.14-4.07-.45ZM8.47 23.97c-.89-.22-1.34-.81-1.34-1.75 0-.95.45-1.53 1.34-1.75.89-.22 3.23-.33 7.01-.33s6.12.11 7.01.33c.89.22 1.34.81 1.34 1.75 0 .95-.45 1.53-1.34 1.75-.89.22-3.23.33-7.01.33-3.79.01-6.12-.1-7.01-.33ZM38.54 55.24c-.64-.3-.95-.99-.95-2.06s.32-1.76.95-2.06c.64-.3 1.99-.45 4.07-.45 2.07 0 3.43.15 4.07.45.64.3.95.99.95 2.06s-.32 1.76-.95 2.06c-.64.3-1.99.45-4.07.45s-3.44-.15-4.07-.45Z" fill="currentColor">'),
+    hd = "/assets/player-8b9a1305.mp3",
+    md = "/assets/player-4aabf494.ogg",
+    _d = V('<svg viewBox="0 0 68 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path id="path-1" d="M8 36L25 24L8 12V36Z" fill="currentColor"></path><path id="path-2" d="M25 36L42 24L25 12V36Z" fill="currentColor"></path><path id="path-3" d="M42 36L59 24L42 12V36Z" fill="currentColor">'),
     yd = (e = {}) => (() => {
         const n = _d();
         return Qe(n, e, !0, !0), n
     })(),
-    bd = V('<svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path d="M12 38h8V10h-8v28Zm16-28v28h8V10h-8Z" fill="currentColor">'),
+    bd = V('<svg viewBox="0 0 68 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path id="path-1" d="M26 36L9 24L26 12V36Z" fill="currentColor"></path><path id="path-2" d="M43 36L26 24L43 12V36Z" fill="currentColor"></path><path id="path-3" d="M60 36L43 24L60 12V36Z" fill="currentColor">'),
     wd = (e = {}) => (() => {
         const n = bd();
         return Qe(n, e, !0, !0), n
     })(),
-    Ad = V('<svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path d="M16 10v28l22-14-22-14Z" fill="currentColor">'),
+    Ad = V('<svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 104 68"><path d="M60.66 16.06c-.57-.27-.85-.88-.85-1.83 0-.95.28-1.57.85-1.84s1.78-.4 3.63-.4c1.85 0 3.06.13 3.63.4.57.27.85.88.85 1.84 0 .96-.28 1.57-.85 1.83-.57.27-1.78.4-3.63.4-1.85 0-3.06-.13-3.63-.4Zm0 35.81c-.57-.27-.85-.88-.85-1.83 0-.95.28-1.57.85-1.84s1.78-.4 3.63-.4c1.85 0 3.06.13 3.63.4.57.27.85.88.85 1.84 0 .96-.28 1.57-.85 1.83-.57.27-1.78.4-3.63.4-1.85.01-3.06-.13-3.63-.4Zm9.54-26.81c-.96-.24-1.43-.86-1.43-1.88 0-1.01.48-1.64 1.43-1.88s3.46-.36 7.52-.36 6.57.12 7.52.36c.95.24 1.43.87 1.43 1.88 0 1.02-.48 1.64-1.43 1.88-.96.24-3.46.36-7.52.36-4.06-.01-6.57-.12-7.52-.36Zm0 17.9c-.96-.24-1.43-.86-1.43-1.88 0-1.01.48-1.64 1.43-1.88s3.46-.36 7.52-.36 6.57.12 7.52.36c.95.24 1.43.87 1.43 1.88 0 1.02-.48 1.64-1.43 1.88-.96.24-3.46.36-7.52.36s-6.57-.12-7.52-.36Zm3.89-8.99c-.57-.27-.85-.88-.85-1.83 0-.95.28-1.57.85-1.84s1.78-.4 3.63-.4c1.85 0 3.06.13 3.63.4.57.27.85.88.85 1.84 0 .95-.28 1.57-.85 1.83-.57.27-1.78.4-3.63.4-1.85 0-3.06-.14-3.63-.4Zm13.43-17.91c-.57-.27-.85-.88-.85-1.83 0-.95.28-1.57.85-1.84s1.78-.4 3.63-.4c1.85 0 3.06.13 3.63.4.57.27.85.88.85 1.84 0 .96-.28 1.57-.85 1.83-.57.27-1.78.4-3.63.4-1.85 0-3.06-.13-3.63-.4Zm0 35.81c-.57-.27-.85-.88-.85-1.83 0-.95.28-1.57.85-1.84s1.78-.4 3.63-.4c1.85 0 3.06.13 3.63.4.57.27.85.88.85 1.84 0 .96-.28 1.57-.85 1.83-.57.27-1.78.4-3.63.4-1.85.01-3.06-.13-3.63-.4ZM19.57 17.17c-.89-.22-1.34-.81-1.34-1.75 0-.95.45-1.53 1.34-1.75.89-.22 3.23-.33 7.01-.33s6.12.11 7.01.33c.89.22 1.34.81 1.34 1.75 0 .95-.45 1.53-1.34 1.75-.89.22-3.23.33-7.01.33s-6.12-.11-7.01-.33ZM27.24 9.83c-.89-.22-1.34-.81-1.34-1.75 0-.95.45-1.53 1.34-1.75.89-.22 3.23-.33 7.01-.33s6.12.11 7.01.33c.89.22 1.34.81 1.34 1.75 0 .95-.45 1.53-1.34 1.75-.89.22-3.23.33-7.01.33s-6.12-.11-7.01-.33ZM13.37 43.61c3.78 0 6.12.11 7.01.33.89.22 1.34.81 1.34 1.75 0 .95-.45 1.53-1.34 1.75-.89.22-3.23.33-7.01.33-3.79 0-6.12-.11-7.01-.33-.89-.22-1.34-.81-1.34-1.75 0-.95.45-1.53 1.34-1.75.89-.22 3.23-.33 7.01-.33ZM26.11 50.21c3.78 0 6.12.11 7.01.33.89.22 1.34.81 1.34 1.75 0 .95-.45 1.53-1.34 1.75-.89.22-3.23.33-7.01.33-3.79 0-6.12-.11-7.01-.33-.89-.22-1.34-.81-1.34-1.75 0-.95.45-1.53 1.34-1.75.88-.22 3.22-.33 7.01-.33ZM33.78 57.55c3.78 0 6.12.11 7.01.33.89.22 1.34.81 1.34 1.75 0 .95-.45 1.53-1.34 1.75-.89.22-3.23.33-7.01.33-3.79 0-6.12-.11-7.01-.33-.89-.22-1.34-.81-1.34-1.75 0-.95.45-1.53 1.34-1.75.88-.21 3.22-.33 7.01-.33ZM1.43 31.5c-.64-.3-.95-.99-.95-2.06s.32-1.76.95-2.06c.64-.3 1.99-.45 4.07-.45 2.07 0 3.43.15 4.07.45.64.3.95.99.95 2.06s-.32 1.76-.95 2.06c-.64.3-1.99.45-4.07.45-2.08.01-3.43-.14-4.07-.45ZM.95 39.78c-.64-.3-.95-.99-.95-2.06s.32-1.76.95-2.06c.64-.3 1.99-.45 4.07-.45 2.07 0 3.43.15 4.07.45.64.3.95.99.95 2.06s-.32 1.76-.95 2.06c-.64.3-1.99.45-4.07.45-2.07 0-3.43-.15-4.07-.45ZM38.54 17.82c-.64-.3-.95-.99-.95-2.06s.32-1.76.95-2.06c.64-.3 1.99-.45 4.07-.45 2.07 0 3.43.15 4.07.45.64.3.95.99.95 2.06s-.32 1.76-.95 2.06c-.64.3-1.99.45-4.07.45s-3.44-.15-4.07-.45ZM38.54 25.3c-.64-.3-.95-.99-.95-2.06s.32-1.76.95-2.06c.64-.3 1.99-.45 4.07-.45 2.07 0 3.43.15 4.07.45.64.3.95.99.95 2.06s-.32 1.76-.95 2.06c-.64.3-1.99.45-4.07.45s-3.44-.15-4.07-.45ZM38.54 32.79c-.64-.3-.95-.99-.95-2.06s.32-1.76.95-2.06c.64-.3 1.99-.45 4.07-.45 2.07 0 3.43.15 4.07.45.64.3.95.99.95 2.06s-.32 1.76-.95 2.06c-.64.3-1.99.45-4.07.45s-3.44-.15-4.07-.45ZM38.54 40.27c-.64-.3-.95-.99-.95-2.06s.32-1.76.95-2.06c.64-.3 1.99-.45 4.07-.45 2.07 0 3.43.15 4.07.45.64.3.95.99.95 2.06s-.32 1.76-.95 2.06c-.64.3-1.99.45-4.07.45s-3.44-.15-4.07-.45ZM38.54 47.75c-.64-.3-.95-.99-.95-2.06s.32-1.76.95-2.06c.64-.3 1.99-.45 4.07-.45 2.07 0 3.43.15 4.07.45.64.3.95.99.95 2.06s-.32 1.76-.95 2.06c-.64.3-1.99.45-4.07.45-2.08.01-3.44-.14-4.07-.45ZM8.47 23.97c-.89-.22-1.34-.81-1.34-1.75 0-.95.45-1.53 1.34-1.75.89-.22 3.23-.33 7.01-.33s6.12.11 7.01.33c.89.22 1.34.81 1.34 1.75 0 .95-.45 1.53-1.34 1.75-.89.22-3.23.33-7.01.33-3.79.01-6.12-.1-7.01-.33ZM38.54 55.24c-.64-.3-.95-.99-.95-2.06s.32-1.76.95-2.06c.64-.3 1.99-.45 4.07-.45 2.07 0 3.43.15 4.07.45.64.3.95.99.95 2.06s-.32 1.76-.95 2.06c-.64.3-1.99.45-4.07.45s-3.44-.15-4.07-.45Z" fill="currentColor">'),
     xd = (e = {}) => (() => {
         const n = Ad();
         return Qe(n, e, !0, !0), n
     })(),
-    Sd = V('<svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path d="M23.495 27.969c2.28 0 4.13-1.913 4.13-4.273 0-2.36-1.85-4.273-4.13-4.273-2.281 0-4.13 1.913-4.13 4.273 0 2.36 1.849 4.273 4.13 4.273Z" fill="currentColor"></path><path d="M31.073 15.863a2.047 2.047 0 0 0-.137-.13 11.945 11.945 0 0 0-.504-.476 1.942 1.942 0 0 0-2.8.233c-.71.863-.609 2.162.225 2.897a7.06 7.06 0 0 1 2.374 5.306c0 2.261-1.068 4.39-2.856 5.695-.013.009-.023.02-.037.03a1.412 1.412 0 0 0-.066.05c-.909.636-1.15 1.913-.535 2.853.384.59 1.01.904 1.648.904.381 0 .768-.115 1.11-.353 2.953-2.064 4.717-5.498 4.717-9.184-.003-2.952-1.118-5.734-3.139-7.825Z" fill="currentColor"></path><path d="M35.168 11.425a1.917 1.917 0 0 0-.156-.145 17.637 17.637 0 0 0-.829-.79 1.942 1.942 0 0 0-2.8.233c-.71.864-.61 2.163.225 2.897 2.805 2.47 4.413 6.069 4.413 9.873 0 4.199-1.981 8.154-5.297 10.585-.072.052-.143.11-.218.162-.908.636-1.147 1.913-.535 2.853.384.59 1.01.904 1.648.904.381 0 .768-.115 1.11-.353C37.282 34.462 40 29.169 40 23.49c0-4.555-1.717-8.842-4.832-12.065ZM19.733 29.47c-.024-.016-.045-.032-.066-.049-.013-.01-.024-.022-.037-.03-1.788-1.304-2.856-3.434-2.856-5.695 0-2.045.864-3.98 2.374-5.306a2.104 2.104 0 0 0 .225-2.898 1.94 1.94 0 0 0-2.8-.233 9.434 9.434 0 0 0-.503.477 2.158 2.158 0 0 0-.14.132c-2.024 2.086-3.14 4.868-3.14 7.828 0 3.686 1.765 7.118 4.718 9.184.342.239.729.354 1.11.354.639 0 1.264-.318 1.648-.905.617-.945.376-2.223-.533-2.858Z" fill="currentColor"></path><path d="M16.496 34.24c-.074-.053-.143-.11-.217-.162-3.316-2.429-5.298-6.383-5.298-10.585 0-3.804 1.608-7.403 4.413-9.872.837-.735.938-2.034.226-2.898a1.94 1.94 0 0 0-2.8-.232c-.29.252-.562.518-.83.789-.052.046-.105.093-.156.145C8.716 14.648 7 18.935 7 23.493c0 5.679 2.718 10.969 7.271 14.153.342.239.729.354 1.11.354.639 0 1.264-.318 1.648-.904.614-.943.376-2.22-.533-2.856Z" fill="currentColor">'),
+    Sd = V('<svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path d="M12 38h8V10h-8v28Zm16-28v28h8V10h-8Z" fill="currentColor">'),
     Td = (e = {}) => (() => {
         const n = Sd();
         return Qe(n, e, !0, !0), n
     })(),
-    kd = V('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 103.96 67.25"><path d="M86.24 11.87c-.46-.23-.69-.84-.69-1.83s.23-1.6.69-1.83c.46-.23 1.66-.35 3.6-.35s3.14.12 3.6.35c.46.23.69.84.69 1.83s-.23 1.6-.69 1.83c-.46.23-1.66.35-3.6.35s-3.14-.12-3.6-.35Zm-3.65-7.86c-.42-.23-.63-.84-.63-1.83s.21-1.6.63-1.83C83.01.12 84.11 0 85.9 0s2.89.12 3.31.35c.42.23.63.84.63 1.83s-.21 1.6-.63 1.83c-.42.23-1.52.35-3.31.35s-2.89-.12-3.31-.35Zm6.77 15.72c-.55-.23-.82-.84-.82-1.83s.27-1.6.82-1.83c.55-.23 1.98-.35 4.3-.35s3.76.12 4.3.35c.55.23.82.84.82 1.83s-.27 1.6-.82 1.83c-.55.23-1.98.35-4.3.35s-3.76-.12-4.3-.35Zm2.99 7.86c-.55-.23-.82-.84-.82-1.83s.27-1.6.82-1.83c.55-.23 1.98-.35 4.3-.35s3.76.12 4.3.35c.55.23.82.84.82 1.83s-.27 1.6-.82 1.83c-.55.23-1.98.35-4.3.35s-3.76-.12-4.3-.35Zm.18 7.86c-.66-.23-.99-.84-.99-1.83s.33-1.6.99-1.83c.66-.23 2.4-.35 5.22-.35s4.56.12 5.22.35c.66.23.99.84.99 1.83s-.33 1.6-.99 1.83c-.66.23-2.4.35-5.22.35s-4.56-.12-5.22-.35Zm-.18 7.86c-.55-.23-.82-.84-.82-1.83s.27-1.6.82-1.83c.55-.23 1.98-.35 4.3-.35s3.76.12 4.3.35c.55.23.82.84.82 1.83s-.27 1.6-.82 1.83c-.55.23-1.98.35-4.3.35s-3.76-.12-4.3-.35Zm-2.99 7.87c-.55-.23-.82-.84-.82-1.83s.27-1.6.82-1.83c.55-.23 1.98-.35 4.3-.35s3.76.12 4.3.35c.55.23.82.84.82 1.83s-.27 1.6-.82 1.83c-.55.23-1.98.35-4.3.35s-3.76-.12-4.3-.35Zm-3.12 7.86c-.46-.23-.69-.84-.69-1.83s.23-1.6.69-1.83c.46-.23 1.66-.35 3.6-.35s3.14.12 3.6.35c.46.23.69.84.69 1.83s-.23 1.6-.69 1.83c-.46.23-1.66.35-3.6.35s-3.14-.12-3.6-.35Zm-3.7 7.86c-.39-.23-.58-.84-.58-1.83s.19-1.6.58-1.83c.39-.23 1.4-.35 3.04-.35s2.65.12 3.04.35c.39.23.58.84.58 1.83s-.19 1.6-.58 1.83c-.39.23-1.4.35-3.04.35s-2.65-.12-3.04-.35ZM61.57 11.87c-.46-.23-.69-.84-.69-1.83s.23-1.6.69-1.83c.46-.23 1.66-.35 3.6-.35s3.14.12 3.6.35c.46.23.69.84.69 1.83s-.23 1.6-.69 1.83c-.46.23-1.66.35-3.6.35s-3.14-.12-3.6-.35Zm3.12 7.86c-.55-.23-.82-.84-.82-1.83s.27-1.6.82-1.83c.55-.23 1.98-.35 4.3-.35s3.76.12 4.3.35c.55.23.82.84.82 1.83s-.27 1.6-.82 1.83c-.55.23-1.98.35-4.3.35s-3.76-.12-4.3-.35Zm2.99 7.86c-.55-.23-.82-.84-.82-1.83s.27-1.6.82-1.83c.55-.23 1.98-.35 4.3-.35s3.76.12 4.3.35c.55.23.82.84.82 1.83s-.27 1.6-.82 1.83c-.55.23-1.98.35-4.3.35s-3.76-.12-4.3-.35Zm.17 7.86c-.66-.23-.99-.84-.99-1.83s.33-1.6.99-1.83c.66-.23 2.4-.35 5.22-.35s4.56.12 5.22.35c.66.23.99.84.99 1.83s-.33 1.6-.99 1.83c-.66.23-2.4.35-5.22.35s-4.56-.12-5.22-.35Zm-.17 7.86c-.55-.23-.82-.84-.82-1.83s.27-1.6.82-1.83c.55-.23 1.98-.35 4.3-.35s3.76.12 4.3.35c.55.23.82.84.82 1.83s-.27 1.6-.82 1.83c-.55.23-1.98.35-4.3.35s-3.76-.12-4.3-.35Zm-2.99 7.87c-.55-.23-.82-.84-.82-1.83s.27-1.6.82-1.83c.55-.23 1.98-.35 4.3-.35s3.76.12 4.3.35c.55.23.82.84.82 1.83s-.27 1.6-.82 1.83c-.55.23-1.98.35-4.3.35s-3.76-.12-4.3-.35Zm-3.12 7.86c-.46-.23-.69-.84-.69-1.83s.23-1.6.69-1.83c.46-.23 1.66-.35 3.6-.35s3.14.12 3.6.35c.46.23.69.84.69 1.83s-.23 1.6-.69 1.83c-.46.23-1.66.35-3.6.35s-3.14-.12-3.6-.35Zm-42-41.98c-.89-.22-1.34-.81-1.34-1.75s.45-1.53 1.34-1.75c.89-.22 3.23-.33 7.01-.33s6.12.11 7.01.33c.89.22 1.34.81 1.34 1.75s-.45 1.53-1.34 1.75c-.89.22-3.23.33-7.01.33s-6.12-.11-7.01-.33Zm7.67-7.35c-.89-.22-1.34-.81-1.34-1.75s.45-1.53 1.34-1.75c.89-.22 3.23-.33 7.01-.33s6.12.11 7.01.33c.89.22 1.34.81 1.34 1.75s-.45 1.53-1.34 1.75c-.89.22-3.23.33-7.01.33s-6.12-.11-7.01-.33ZM13.37 43.5c3.78 0 6.12.11 7.01.33.89.22 1.34.81 1.34 1.75s-.45 1.53-1.34 1.75c-.89.22-3.23.33-7.01.33s-6.12-.11-7.01-.33c-.89-.22-1.34-.81-1.34-1.75s.45-1.53 1.34-1.75c.89-.22 3.23-.33 7.01-.33Zm12.74 6.6c3.78 0 6.12.11 7.01.33.89.22 1.34.81 1.34 1.75s-.45 1.53-1.34 1.75c-.89.22-3.23.33-7.01.33s-6.12-.11-7.01-.33c-.89-.22-1.34-.81-1.34-1.75s.45-1.53 1.34-1.75c.89-.22 3.23-.33 7.01-.33Zm7.67 7.34c3.78 0 6.12.11 7.01.33.89.22 1.34.81 1.34 1.75s-.45 1.53-1.34 1.75c-.89.22-3.23.33-7.01.33s-6.12-.11-7.01-.33c-.89-.22-1.34-.81-1.34-1.75s.45-1.53 1.34-1.75c.89-.22 3.23-.33 7.01-.33ZM1.43 31.39c-.64-.3-.95-.99-.95-2.06s.32-1.76.95-2.06c.64-.3 1.99-.45 4.07-.45s3.43.15 4.07.45c.64.3.95.99.95 2.06s-.32 1.76-.95 2.06c-.64.3-1.99.45-4.07.45s-3.43-.15-4.07-.45Zm-.48 8.27c-.64-.3-.95-.99-.95-2.06s.32-1.76.95-2.06c.64-.3 1.99-.45 4.07-.45s3.43.15 4.07.45c.64.3.95.99.95 2.06s-.32 1.76-.95 2.06c-.64.3-1.99.45-4.07.45s-3.43-.15-4.07-.45ZM38.54 17.7c-.64-.3-.95-.99-.95-2.06s.32-1.76.95-2.06c.64-.3 1.99-.45 4.07-.45s3.43.15 4.07.45c.64.3.95.99.95 2.06s-.32 1.76-.95 2.06c-.64.3-1.99.45-4.07.45s-3.43-.15-4.07-.45Zm0 7.49c-.64-.3-.95-.99-.95-2.06s.32-1.76.95-2.06c.64-.3 1.99-.45 4.07-.45s3.43.15 4.07.45c.64.3.95.99.95 2.06s-.32 1.76-.95 2.06c-.64.3-1.99.45-4.07.45s-3.43-.15-4.07-.45Zm0 7.48c-.64-.3-.95-.99-.95-2.06s.32-1.76.95-2.06c.64-.3 1.99-.45 4.07-.45s3.43.15 4.07.45c.64.3.95.99.95 2.06s-.32 1.76-.95 2.06c-.64.3-1.99.45-4.07.45s-3.43-.15-4.07-.45Zm0 7.49c-.64-.3-.95-.99-.95-2.06s.32-1.76.95-2.06c.64-.3 1.99-.45 4.07-.45s3.43.15 4.07.45c.64.3.95.99.95 2.06s-.32 1.76-.95 2.06c-.64.3-1.99.45-4.07.45s-3.43-.15-4.07-.45Zm0 7.48c-.64-.3-.95-.99-.95-2.06s.32-1.76.95-2.06c.64-.3 1.99-.45 4.07-.45s3.43.15 4.07.45c.64.3.95.99.95 2.06s-.32 1.76-.95 2.06c-.64.3-1.99.45-4.07.45s-3.43-.15-4.07-.45ZM8.47 23.86c-.89-.22-1.34-.81-1.34-1.75s.45-1.53 1.34-1.75c.89-.22 3.23-.33 7.01-.33s6.12.11 7.01.33c.89.22 1.34.81 1.34 1.75s-.45 1.53-1.34 1.75c-.89.22-3.23.33-7.01.33s-6.12-.11-7.01-.33Zm30.07 31.26c-.64-.3-.95-.99-.95-2.06s.32-1.76.95-2.06c.64-.3 1.99-.45 4.07-.45s3.43.15 4.07.45c.64.3.95.99.95 2.06s-.32 1.76-.95 2.06c-.64.3-1.99.45-4.07.45s-3.43-.15-4.07-.45Z" fill="currentColor">'),
+    kd = V('<svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path d="M16 10v28l22-14-22-14Z" fill="currentColor">'),
     $d = (e = {}) => (() => {
         const n = kd();
         return Qe(n, e, !0, !0), n
     })(),
-    Id = {
-        "fast-forward": vd,
-        "fast-rewind": md,
-        mute: yd,
-        pause: wd,
-        play: xd,
-        live: Td,
-        unmute: $d
+    Id = V('<svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path d="M23.495 27.969c2.28 0 4.13-1.913 4.13-4.273 0-2.36-1.85-4.273-4.13-4.273-2.281 0-4.13 1.913-4.13 4.273 0 2.36 1.849 4.273 4.13 4.273Z" fill="currentColor"></path><path d="M31.073 15.863a2.047 2.047 0 0 0-.137-.13 11.945 11.945 0 0 0-.504-.476 1.942 1.942 0 0 0-2.8.233c-.71.863-.609 2.162.225 2.897a7.06 7.06 0 0 1 2.374 5.306c0 2.261-1.068 4.39-2.856 5.695-.013.009-.023.02-.037.03a1.412 1.412 0 0 0-.066.05c-.909.636-1.15 1.913-.535 2.853.384.59 1.01.904 1.648.904.381 0 .768-.115 1.11-.353 2.953-2.064 4.717-5.498 4.717-9.184-.003-2.952-1.118-5.734-3.139-7.825Z" fill="currentColor"></path><path d="M35.168 11.425a1.917 1.917 0 0 0-.156-.145 17.637 17.637 0 0 0-.829-.79 1.942 1.942 0 0 0-2.8.233c-.71.864-.61 2.163.225 2.897 2.805 2.47 4.413 6.069 4.413 9.873 0 4.199-1.981 8.154-5.297 10.585-.072.052-.143.11-.218.162-.908.636-1.147 1.913-.535 2.853.384.59 1.01.904 1.648.904.381 0 .768-.115 1.11-.353C37.282 34.462 40 29.169 40 23.49c0-4.555-1.717-8.842-4.832-12.065ZM19.733 29.47c-.024-.016-.045-.032-.066-.049-.013-.01-.024-.022-.037-.03-1.788-1.304-2.856-3.434-2.856-5.695 0-2.045.864-3.98 2.374-5.306a2.104 2.104 0 0 0 .225-2.898 1.94 1.94 0 0 0-2.8-.233 9.434 9.434 0 0 0-.503.477 2.158 2.158 0 0 0-.14.132c-2.024 2.086-3.14 4.868-3.14 7.828 0 3.686 1.765 7.118 4.718 9.184.342.239.729.354 1.11.354.639 0 1.264-.318 1.648-.905.617-.945.376-2.223-.533-2.858Z" fill="currentColor"></path><path d="M16.496 34.24c-.074-.053-.143-.11-.217-.162-3.316-2.429-5.298-6.383-5.298-10.585 0-3.804 1.608-7.403 4.413-9.872.837-.735.938-2.034.226-2.898a1.94 1.94 0 0 0-2.8-.232c-.29.252-.562.518-.83.789-.052.046-.105.093-.156.145C8.716 14.648 7 18.935 7 23.493c0 5.679 2.718 10.969 7.271 14.153.342.239.729.354 1.11.354.639 0 1.264-.318 1.648-.904.614-.943.376-2.22-.533-2.856Z" fill="currentColor">'),
+    Pd = (e = {}) => (() => {
+        const n = Id();
+        return Qe(n, e, !0, !0), n
+    })(),
+    Od = V('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 103.96 67.25"><path d="M86.24 11.87c-.46-.23-.69-.84-.69-1.83s.23-1.6.69-1.83c.46-.23 1.66-.35 3.6-.35s3.14.12 3.6.35c.46.23.69.84.69 1.83s-.23 1.6-.69 1.83c-.46.23-1.66.35-3.6.35s-3.14-.12-3.6-.35Zm-3.65-7.86c-.42-.23-.63-.84-.63-1.83s.21-1.6.63-1.83C83.01.12 84.11 0 85.9 0s2.89.12 3.31.35c.42.23.63.84.63 1.83s-.21 1.6-.63 1.83c-.42.23-1.52.35-3.31.35s-2.89-.12-3.31-.35Zm6.77 15.72c-.55-.23-.82-.84-.82-1.83s.27-1.6.82-1.83c.55-.23 1.98-.35 4.3-.35s3.76.12 4.3.35c.55.23.82.84.82 1.83s-.27 1.6-.82 1.83c-.55.23-1.98.35-4.3.35s-3.76-.12-4.3-.35Zm2.99 7.86c-.55-.23-.82-.84-.82-1.83s.27-1.6.82-1.83c.55-.23 1.98-.35 4.3-.35s3.76.12 4.3.35c.55.23.82.84.82 1.83s-.27 1.6-.82 1.83c-.55.23-1.98.35-4.3.35s-3.76-.12-4.3-.35Zm.18 7.86c-.66-.23-.99-.84-.99-1.83s.33-1.6.99-1.83c.66-.23 2.4-.35 5.22-.35s4.56.12 5.22.35c.66.23.99.84.99 1.83s-.33 1.6-.99 1.83c-.66.23-2.4.35-5.22.35s-4.56-.12-5.22-.35Zm-.18 7.86c-.55-.23-.82-.84-.82-1.83s.27-1.6.82-1.83c.55-.23 1.98-.35 4.3-.35s3.76.12 4.3.35c.55.23.82.84.82 1.83s-.27 1.6-.82 1.83c-.55.23-1.98.35-4.3.35s-3.76-.12-4.3-.35Zm-2.99 7.87c-.55-.23-.82-.84-.82-1.83s.27-1.6.82-1.83c.55-.23 1.98-.35 4.3-.35s3.76.12 4.3.35c.55.23.82.84.82 1.83s-.27 1.6-.82 1.83c-.55.23-1.98.35-4.3.35s-3.76-.12-4.3-.35Zm-3.12 7.86c-.46-.23-.69-.84-.69-1.83s.23-1.6.69-1.83c.46-.23 1.66-.35 3.6-.35s3.14.12 3.6.35c.46.23.69.84.69 1.83s-.23 1.6-.69 1.83c-.46.23-1.66.35-3.6.35s-3.14-.12-3.6-.35Zm-3.7 7.86c-.39-.23-.58-.84-.58-1.83s.19-1.6.58-1.83c.39-.23 1.4-.35 3.04-.35s2.65.12 3.04.35c.39.23.58.84.58 1.83s-.19 1.6-.58 1.83c-.39.23-1.4.35-3.04.35s-2.65-.12-3.04-.35ZM61.57 11.87c-.46-.23-.69-.84-.69-1.83s.23-1.6.69-1.83c.46-.23 1.66-.35 3.6-.35s3.14.12 3.6.35c.46.23.69.84.69 1.83s-.23 1.6-.69 1.83c-.46.23-1.66.35-3.6.35s-3.14-.12-3.6-.35Zm3.12 7.86c-.55-.23-.82-.84-.82-1.83s.27-1.6.82-1.83c.55-.23 1.98-.35 4.3-.35s3.76.12 4.3.35c.55.23.82.84.82 1.83s-.27 1.6-.82 1.83c-.55.23-1.98.35-4.3.35s-3.76-.12-4.3-.35Zm2.99 7.86c-.55-.23-.82-.84-.82-1.83s.27-1.6.82-1.83c.55-.23 1.98-.35 4.3-.35s3.76.12 4.3.35c.55.23.82.84.82 1.83s-.27 1.6-.82 1.83c-.55.23-1.98.35-4.3.35s-3.76-.12-4.3-.35Zm.17 7.86c-.66-.23-.99-.84-.99-1.83s.33-1.6.99-1.83c.66-.23 2.4-.35 5.22-.35s4.56.12 5.22.35c.66.23.99.84.99 1.83s-.33 1.6-.99 1.83c-.66.23-2.4.35-5.22.35s-4.56-.12-5.22-.35Zm-.17 7.86c-.55-.23-.82-.84-.82-1.83s.27-1.6.82-1.83c.55-.23 1.98-.35 4.3-.35s3.76.12 4.3.35c.55.23.82.84.82 1.83s-.27 1.6-.82 1.83c-.55.23-1.98.35-4.3.35s-3.76-.12-4.3-.35Zm-2.99 7.87c-.55-.23-.82-.84-.82-1.83s.27-1.6.82-1.83c.55-.23 1.98-.35 4.3-.35s3.76.12 4.3.35c.55.23.82.84.82 1.83s-.27 1.6-.82 1.83c-.55.23-1.98.35-4.3.35s-3.76-.12-4.3-.35Zm-3.12 7.86c-.46-.23-.69-.84-.69-1.83s.23-1.6.69-1.83c.46-.23 1.66-.35 3.6-.35s3.14.12 3.6.35c.46.23.69.84.69 1.83s-.23 1.6-.69 1.83c-.46.23-1.66.35-3.6.35s-3.14-.12-3.6-.35Zm-42-41.98c-.89-.22-1.34-.81-1.34-1.75s.45-1.53 1.34-1.75c.89-.22 3.23-.33 7.01-.33s6.12.11 7.01.33c.89.22 1.34.81 1.34 1.75s-.45 1.53-1.34 1.75c-.89.22-3.23.33-7.01.33s-6.12-.11-7.01-.33Zm7.67-7.35c-.89-.22-1.34-.81-1.34-1.75s.45-1.53 1.34-1.75c.89-.22 3.23-.33 7.01-.33s6.12.11 7.01.33c.89.22 1.34.81 1.34 1.75s-.45 1.53-1.34 1.75c-.89.22-3.23.33-7.01.33s-6.12-.11-7.01-.33ZM13.37 43.5c3.78 0 6.12.11 7.01.33.89.22 1.34.81 1.34 1.75s-.45 1.53-1.34 1.75c-.89.22-3.23.33-7.01.33s-6.12-.11-7.01-.33c-.89-.22-1.34-.81-1.34-1.75s.45-1.53 1.34-1.75c.89-.22 3.23-.33 7.01-.33Zm12.74 6.6c3.78 0 6.12.11 7.01.33.89.22 1.34.81 1.34 1.75s-.45 1.53-1.34 1.75c-.89.22-3.23.33-7.01.33s-6.12-.11-7.01-.33c-.89-.22-1.34-.81-1.34-1.75s.45-1.53 1.34-1.75c.89-.22 3.23-.33 7.01-.33Zm7.67 7.34c3.78 0 6.12.11 7.01.33.89.22 1.34.81 1.34 1.75s-.45 1.53-1.34 1.75c-.89.22-3.23.33-7.01.33s-6.12-.11-7.01-.33c-.89-.22-1.34-.81-1.34-1.75s.45-1.53 1.34-1.75c.89-.22 3.23-.33 7.01-.33ZM1.43 31.39c-.64-.3-.95-.99-.95-2.06s.32-1.76.95-2.06c.64-.3 1.99-.45 4.07-.45s3.43.15 4.07.45c.64.3.95.99.95 2.06s-.32 1.76-.95 2.06c-.64.3-1.99.45-4.07.45s-3.43-.15-4.07-.45Zm-.48 8.27c-.64-.3-.95-.99-.95-2.06s.32-1.76.95-2.06c.64-.3 1.99-.45 4.07-.45s3.43.15 4.07.45c.64.3.95.99.95 2.06s-.32 1.76-.95 2.06c-.64.3-1.99.45-4.07.45s-3.43-.15-4.07-.45ZM38.54 17.7c-.64-.3-.95-.99-.95-2.06s.32-1.76.95-2.06c.64-.3 1.99-.45 4.07-.45s3.43.15 4.07.45c.64.3.95.99.95 2.06s-.32 1.76-.95 2.06c-.64.3-1.99.45-4.07.45s-3.43-.15-4.07-.45Zm0 7.49c-.64-.3-.95-.99-.95-2.06s.32-1.76.95-2.06c.64-.3 1.99-.45 4.07-.45s3.43.15 4.07.45c.64.3.95.99.95 2.06s-.32 1.76-.95 2.06c-.64.3-1.99.45-4.07.45s-3.43-.15-4.07-.45Zm0 7.48c-.64-.3-.95-.99-.95-2.06s.32-1.76.95-2.06c.64-.3 1.99-.45 4.07-.45s3.43.15 4.07.45c.64.3.95.99.95 2.06s-.32 1.76-.95 2.06c-.64.3-1.99.45-4.07.45s-3.43-.15-4.07-.45Zm0 7.49c-.64-.3-.95-.99-.95-2.06s.32-1.76.95-2.06c.64-.3 1.99-.45 4.07-.45s3.43.15 4.07.45c.64.3.95.99.95 2.06s-.32 1.76-.95 2.06c-.64.3-1.99.45-4.07.45s-3.43-.15-4.07-.45Zm0 7.48c-.64-.3-.95-.99-.95-2.06s.32-1.76.95-2.06c.64-.3 1.99-.45 4.07-.45s3.43.15 4.07.45c.64.3.95.99.95 2.06s-.32 1.76-.95 2.06c-.64.3-1.99.45-4.07.45s-3.43-.15-4.07-.45ZM8.47 23.86c-.89-.22-1.34-.81-1.34-1.75s.45-1.53 1.34-1.75c.89-.22 3.23-.33 7.01-.33s6.12.11 7.01.33c.89.22 1.34.81 1.34 1.75s-.45 1.53-1.34 1.75c-.89.22-3.23.33-7.01.33s-6.12-.11-7.01-.33Zm30.07 31.26c-.64-.3-.95-.99-.95-2.06s.32-1.76.95-2.06c.64-.3 1.99-.45 4.07-.45s3.43.15 4.07.45c.64.3.95.99.95 2.06s-.32 1.76-.95 2.06c-.64.3-1.99.45-4.07.45s-3.43-.15-4.07-.45Z" fill="currentColor">'),
+    Dd = (e = {}) => (() => {
+        const n = Od();
+        return Qe(n, e, !0, !0), n
+    })(),
+    Ed = {
+        "fast-forward": yd,
+        "fast-rewind": wd,
+        mute: xd,
+        pause: Td,
+        play: $d,
+        live: Pd,
+        unmute: Dd
     },
-    Pd = V("<span>"),
+    Cd = V("<span>"),
     yt = e => {
         const [n, t] = lo(e, ["name"]);
         return (() => {
-            const r = Pd();
-            return Qe(r, t, !1, !0), D(r, S(ls, {
+            const r = Cd();
+            return Qe(r, t, !1, !0), E(r, S(ls, {
                 get component() {
-                    return Id[n.name]
+                    return Ed[n.name]
                 }
             })), r
         })()
@@ -5828,7 +5854,7 @@ const Ii = e => typeof e == "boolean" ? "".concat(e) : e === 0 ? "0" : e,
         var n;
         return (n = Object.values(ta)[e]) != null ? n : "c"
     },
-    Od = [{
+    Md = [{
         liveVideos: [{
             videoId: "6341919779112",
             adId: "live.i6atvHTPufS-u8OORhbUcpVBaNMbZwK0wSU-LTMN_eMqAX2F6Enp21rG7UTVmwhwd8ThY0A25RoENC-BhGcTLbo7xNjwgF4P-07qWFMkFw68n8K78w-RBdiIUaXjeSCjT0xJBIQ"
@@ -5847,10 +5873,10 @@ const Ii = e => typeof e == "boolean" ? "".concat(e) : e === 0 ? "0" : e,
         }],
         postDate: "2023-11-02"
     }],
-    Ed = Od,
-    Dd = Wt(Ed),
-    Cd = () => Dd()[0],
-    Md = (e = !0) => {
+    jd = Md,
+    Bd = Wt(jd),
+    Ld = () => Bd()[0],
+    Rd = (e = !0) => {
         let n = ps;
         return {
             get abort() {
@@ -5862,7 +5888,7 @@ const Ii = e => typeof e == "boolean" ? "".concat(e) : e === 0 ? "0" : e,
     cn = [4, 16, 32],
     Pi = Math.min(...cn),
     Oi = Math.max(...cn),
-    jd = () => {
+    Vd = () => {
         const [e, n] = W(Pi);
         let t = ps,
             r;
@@ -5885,10 +5911,10 @@ const Ii = e => typeof e == "boolean" ? "".concat(e) : e === 0 ? "0" : e,
         };
         return u
     },
-    Bd = e => {
+    Nd = e => {
         const n = is(),
-            t = jd(),
-            r = Md(),
+            t = Vd(),
+            r = Rd(),
             [i, s] = W(null),
             [l, c] = W(0),
             [u, f] = W(e.initialFeed),
@@ -5914,7 +5940,7 @@ const Ii = e => typeof e == "boolean" ? "".concat(e) : e === 0 ? "0" : e,
             Y = async x => {
                 try {
                     const A = u(),
-                        $ = await (await jl(() => import("./player-5023c656.js"), [])).initPlayer({
+                        $ = await (await jl(() => import("./player-4835b36b.js"), [])).initPlayer({
                             refNode: x,
                             videoId: A.videoId,
                             adConfigId: A.videoId && A.adId,
@@ -6040,45 +6066,45 @@ const Ii = e => typeof e == "boolean" ? "".concat(e) : e === 0 ? "0" : e,
             }
         }
     },
-    qe = Cd().liveVideos.map((e, n) => Bd({
+    qe = Ld().liveVideos.map((e, n) => Nd({
         initialFeed: e,
         initialPosition: na(n)
     })),
-    [Ld, Rd] = W(!1),
-    [Vd, Nd] = W(null),
+    [zd, Ud] = W(!1),
+    [Hd, Fd] = W(null),
     Ft = () => qe.filter(e => e.isEnabled()),
-    zd = () => Ft().find(e => e.isCenter()),
-    Ud = () => {
+    Gd = () => Ft().find(e => e.isCenter()),
+    Zd = () => {
         const e = Ft().filter(n => n.isLive() && n.status() === "playing");
         return e.length > 0 ? e.every(n => n.isAtEdge()) : !1
     },
-    Hd = xe(() => qe.length > 0 && qe.every(e => e.status() !== "initializing")),
-    Fd = xe(() => Ft().length > 0 && Ft().every(e => e.status() === "ended")),
-    Gd = e => {
+    Yd = xe(() => qe.length > 0 && qe.every(e => e.status() !== "initializing")),
+    Wd = xe(() => Ft().length > 0 && Ft().every(e => e.status() === "ended")),
+    qd = e => {
         const n = qe.find(r => r.uid === e.uid),
             t = qe.find(r => r.position() === "c");
         lr(() => {
             t.setPosition(n.position()), n.setPosition("c")
         })
     },
-    Zd = () => {
+    Qd = () => {
         lr(() => {
             qe.forEach((e, n) => e.setPosition(na(n)))
         })
     },
-    Yd = async e => {
+    Kd = async e => {
         var t;
-        const n = (t = zd()) == null ? void 0 : t.time();
+        const n = (t = Gd()) == null ? void 0 : t.time();
         if (n) return e.setTime(n), e.Player.dispatch("sync")
-    }, Wd = async e => {
+    }, Jd = async e => {
         try {
-            e === "play" && await Promise.all(Ft().map(Yd)), await Promise.all(Ft().map(n => n.Player.dispatch(e)))
+            e === "play" && await Promise.all(Ft().map(Kd)), await Promise.all(Ft().map(n => n.Player.dispatch(e)))
         } catch (n) {
             console.warn(n)
         }
-    }, qd = async e => {
+    }, Xd = async e => {
         try {
-            Nd(e), !!e.archivePlaylist ? await Promise.all(qe.map(t => t.switchFeed(e.archivePlaylist))) : await Promise.all(qe.map((t, r) => {
+            Fd(e), !!e.archivePlaylist ? await Promise.all(qe.map(t => t.switchFeed(e.archivePlaylist))) : await Promise.all(qe.map((t, r) => {
                 const i = e.liveVideos[r % e.liveVideos.length];
                 if (i) return t.switchFeed(i)
             }))
@@ -6088,19 +6114,19 @@ const Ii = e => typeof e == "boolean" ? "".concat(e) : e === 0 ? "0" : e,
     }, he = {
         screens: qe,
         Supervisor: {
-            dispatch: Wd,
-            positionScreenAtCenter: Gd,
-            resetScreensPosition: Zd,
-            controlsVisible: Ld,
-            setControlsVisible: Rd,
-            switchFeed: qd,
-            allAtEdge: Ud,
-            allLoaded: Hd,
-            allEnded: Fd,
-            currentFeed: Vd
+            dispatch: Jd,
+            positionScreenAtCenter: qd,
+            resetScreensPosition: Qd,
+            controlsVisible: zd,
+            setControlsVisible: Ud,
+            switchFeed: Xd,
+            allAtEdge: Zd,
+            allLoaded: Yd,
+            allEnded: Wd,
+            currentFeed: Hd
         }
-    }, Qd = V('<div role="button" class="absolute top-0 left-0 wh-full">'), Kd = V('<div class="absolute bottom-0 left-0 right-0 h-[228px] px-[158px] flex space-x-68 items-center"><button></button><button></button><button></button><button></button><button>'), rn = ["w-[330px] h-[100px] flex-center bg-player-control-btn text-green rounded-sm", "shadow-player-controls-btn active:shadow-player-controls-btn-pressed", "[&>span]:w-72 [&>span]:drop-shadow-terminal"], Jd = () => {
-        const e = ct([pd, dd], {
+    }, ep = V('<div role="button" class="absolute top-0 left-0 wh-full">'), tp = V('<div class="absolute bottom-0 left-0 right-0 h-[228px] px-[158px] flex space-x-68 items-center"><button></button><button></button><button></button><button></button><button>'), rn = ["w-[330px] h-[100px] flex-center bg-player-control-btn text-green rounded-sm", "shadow-player-controls-btn active:shadow-player-controls-btn-pressed", "[&>span]:w-72 [&>span]:drop-shadow-terminal"], np = () => {
+        const e = ct([md, hd], {
             sprite: {
                 "forward-click": [0, 234.67120181405895],
                 "forward-loop": [2e3, 1866.6666666666667],
@@ -6112,10 +6138,10 @@ const Ii = e => typeof e == "boolean" ? "".concat(e) : e === 0 ? "0" : e,
             }
         });
         return [(() => {
-            const n = Qd();
+            const n = ep();
             return n.$$click = () => he.Supervisor.setControlsVisible(!1), n
         })(), (() => {
-            const n = Kd(),
+            const n = tp(),
                 t = n.firstChild,
                 r = t.nextSibling,
                 i = r.nextSibling,
@@ -6125,33 +6151,33 @@ const Ii = e => typeof e == "boolean" ? "".concat(e) : e === 0 ? "0" : e,
                 ne.trackClickEvent("player-controls", "rewind", "cctv-room"), he.Supervisor.dispatch("rev"), e.play("rewind-click", {
                     interrupt: !0
                 }), e.play("rewind-loop")
-            }, D(t, S(yt, {
+            }, E(t, S(yt, {
                 name: "fast-rewind",
                 class: "!w-112 ml-22 [&_#path-3]:hidden"
             })), r.$$click = () => {
                 ne.trackClickEvent("player-controls", "play", "cctv-room"), he.Supervisor.dispatch("play"), e.play("play", {
                     interrupt: !0
                 })
-            }, D(r, S(yt, {
+            }, E(r, S(yt, {
                 name: "play"
             })), i.$$click = () => {
                 ne.trackClickEvent("player-controls", "forward", "cctv-room"), he.Supervisor.dispatch("fwd"), e.play("forward-click", {
                     interrupt: !0
                 }), e.play("forward-loop")
-            }, D(i, S(yt, {
+            }, E(i, S(yt, {
                 name: "fast-forward",
                 class: "!w-112 ml-22 [&_#path-3]:hidden"
             })), s.$$click = () => {
                 ne.trackClickEvent("player-controls", "pause", "cctv-room"), he.Supervisor.dispatch("pause"), e.play("pause", {
                     interrupt: !0
                 })
-            }, D(s, S(yt, {
+            }, E(s, S(yt, {
                 name: "pause"
             })), l.$$click = () => {
                 ne.trackClickEvent("player-controls", "live", "cctv-room"), he.Supervisor.dispatch("go-live"), e.play("live", {
                     interrupt: !0
                 })
-            }, D(l, S(yt, {
+            }, E(l, S(yt, {
                 name: "live"
             })), K(c => {
                 const u = ce(rn),
@@ -6170,13 +6196,13 @@ const Ii = e => typeof e == "boolean" ? "".concat(e) : e === 0 ? "0" : e,
         })()]
     };
 Ie(["click"]);
-const Xd = (e, n) => {
+const rp = (e, n) => {
         const t = e * n / 100;
         return e - t
     },
-    Ei = e => e.touches.length === 2,
-    Di = e => Math.hypot(e[0].pageX - e[1].pageX, e[0].pageY - e[1].pageY),
-    ep = e => {
+    Di = e => e.touches.length === 2,
+    Ei = e => Math.hypot(e[0].pageX - e[1].pageX, e[0].pageY - e[1].pageY),
+    op = e => {
         const [n, t] = Yt({
             isEnabled: !0,
             isZooming: !1,
@@ -6209,21 +6235,21 @@ const Xd = (e, n) => {
                 }
             })
         }, l = f => {
-            !Ei(f) || !n.isEnabled || (f.preventDefault(), t({
+            !Di(f) || !n.isEnabled || (f.preventDefault(), t({
                 isZooming: !0,
                 start: {
-                    distance: Di(f.touches),
+                    distance: Ei(f.touches),
                     x: (f.touches[0].pageX + f.touches[1].pageX) / 2,
                     y: (f.touches[0].pageY + f.touches[1].pageY) / 2
                 }
             }))
         }, c = f => {
-            !Ei(f) || !n.isEnabled || (f.preventDefault(), t(p => {
-                const o = "scale" in f ? f.scale : Di(f.touches) / n.start.distance,
+            !Di(f) || !n.isEnabled || (f.preventDefault(), t(p => {
+                const o = "scale" in f ? f.scale : Ei(f.touches) / n.start.distance,
                     a = (f.touches[0].pageX + f.touches[1].pageX) / 2 - p.start.x,
                     d = (f.touches[0].pageY + f.touches[1].pageY) / 2 - p.start.y;
                 return {
-                    scale: Math.min(Math.max(1, Xd(o, 10)), 4),
+                    scale: Math.min(Math.max(1, rp(o, 10)), 4),
                     delta: {
                         x: a,
                         y: d
@@ -6283,19 +6309,19 @@ const Xd = (e, n) => {
             }
         }))
     },
-    tp = "/assets/seek-video-dab3075d.mp4",
-    np = V('<video playsinline muted loop class="absolute top-0 left-0 wh-full object-cover">'),
-    rp = V('<div class="absolute top-0 left-0 bg-black z-10 wh-full">'),
+    ip = "/assets/seek-video-dab3075d.mp4",
+    sp = V('<video playsinline muted loop class="absolute top-0 left-0 wh-full object-cover">'),
+    ap = V('<div class="absolute top-0 left-0 bg-black z-10 wh-full">'),
     Ci = V("<span>"),
-    op = V('<div class="absolute top-72 left-72 flex items-center space-x-8 text-white">'),
-    ip = {
+    lp = V('<div class="absolute top-72 left-72 flex items-center space-x-8 text-white">'),
+    cp = {
         "seeking-fwd": "seeking-fwd",
         "seeking-bwd": "seeking-bwd",
         ready: "ready",
         playing: "playing",
         error: "error"
     },
-    sp = {
+    up = {
         "seeking-fwd": {
             text: "FFWD",
             icon: "fast-forward"
@@ -6317,13 +6343,13 @@ const Xd = (e, n) => {
             icon: "live"
         }
     },
-    ap = e => {
+    fp = e => {
         let n;
         const [t, r] = W(void 0);
         pe(() => {
             const u = e.screen.status();
             if (u === "syncing") return;
-            const p = e.screen.isAtEdge() && u === "playing" ? "live" : ip[u];
+            const p = e.screen.isAtEdge() && u === "playing" ? "live" : cp[u];
             r(p);
             let o;
             (p === "playing" || p === "live") && (o = setTimeout(() => r(void 0), 1500)), Ae(() => clearTimeout(o))
@@ -6342,7 +6368,7 @@ const Xd = (e, n) => {
                 time: a.format("HH:mm:ss")
             })
         });
-        const l = () => t() ? sp[t()] : void 0,
+        const l = () => t() ? up[t()] : void 0,
             c = () => t() === "seeking-bwd" || t() === "seeking-fwd";
         return pe(() => {
             n && (c() ? n.play() : n.pause())
@@ -6350,9 +6376,9 @@ const Xd = (e, n) => {
             const u = e.screen.seekerSpeed();
             !n || !u || (n.playbackRate = u === 4 ? 1 : u === 16 ? 1.5 : 2)
         }), [(() => {
-            const u = np(),
+            const u = sp(),
                 f = n;
-            return typeof f == "function" ? $e(f, u) : n = u, ie(u, "src", tp), K(() => (c() ? "visible" : "hidden") != null ? u.style.setProperty("visibility", c() ? "visible" : "hidden") : u.style.removeProperty("visibility")), u
+            return typeof f == "function" ? $e(f, u) : n = u, ie(u, "src", ip), K(() => (c() ? "visible" : "hidden") != null ? u.style.setProperty("visibility", c() ? "visible" : "hidden") : u.style.removeProperty("visibility")), u
         })(), S(as, {
             get children() {
                 return [S(Bt, {
@@ -6360,7 +6386,7 @@ const Xd = (e, n) => {
                         return t() === "error"
                     },
                     get children() {
-                        return rp()
+                        return ap()
                     }
                 }), S(Bt, {
                     get when() {
@@ -6372,13 +6398,13 @@ const Xd = (e, n) => {
                                 return l()
                             },
                             children: u => (() => {
-                                const f = op();
-                                return D(f, S(se, {
+                                const f = lp();
+                                return E(f, S(se, {
                                     size: "screen-overlay-md",
                                     get children() {
                                         return u().text
                                     }
-                                }), null), D(f, S(yt, {
+                                }), null), E(f, S(yt, {
                                     get name() {
                                         return u().icon
                                     },
@@ -6404,10 +6430,10 @@ const Xd = (e, n) => {
                                     get children() {
                                         return [(() => {
                                             const u = Ci();
-                                            return D(u, () => i().time), u
+                                            return E(u, () => i().time), u
                                         })(), (() => {
                                             const u = Ci();
-                                            return D(u, () => i().date), u
+                                            return E(u, () => i().date), u
                                         })()]
                                     }
                                 })
@@ -6418,8 +6444,8 @@ const Xd = (e, n) => {
             }
         })]
     },
-    lp = V('<button class="absolute top-0 left-0 isolate"><div>'),
-    cp = {
+    dp = V('<button class="absolute top-0 left-0 isolate"><div>'),
+    pp = {
         c: {
             coordinates: {
                 x: 621,
@@ -6483,14 +6509,14 @@ const Xd = (e, n) => {
             transformOrigin: "top left"
         }
     },
-    up = e => {
+    gp = e => {
         const [n, t] = W(void 0);
         let r;
-        const i = () => cp[e.screen.position()],
+        const i = () => pp[e.screen.position()],
             {
                 data: s,
                 controls: l
-            } = ep({
+            } = op({
                 targetRef: n
             });
         return pe(() => {
@@ -6500,14 +6526,14 @@ const Xd = (e, n) => {
         }), pe(() => {
             e.screen.position() === "c" && !["initializing", "error"].includes(e.screen.status()) ? l.enable() : l.disable()
         }), (() => {
-            const c = lp(),
+            const c = dp(),
                 u = c.firstChild;
             c.$$click = () => {
                 var p;
                 (p = e.onClick) == null || p.call(e)
             }, $e(t, c);
             const f = r;
-            return typeof f == "function" ? $e(f, u) : r = u, D(c, S(ap, {
+            return typeof f == "function" ? $e(f, u) : r = u, E(c, S(fp, {
                 get screen() {
                     return e.screen
                 }
@@ -6536,30 +6562,30 @@ const Xd = (e, n) => {
         })()
     };
 Ie(["click"]);
-const fp = () => {
+const vp = () => {
         if (!$l()) return !0;
         const e = window.navigator;
         return !!(e.mediaCapabilities && e.mediaCapabilities.decodingInfo)
     },
-    dp = V('<img class="absolute top-0 left-0 wh-full pointer-events-none">'),
-    pp = V('<video muted playsinline loop class="absolute top-0 left-0 h-full pointer-events-none"><source type="video/mp4; codecs=hvc1"><source type="video/webm">'),
-    gp = () => {
+    hp = V('<img class="absolute top-0 left-0 wh-full pointer-events-none">'),
+    mp = V('<video muted playsinline loop class="absolute top-0 left-0 h-full pointer-events-none"><source type="video/mp4; codecs=hvc1"><source type="video/webm">'),
+    _p = () => {
         let e;
         return Gt(() => {
-            if (fp()) try {
+            if (vp()) try {
                 e == null || e.play()
             } catch (n) {
                 console.error(n)
             }
         }), [(() => {
-            const n = dp();
+            const n = hp();
             return K(() => ie(n, "src", Fe().bgSrc)), n
         })(), S(Le, {
             get when() {
                 return xe(() => !!Fe().overlayVideoMp4)() && Fe().overlayVideoWebm
             },
             get children() {
-                const n = pp(),
+                const n = mp(),
                     t = n.firstChild,
                     r = t.nextSibling,
                     i = e;
@@ -6576,8 +6602,8 @@ const fp = () => {
             }
         })]
     },
-    vp = V('<button class="absolute origin-top-left">'),
-    hp = [{
+    yp = V('<button class="absolute origin-top-left">'),
+    bp = [{
         appName: "terminal",
         position: {
             x: 319,
@@ -6608,10 +6634,10 @@ const fp = () => {
             height: 333
         }
     }],
-    mp = e => S(co, {
-        each: hp,
+    wp = e => S(co, {
+        each: bp,
         children: n => (() => {
-            const t = vp();
+            const t = yp();
             return t.$$click = () => e.onItemSelected(n.appName), K(r => {
                 const i = "".concat(n.size.width, "px"),
                     s = "".concat(n.size.height, "px"),
@@ -6625,9 +6651,9 @@ const fp = () => {
         })()
     });
 Ie(["click"]);
-const _p = "/assets/answering-machine-button-glow-58ea4526.svg",
-    yp = V('<img class="absolute origin-bottom-left">'),
-    bp = {
+const Ap = "/assets/answering-machine-button-glow-58ea4526.svg",
+    xp = V('<img class="absolute origin-bottom-left">'),
+    Sp = {
         "phone-button-light": {
             position: {
                 x: 1914,
@@ -6639,15 +6665,15 @@ const _p = "/assets/answering-machine-button-glow-58ea4526.svg",
             }
         }
     },
-    wp = () => {
-        const e = bp["phone-button-light"];
+    Tp = () => {
+        const e = Sp["phone-button-light"];
         return S(Le, {
             get when() {
                 return We.answeringMachineTrack.hasNew()
             },
             get children() {
-                const n = yp();
-                return ie(n, "src", _p), K(t => {
+                const n = xp();
+                return ie(n, "src", Ap), K(t => {
                     const r = e.size.width,
                         i = e.size.width,
                         s = "translate(".concat(e.position.x, "px, ").concat(e.position.y, "px)");
@@ -6660,24 +6686,24 @@ const _p = "/assets/answering-machine-button-glow-58ea4526.svg",
             }
         })
     },
-    Ap = "data:image/jpeg;base64,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",
-    xp = "data:image/jpeg;base64,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",
-    Sp = V('<div class="absolute origin-top-left bg-black"><img class="absolute top-0 left-0 wh-full object-cover"><img>'),
-    Tp = "absolute top-0 left-0 wh-full object-cover",
-    kp = () => (() => {
-        const e = Sp(),
+    kp = "data:image/jpeg;base64,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",
+    $p = "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAgICAgJCAkKCgkNDgwODRMREBARExwUFhQWFBwrGx8bGx8bKyYuJSMlLiZENS8vNUROQj5CTl9VVV93cXecnNEBCAgICAkICQoKCQ0ODA4NExEQEBETHBQWFBYUHCsbHxsbHxsrJi4lIyUuJkQ1Ly81RE5CPkJOX1VVX3dxd5yc0f/CABEIAHIAyAMBIgACEQEDEQH/xAA1AAEAAQUBAQAAAAAAAAAAAAAABQIDBAYHAQgBAQACAwEBAAAAAAAAAAAAAAADBAECBQYH/9oADAMBAAIQAxAAAAD5/wDfKi9Qp2UHurxctsL9i/nKny7nHlNYo8uUlg91z498AAAFy3Oz2I1IW7FqO27WNyi87lQM7ib8PAsbZbNfm8GWaapHb5D6W7GVYl94NeksyNxmrTOh6Bp0zMS+ow8eatEOKPOTcJOW70UkNt5MeiVdSc2XlrqQ5b71EctdSGkYHRm0HLPepNZ+W+dTHLaeqDldHVoCXXTM61d9JLDinzU5Bzlu9l9l432bwt/YardPjOvWpqKvKKirykVqK8Ka7GQWynK55RSZOm7hqNuHjNq9Z+v8WHFflpyDnLd6neuZ18bXs7jjkz9jccHY3HB2Nyrss3Ij3uh5xvbjiDsdjccHY3HB2HWtDszaZleDneq2hxT5qbhJy3eibN6zWqBroABXJxLMcrh4xgMSgAAZOfgZ97ow4o85NQ/s08/RCrNuaQrGJpCiaQomkKJpCiaQomkKJpCiaQonsGPoxrSqUqHTwAAAAAAAAAAAAf/EACMQAAAFBAMBAQEBAAAAAAAAAAIDBAUVARIUFgAGExAwIED/2gAIAQEAAQIA4EJSU0n+aJqJhEDS1TYwyPyCIB4zOW+PwCmpxhmYBWFSYfylKU/ssrCwjSCE4RCZ9dM68WwrAqmBe2mJRtsIFEhbBF4WFhDL+M9TXaYVLSySkmEYnUJ3UqiU9OSlKCvbiULMqQIvaYmCHV5+tPDg0IxvDw8PDxqR4Jl64zH8PCifwxsYRKajx9aeAJbmDU9T1PU9T1PU9T1PU9T1PU9T1PUxdTdGIJbx9aeIg9aLqbf6iO9AGX+tTKDCaIVDanVH687eA6jx9aeIa9bGEmiYJHl4FlCJoTQiwwgQaleAyKEUp24R1Xj608KOaOxbft+37ft237ft+37dt+37dt+37eLt712Ghjx9aeHCCqzs7Ozs7Obj9Uc+udsIzs7Ozs7OqtGpTVePrTxR+BZk6J7VLPwS8ePrTxR/kS8ePrSYY3xsbGxsbGxsbGxsbGxsbGxsbGxpSB2M5bSl111111111111111111111aWx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx/wD/xAA5EAABAwIDAwgJAwUBAAAAAAABAAIDBBESUVQhkZMQEzFBYnGS0QUUIiRSYXOhsSMwMiAzgYLBQP/aAAgBAQADPwBOcQ1oJJ6AFUS/wjJUkL8EjcLsv6p3RiRsZLT0EKcvazmnBzr2BFr271M1uN0bg29rkWVSwkGF+66nAuYn7lOWtcInEOFwQLqZgJdE4AG1yNn7bmODmkgjoKmZ/F5G2+xPkOJ7i42tc8hte2xSAYi2w5Z4w0MlcAOixUpNzI69iOnPpVU8HG95Bte5yVVe/PP3qoYbtlPX91VMiwNkcGKoe2z5XFuRPISLono/YfIbNCnyU+SfEAXDpUTvR0bHRkMMEspN9mKNwAf/AKqSKd0MhrIoQ8MYwMBjw/N/zVK18rp2TxtMsgjYwB5DWHr7s1FE4Rz+sF77uZzTQ8YMyntnY0YsALmv2i4cwXcB3BUjZBidO6wBLWgOdZwu02H3VLHggbT1Doud5iRg2m2DEGC2+6LS0Q48WKO4fYbJjZm8r1aSLBidHJiDSbXuw4XCw+axQH0b6s8SRsBDr7DM0YngdRu1RT0RY+J7I4IopC7EPZDhief9lRPsWPnAL8HtgNIfbFY5AhUlLTQxilq3xzlwf7NnktthOHskr1V0sT4HnHO2M2cATG9pdgPzKxzuY0bSVPkp8lP8Kcw2cOXCZHDpDHn7KpbI4B7t6qvjdvU1SGh7iQCo3egsYijx8xIMeP55fFkpof0jTSz7LYnTgxHZ0gFSS1EcrQZogzmXczLhOJmwuN+pyeyazafEwlpa+GYAsAFsDr71JG+ZrPR7JsTnubIyUYRjFrG/wqajpXSNayJ5MQDo3nHsbttb7qdj3TtihcRPjEbZNrmlgaQ05A7U9kgkFCJw9kfsiUYmOZ8RPW6+1Gpmo5RDEebE7zGX7XkPsGH/AIqU1opGlzqmN98Rl/Se8bSAPn0KeeGsEMcMWIRljRJtdhBu0J4jhPqoBEpMnPzBxIDDYk5XU1RF/EzSQg3vLaRwkFrgn4UGS1TJhHMRM1wLpdrQW3s45Zp0FWZGHa1xsQqr43b1VfG7eql8li929e8v7+XZL9N/4RMru9OKfkpVLl9lLkpcvspVKVLkhFSx08tCyUMc4tJJafa7lNV1DpubawWADWjYABYBSXupVLa1vspApclJkU/JOCtKF7y/v5dkv03/AIWOd3ep6ppMUJfa17Kr07lV6dyq9O5VencqvTuVXp3Kr07lV6dyq9O5VencqvTuVXp3Kr07lV6dyq9O5VencqvTOVRRtBmhczFe1+uywTL3l/fy/wB36b/wgag96DIZfmGqMC5cOr7pmYTLs7Rso2329BF0y4GLpTHlwbttZMBIv0Dao9ntdKjAviCaSLEbRdMcwOvYEH7INaXHoATSG32E9SjAJvexA3pgNiVHa+LrtyB0FP8AIPVqhe8v7+X+79N/4Vqj/KDoZe5qDSDiJsRb/CaCDidsFvtZBotjP8sS7WzFcC3zum4g66wX9om4A7gEHOeS7+QssNsLrHr2DagCfaNtn2N17Ydi6ARZEsDQSdp67WBQc1zT1iyBI2kAAAjOyGEjGegAHK20LE7FiN7f8srtaH2FidxRBccRN/sgIIO56vUL3l/fy/3fpv8AwsE571JRMcIy32rXuL9Cmzj8Kmzj8Kmzj8Kmzj8Kmzj8Kmzj8Kmzj8Kmzj8Kmzj8Kmzj8Kmzj8Kmzj8Kmzj8Kmzj8Kmzj8Kmzj8KntsMfhU1e1gkLLMvbCLdKxzr3l/fy7Jfpv8Awi2Z3enN60/NPzKfmU/Mp+ZT8yufrYI33LXOsV6IHTBMe55XoymgY+OGQEyBvtPv0qH0V6VNNTYgwRMdtNzdyfmU/Mp+ZT8yn5lPzKfmnO61eYL3l/fy7Jfpv/C/Vd+w+N7XscQ4dBXpbX1HFf5r0o62Ksmdtv7T3O/KqKuTnJ5XPfa13G5/Z/VC95f38uyX6b/wv1Xf+T9UL3l/fyxtc8PcGgscLn5hUz3l3rEe8+SptTHvPkqbUx7z5Km1Me8+SptTHvPkqbUx7z5Km1Me8+SptTHvPkqbUx7z5Km1Me8+SptTHvPkqbUx7z5Km1Me8+SptTHvPkqbUx7z5Km1Me8+SptTHvPkqbUx7z5Km1Me8+SptTHvPkqZjr+sR7z5Jj6h5Ybi/I74SnjoBU3aU3aU3aU3aU3aU3aU3aU3aU3aU3aU3aU3aU3aU3aU3aU3aU3aU3aU3aU3aU3aTz0gp3wlUGjg4bVQaODhtVBo4OG1UGjg4bVQaODhtVBo4OG1UGjg4bVQaODhtVBo4OG1UGjg4bVQaODhtVBo4OG1UGjg4bVQaODhtVBo4OG1UGjg4bVQaODhtVBo4OG1UGjg4bVQaODhtVBo4OG1UGjg4bVQaODhtVBo4OG1UGjg4bV//8QANREAAQIDAwkHAgcAAAAAAAAAAQACAwQRElORBRATFBUWIjRUBiAhMUFRYWJxMDI1UnJzsf/aAAgBAgEBPwBGzT1rnFPVcPyuD5XBT170tCEWM1hNAUWSAJGkiYICHbfoyS2z6pza0q1GEz9qa0CoDU6E3yA8UGggmlfRBrQRw0JT2tGjteDbXirMheRMFEgS+gdFhPcaOAIIzSPMsU5Ow5dzy9wAqtty163Fbclr1uK25LXrcVtyWvW4o5egEUMVmIW3Ja9bituS163Fbclr1uKg5Xl4rw1sRpJ+VCIdk+KfrbmkeZYu0tbMT2tKjPcrgRsUNCVRnuuH3RDfD7rgVGUHisnc7Bp7n/FKfpkT+bc0jzLFPyEOZL2vAIqt35a7C3flrsLd+WuwoXZiDFBLWMUTsvChgksYt35a7C3flrsLd+WuwoGRJeDEDxDAIUFtnJ8UfW3NI8yxP/O779wOcPIlFzj5k91nIxf7G5oEXQxWvpWiMzLkk6s3ErWZbpW4lazLdK3ErWZbpW4lazLdK3ErWZbpW4lazLdK3ErWZbpW4lazLdK3ErWZbpW4lRZpjoJhMhBgJBP4/wD/xAA2EQABAwAGBwUGBwAAAAAAAAABAAIDBAURFCFSEBIVQVFUkRMgNHOxBiIxM2FxIzA1RFOBkv/aAAgBAwEBPwDSCD8DotWPfosLZ52RuNgKMdWgkdrJgcqrp0THQCJztQygAnDcoZuzLyyYNBaLXAjGz+8CfqmVnSbR+OCXN3loHqpZnvEUsk+sLHBotA97BUespbA98gLADbiMpPHiFJO5j4mmQstIfrHiSAXDH4FPnmlY93bFzIyLRrAYm0DEFVVKJaVNrvJFkes4fXeBatSrf5Zf8qWj0a7Omhe42OAII46Ku8XGhA6SRwA3lXCXIVcJMh6LZ8mQ9FcJMhTKnayQyNidrG3jvxKuEmQq4SZCrhJkKfQ5GAktKYLKum8xvodFXeLjVBs7Z33K97gveWKxWKFqxVruCpPyHr9hP5rfQ6Ku8XGm0h0UjiDvK2jLmK2jLmK2jLmKrL2qhq18bJ+0JeCRqqge1sFOlbHEZASHHEZVtGXMVtGTMVtGXMVJTpHtLS42Jhtq6fzG+h0Vd4uNSfMf9z3HwxSEF8bXfcWpkEDDrMiY08QO7H+nTeY30OijzGCZsgFtm5Gl0Ukk0RvUq9UTk29Sr1ROTb1KvVE5NvUq9UTk29Sr1ROTb1KvVE5NvUq9UTk29Sr1ROTb1KvVE5NvUqamRvgMMcAYC4E/n//Z",
+    Ip = V('<div class="absolute origin-top-left bg-black"><img class="absolute top-0 left-0 wh-full object-cover"><img>'),
+    Pp = "absolute top-0 left-0 wh-full object-cover",
+    Op = () => (() => {
+        const e = Ip(),
             n = e.firstChild,
             t = n.nextSibling;
-        return e.style.setProperty("width", "150px"), e.style.setProperty("height", "85px"), e.style.setProperty("transform", "translate(403px, 924px) rotateZ(-4deg)"), ie(n, "src", Ap), ie(t, "src", xp), K(() => te(t, ce(Tp, {
+        return e.style.setProperty("width", "150px"), e.style.setProperty("height", "85px"), e.style.setProperty("transform", "translate(403px, 924px) rotateZ(-4deg)"), ie(n, "src", kp), ie(t, "src", $p), K(() => te(t, ce(Pp, {
             hidden: !We.archive.hasNew()
         }))), e
     })(),
-    $p = V('<div class="absolute top-0 left-0 wh-full isolate">'),
-    Ip = e => {
+    Dp = V('<div class="absolute top-0 left-0 wh-full isolate">'),
+    Ep = e => {
         const [n, t] = W(!1), i = ct(() => an() ? [an().srcWebm, an().srcMp3] : []), l = ct(() => [si().srcWebm, si().srcMp3], {
             loop: !0,
             autoplay: !0
-        }), c = ct([Nc, zc]);
+        }), c = ct([Fc, Gc]);
         (async () => {
             await Kr(6e4);
             const p = c.internalInstance();
@@ -6698,12 +6724,12 @@ const _p = "/assets/answering-machine-button-glow-58ea4526.svg",
             } else p === "log-book" && (ne.trackClickEvent("logbook", "open", "cctv-room"), e.roomSound.play("logbook-open")), p === "terminal" && (ne.trackClickEvent("terminal", "open", "cctv-room"), e.roomSound.play("terminal-open")), we.openApp(p)
         };
         return (() => {
-            const p = $p();
-            return D(p, S(co, {
+            const p = Dp();
+            return E(p, S(co, {
                 get each() {
                     return he.screens
                 },
-                children: o => S(up, {
+                children: o => S(gp, {
                     screen: o,
                     onClick: () => {
                         if (o.isEnabled() && o.position() === "c") n() || (he.Supervisor.dispatch("play"), t(!0)), he.Supervisor.setControlsVisible(!0);
@@ -6714,38 +6740,38 @@ const _p = "/assets/answering-machine-button-glow-58ea4526.svg",
                         e.roomSound.play(Xs(["screen-tap-1", "screen-tap-2", "screen-tap-3"]))
                     }
                 })
-            }), null), D(p, S(kp, {}), null), D(p, S(gp, {}), null), D(p, S(wp, {}), null), D(p, S(mp, {
+            }), null), E(p, S(Op, {}), null), E(p, S(_p, {}), null), E(p, S(Tp, {}), null), E(p, S(wp, {
                 onItemSelected: f
-            }), null), D(p, S(Le, {
+            }), null), E(p, S(Le, {
                 get when() {
                     return he.Supervisor.controlsVisible()
                 },
                 get children() {
-                    return S(Jd, {})
+                    return S(np, {})
                 }
             }), null), K(() => (st.currentStatus() === Ht.done ? "visible" : "hidden") != null ? p.style.setProperty("visibility", st.currentStatus() === Ht.done ? "visible" : "hidden") : p.style.removeProperty("visibility")), p
         })()
     },
-    Pp = V('<div class="absolute top-0 left-0 wh-full z-modal">'),
+    Cp = V('<div class="absolute top-0 left-0 wh-full z-modal">'),
     ur = e => S(Le, {
         get when() {
             return e.isOpen
         },
         get children() {
-            const n = Pp();
-            return D(n, () => e.children), n
+            const n = Cp();
+            return E(n, () => e.children), n
         }
     }),
-    Op = "/assets/logbook-36af03c8.mp3",
-    Ep = "/assets/logbook-dccdaf17.ogg",
-    Dp = V('<div><img><img><img class="absolute left-1/2 w-1/2 h-full"><img><img><div class="absolute top-0 left-0 wh-full flex"><button class="flex-1"></button><button class="flex-1"></button></div><button class="absolute top-20 left-20 w-100 h-100 flex-center">'),
-    Cp = () => [...Gs().map(e => e.srcPng || e.srcJpg), null].reverse(),
-    on = () => qs(Cp()).map((e, n) => ({
+    Mp = "/assets/logbook-36af03c8.mp3",
+    jp = "/assets/logbook-dccdaf17.ogg",
+    Bp = V('<div><img><img><img class="absolute left-1/2 w-1/2 h-full"><img><img><div class="absolute top-0 left-0 wh-full flex"><button class="flex-1"></button><button class="flex-1"></button></div><button class="absolute top-20 left-20 w-100 h-100 flex-center">'),
+    Lp = () => [...Gs().map(e => e.srcPng || e.srcJpg), null].reverse(),
+    on = () => qs(Lp()).map((e, n) => ({
         index: n,
         left: (e == null ? void 0 : e[0]) || null,
         right: (e == null ? void 0 : e[1]) || null
     })),
-    Mp = e => {
+    Rp = e => {
         const n = [],
             [t, r] = W(!1);
         Gt(async () => {
@@ -6786,13 +6812,13 @@ const _p = "/assets/answering-machine-button-glow-58ea4526.svg",
             },
             o = () => on()[i()],
             a = () => i() === 0,
-            d = ct([Ep, Op], {
+            d = ct([jp, Mp], {
                 sprite: {
                     "page-turn": [0, 933.3333333333334]
                 }
             });
         return (() => {
-            const v = Dp(),
+            const v = Bp(),
                 g = v.firstChild,
                 m = g.nextSibling,
                 h = m.nextSibling,
@@ -6804,7 +6830,7 @@ const _p = "/assets/answering-machine-button-glow-58ea4526.svg",
                 Y = b.nextSibling;
             return $e(B => n.push(B), g), ie(g, "src", Ws), $e(B => n.push(B), m), ie(m, "src", Zs), $e(B => n.push(B), h), ie(h, "src", Ys), $e(B => n.push(B), y), $e(B => n.push(B), w), P.$$click = () => f(), z.$$click = () => p(), Y.$$click = () => {
                 e.onClose()
-            }, D(Y, S(se, {
+            }, E(Y, S(se, {
                 size: "terminal-lg",
                 class: "text-purple leading-none tracking-[-10px]",
                 children: "<-"
@@ -6830,12 +6856,12 @@ const _p = "/assets/answering-machine-button-glow-58ea4526.svg",
         })()
     };
 Ie(["click"]);
-const jp = e => S(ur, {
+const Vp = e => S(ur, {
         get isOpen() {
             return we.currentOpenApp.mainApp === "log-book"
         },
         get children() {
-            return S(Mp, {
+            return S(Rp, {
                 onClose: () => {
                     var n;
                     ne.trackClickEvent("modal", "close", "logbook"), we.closeApp(), (n = e.onClose) == null || n.call(e)
@@ -6843,10 +6869,10 @@ const jp = e => S(ur, {
             })
         }
     }),
-    Bp = "/assets/terminal-2aa26d8b.mp3",
-    Lp = "/assets/terminal-ca9f8876.ogg",
+    Np = "/assets/terminal-2aa26d8b.mp3",
+    zp = "/assets/terminal-ca9f8876.ogg",
     ra = Ua(),
-    Rp = e => {
+    Up = e => {
         const n = ct(e.src, e.options);
         return S(ra.Provider, {
             value: n,
@@ -6861,26 +6887,26 @@ function qt() {
     if (e === void 0) throw new Error("useAudio must be used within a AudioProvider");
     return e
 }
-const Vp = "\n      @@@@@@@@@@@@@@@@@@@@@@@@@@@@\n    @@                         @@@\n @@                          @@@@@\n@                         @@@@@@@@\n@                         @@@@@@@@\n@  @@@@@@@@@@@@@@@@@@@@@@ @@@@@@@@\n@  @                   @@ @@@@@@@@\n@  @     @@@@@@@@@@    @@ @@@@@@@@\n@  @     @@      @@    @@ @@@@@@@@\n@  @     @@      @@    @@ @@@@@@@@\n@  @                   @@ @@@@@@@@\n@  @                   @@ @@@@@@@@\n@  @@@@@@@@@@@@@@@@@@@@@@ @@@@@@@@\n@                         @@@@@@@@\n@  @@@@@@@@@@@@@@@@@@@@@@ @@@@@@@@\n@  @                   @@ @@@@@@@@\n@  @     @@@@@@@@@@    @@ @@@@@@@@\n@  @     @@      @@    @@ @@@@@@@@\n@  @     @@      @@    @@ @@@@@@@@\n@  @                   @@ @@@@@@@@\n@  @                   @@ @@@@@@@@\n@  @@@@@@@@@@@@@@@@@@@@@@ @@@@@@@@ \n@                         @@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n",
-    Np = "\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n    @@                         @@\n    @@                         @@\n    @@                         @@\n    @@                         @@\n    @@                         @@\n     @@      @@@@@@@@      @@  @@\n      @@  @@@@@@@@@@@@@@@@@@  @@\n       @@  @@@@@@@@@@@@@@@@  @@\n        @@  @@@@@@@@@@@@@@  @@\n         @@  @@@@@@@@@@@@  @@\n           @@  @@@@@@@@  @@\n             @@  @@@@  @@\n              @@  @@  @@\n             @@  @@@@  @@\n           @@     @@     @@\n         @@                @@\n        @@        @@        @@\n       @@       @@@@@@       @@\n      @@      @@@@@@@@@@      @@\n     @@     @@@@@@@@@@@@@@     @@\n    @@    @@@@@@@@@@@@@@@@@     @@\n    @@  @@@@@@@@@@@@@@@@@@@@@   @@\n    @@  @@@@@@@@@@@@@@@@@@@@@   @@\n    @@                          @@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n",
-    zp = "\n _   ____                       _ _              _    _           _     _\n| | / ___|  ___  ___ _   _ _ __(_) |_ _   _     / \\  | | ___ _ __| |_  | |\n| | \\___ \\ / _ \\/ __| | | | '__| | __| | | |   / _ \\ | |/ _ \\ '__| __| | |\n|_|  ___) |  __/ (__| |_| | |  | | |_| |_| |  / ___ \\| |  __/ |  | |_  |_|\n(_) |____/ \\___|\\___|\\__,_|_|  |_|\\__|\\__, | /_/   \\_\\_|\\___|_|   \\__| (_)\n                                      |___/\n",
-    Up = "\n    __\n   / /\n  / /\n / /\n/_/\n",
-    Hp = "\n _\n(_)\n _\n(_)\n",
-    Fp = {
-        archive: Vp,
-        timecoder: Np,
-        securityAlert: zp,
-        forwardSlash: Up,
-        colon: Hp
+const Hp = "\n      @@@@@@@@@@@@@@@@@@@@@@@@@@@@\n    @@                         @@@\n @@                          @@@@@\n@                         @@@@@@@@\n@                         @@@@@@@@\n@  @@@@@@@@@@@@@@@@@@@@@@ @@@@@@@@\n@  @                   @@ @@@@@@@@\n@  @     @@@@@@@@@@    @@ @@@@@@@@\n@  @     @@      @@    @@ @@@@@@@@\n@  @     @@      @@    @@ @@@@@@@@\n@  @                   @@ @@@@@@@@\n@  @                   @@ @@@@@@@@\n@  @@@@@@@@@@@@@@@@@@@@@@ @@@@@@@@\n@                         @@@@@@@@\n@  @@@@@@@@@@@@@@@@@@@@@@ @@@@@@@@\n@  @                   @@ @@@@@@@@\n@  @     @@@@@@@@@@    @@ @@@@@@@@\n@  @     @@      @@    @@ @@@@@@@@\n@  @     @@      @@    @@ @@@@@@@@\n@  @                   @@ @@@@@@@@\n@  @                   @@ @@@@@@@@\n@  @@@@@@@@@@@@@@@@@@@@@@ @@@@@@@@ \n@                         @@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n",
+    Fp = "\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n    @@                         @@\n    @@                         @@\n    @@                         @@\n    @@                         @@\n    @@                         @@\n     @@      @@@@@@@@      @@  @@\n      @@  @@@@@@@@@@@@@@@@@@  @@\n       @@  @@@@@@@@@@@@@@@@  @@\n        @@  @@@@@@@@@@@@@@  @@\n         @@  @@@@@@@@@@@@  @@\n           @@  @@@@@@@@  @@\n             @@  @@@@  @@\n              @@  @@  @@\n             @@  @@@@  @@\n           @@     @@     @@\n         @@                @@\n        @@        @@        @@\n       @@       @@@@@@       @@\n      @@      @@@@@@@@@@      @@\n     @@     @@@@@@@@@@@@@@     @@\n    @@    @@@@@@@@@@@@@@@@@     @@\n    @@  @@@@@@@@@@@@@@@@@@@@@   @@\n    @@  @@@@@@@@@@@@@@@@@@@@@   @@\n    @@                          @@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n",
+    Gp = "\n _   ____                       _ _              _    _           _     _\n| | / ___|  ___  ___ _   _ _ __(_) |_ _   _     / \\  | | ___ _ __| |_  | |\n| | \\___ \\ / _ \\/ __| | | | '__| | __| | | |   / _ \\ | |/ _ \\ '__| __| | |\n|_|  ___) |  __/ (__| |_| | |  | | |_| |_| |  / ___ \\| |  __/ |  | |_  |_|\n(_) |____/ \\___|\\___|\\__,_|_|  |_|\\__|\\__, | /_/   \\_\\_|\\___|_|   \\__| (_)\n                                      |___/\n",
+    Zp = "\n    __\n   / /\n  / /\n / /\n/_/\n",
+    Yp = "\n _\n(_)\n _\n(_)\n",
+    Wp = {
+        archive: Hp,
+        timecoder: Fp,
+        securityAlert: Gp,
+        forwardSlash: Zp,
+        colon: Yp
     },
-    Gp = V("<span>"),
+    qp = V("<span>"),
     St = e => (() => {
-        const n = Gp();
-        return D(n, () => Fp[e.name]), K(() => te(n, ce("font-vt-220 font-medium leading-none whitespace-pre", e.class))), n
+        const n = qp();
+        return E(n, () => Wp[e.name]), K(() => te(n, ce("font-vt-220 font-medium leading-none whitespace-pre", e.class))), n
     })(),
-    Zp = V("<span>Security Archives"),
-    Yp = V("<span>Time Coder"),
-    Wp = V('<div class="wh-full flex justify-center space-x-368 items-end pb-144"><div class="flex flex-col items-center space-y-56" role="button"></div><div class="flex flex-col items-center space-y-56 text-shadow-terminal" role="button">'),
+    Qp = V("<span>Security Archives"),
+    Kp = V("<span>Time Coder"),
+    Jp = V('<div class="wh-full flex justify-center space-x-368 items-end pb-144"><div class="flex flex-col items-center space-y-56" role="button"></div><div class="flex flex-col items-center space-y-56 text-shadow-terminal" role="button">'),
     Mi = An("relative inline-block w-[600px] text-center py-8", {
         variants: {
             selected: {
@@ -6889,7 +6915,7 @@ const Vp = "\n      @@@@@@@@@@@@@@@@@@@@@@@@@@@@\n    @@                        
             }
         }
     }),
-    qp = e => {
+    Xp = e => {
         const n = qt(),
             [t, r] = W();
         let i;
@@ -6903,13 +6929,13 @@ const Vp = "\n      @@@@@@@@@@@@@@@@@@@@@@@@@@@@\n    @@                        
         return Ae(() => {
             clearTimeout(i)
         }), (() => {
-            const l = Wp(),
+            const l = Jp(),
                 c = l.firstChild,
                 u = c.nextSibling;
-            return c.$$click = () => s("security-tape-archives"), D(c, S(St, {
+            return c.$$click = () => s("security-tape-archives"), E(c, S(St, {
                 name: "archive",
                 class: "text-purple text-[21px] text-shadow-terminal"
-            }), null), D(c, S(se, {
+            }), null), E(c, S(se, {
                 size: "terminal-md",
                 get class() {
                     return Mi({
@@ -6917,12 +6943,12 @@ const Vp = "\n      @@@@@@@@@@@@@@@@@@@@@@@@@@@@\n    @@                        
                     })
                 },
                 get children() {
-                    return Zp()
+                    return Qp()
                 }
-            }), null), u.$$click = () => s("timecoder"), D(u, S(St, {
+            }), null), u.$$click = () => s("timecoder"), E(u, S(St, {
                 name: "timecoder",
                 class: "text-purple text-[18px] text-shadow-terminal"
-            }), null), D(u, S(se, {
+            }), null), E(u, S(se, {
                 size: "terminal-md",
                 get class() {
                     return Mi({
@@ -6930,30 +6956,30 @@ const Vp = "\n      @@@@@@@@@@@@@@@@@@@@@@@@@@@@\n    @@                        
                     })
                 },
                 get children() {
-                    return Yp()
+                    return Kp()
                 }
             }), null), l
         })()
     };
 Ie(["click"]);
-const Qp = V('<div class="absolute top-0 left-0 wh-full flex flex-col items-center pt-72 bg-terminal"><img class="block w-[732px] mb-32 text-blue-light drop-shadow-terminal transform-gpu" width="873" height="621"><div class="flex space-x-32 text-blue-light"><div class="bg-blue-light shadow-terminal"></div><div class="w-24 h-full bg-blue-light shadow-terminal">'),
-    Kp = () => {
+const eg = V('<div class="absolute top-0 left-0 wh-full flex flex-col items-center pt-72 bg-terminal"><img class="block w-[732px] mb-32 text-blue-light drop-shadow-terminal transform-gpu" width="873" height="621"><div class="flex space-x-32 text-blue-light"><div class="bg-blue-light shadow-terminal"></div><div class="w-24 h-full bg-blue-light shadow-terminal">'),
+    tg = () => {
         const [e, n] = W(!0), t = setTimeout(() => n(!1), 1e3);
         return Ae(() => clearInterval(t)), S(Le, {
             get when() {
                 return e()
             },
             get children() {
-                const r = Qp(),
+                const r = eg(),
                     i = r.firstChild,
                     s = i.nextSibling,
                     l = s.firstChild;
-                return ie(i, "src", _o), D(r, S(se, {
+                return ie(i, "src", _o), E(r, S(se, {
                     as: "p",
                     size: "terminal-sm",
                     class: "text-center whitespace-pre text-purple mb-56 text-shadow-terminal",
                     children: "**********************************************************\n\n(c) copyright Starr Park corporation, 1995. All rights reserved.\nStarr Park Security Services is a registered\ntrademark of Starr Park corporation. \n          \n**********************************************************"
-                }), s), D(l, S(se, {
+                }), s), E(l, S(se, {
                     as: "span",
                     size: "terminal-md",
                     class: "text-black px-16 py-8",
@@ -6962,7 +6988,7 @@ const Qp = V('<div class="absolute top-0 left-0 wh-full flex flex-col items-cent
             }
         })
     },
-    Jp = 10,
+    ng = 10,
     ji = e => {
         const n = As(e);
         return {
@@ -6970,17 +6996,17 @@ const Qp = V('<div class="absolute top-0 left-0 wh-full flex flex-col items-cent
             time: n.format("HH:mm")
         }
     },
-    Xp = (e = {}) => {
+    rg = (e = {}) => {
         const [n, t] = W(ji(e.timezone)), r = () => {
             const s = ji(e.timezone);
             t(s)
-        }, i = setInterval(() => r(), Jp * 1e3);
+        }, i = setInterval(() => r(), ng * 1e3);
         return Ae(() => clearInterval(i)), n
     },
     Bi = V("<span>"),
-    eg = V("<span>Starr Park Security System"),
-    tg = () => {
-        const e = Xp({
+    og = V("<span>Starr Park Security System"),
+    ig = () => {
+        const e = rg({
             timezone: hs
         });
         return S(se, {
@@ -6990,16 +7016,16 @@ const Qp = V('<div class="absolute top-0 left-0 wh-full flex flex-col items-cent
             get children() {
                 return [(() => {
                     const n = Bi();
-                    return D(n, () => e().date), n
-                })(), eg(), (() => {
+                    return E(n, () => e().date), n
+                })(), og(), (() => {
                     const n = Bi();
-                    return D(n, () => e().time), n
+                    return E(n, () => e().time), n
                 })()]
             }
         })
     },
-    ng = V('<div><div class="flex w-full"><button><span>&lt;-</span></button><div class="flex items-center flex-1 h-full px-32 bg-blue-light text-blue-light shadow-terminal"></div></div><div class="flex-1 min-h-0 px-100">'),
-    rg = "w-100 h-100 flex-center font-vt-220 font-medium leading-none text-shadow-terminal",
+    sg = V('<div><div class="flex w-full"><button><span>&lt;-</span></button><div class="flex items-center flex-1 h-full px-32 bg-blue-light text-blue-light shadow-terminal"></div></div><div class="flex-1 min-h-0 px-100">'),
+    ag = "w-100 h-100 flex-center font-vt-220 font-medium leading-none text-shadow-terminal",
     Vr = e => {
         const n = qt(),
             t = () => {
@@ -7013,21 +7039,21 @@ const Qp = V('<div class="absolute top-0 left-0 wh-full flex flex-col items-cent
                 }, r)
             };
         return (() => {
-            const r = ng(),
+            const r = sg(),
                 i = r.firstChild,
                 s = i.firstChild,
                 l = s.nextSibling,
                 c = i.nextSibling;
-            return s.$$click = () => t(), D(l, S(se, {
+            return s.$$click = () => t(), E(l, S(se, {
                 as: "span",
                 size: "terminal-lg",
                 class: "text-black",
                 get children() {
                     return e.title
                 }
-            })), D(c, () => e.children), K(u => {
+            })), E(c, () => e.children), K(u => {
                 const f = ce("flex flex-col flex-1 pt-64 px-44"),
-                    p = ce(rg, "text-purple text-[80px] tracking-[-10px]");
+                    p = ce(ag, "text-purple text-[80px] tracking-[-10px]");
                 return f !== u._v$ && te(r, u._v$ = f), p !== u._v$2 && te(s, u._v$2 = p), u
             }, {
                 _v$: void 0,
@@ -7036,8 +7062,8 @@ const Qp = V('<div class="absolute top-0 left-0 wh-full flex flex-col items-cent
         })()
     };
 Ie(["click"]);
-const og = "/assets/terminal-typing-8b10cd31.mp3",
-    ig = "/assets/terminal-typing-20a23c49.ogg";
+const lg = "/assets/terminal-typing-8b10cd31.mp3",
+    cg = "/assets/terminal-typing-20a23c49.ogg";
 class oa extends Error {
     constructor(t, r) {
         super(r);
@@ -7045,12 +7071,12 @@ class oa extends Error {
         this.statusCode = t, Object.setPrototypeOf(this, new.target.prototype)
     }
 }
-const sg = "https://bmwryv10bd.execute-api.us-east-1.amazonaws.com",
+const ug = "https://bmwryv10bd.execute-api.us-east-1.amazonaws.com",
     ia = {
-        base: "".concat(sg),
+        base: "".concat(ug),
         getArchiveByCode: e => "".concat(ia.base, "/timecoder/").concat(e)
     },
-    ag = async ({
+    fg = async ({
         params: e
     }) => {
         const n = ia.getArchiveByCode(e.code),
@@ -7062,15 +7088,15 @@ const sg = "https://bmwryv10bd.execute-api.us-east-1.amazonaws.com",
             });
         if (!t.ok) throw new oa(t.status, "Unable to fetch ".concat(n, ": ").concat(t.status, " ").concat(t.statusText));
         return await t.json()
-    }, lg = V('<div class="flex flex-col space-y-120 w-full pt-72 pb-32"><div class="flex justify-between"><div class="flex space-x-24 items-center"></div><div class="flex space-x-24 items-center"></div></div><div class="flex flex-col space-y-48 items-center"><button class="inline-flex px-120 py-8 text-blue-light border text-shadow-terminal">'), cg = V('<input pattern="[0-9]*" inputmode="numeric">'), ug = {
+    }, dg = V('<div class="flex flex-col space-y-120 w-full pt-72 pb-32"><div class="flex justify-between"><div class="flex space-x-24 items-center"></div><div class="flex space-x-24 items-center"></div></div><div class="flex flex-col space-y-48 items-center"><button class="inline-flex px-120 py-8 text-blue-light border text-shadow-terminal">'), pg = V('<input pattern="[0-9]*" inputmode="numeric">'), gg = {
         day: "00",
         month: "00",
         year: "00",
         hours: "00",
         minutes: "00",
         seconds: "00"
-    }, Gn = "text-blue-light text-[20px]", fg = e => {
-        const [n, t] = Yt(ug), r = qt(), i = {
+    }, Gn = "text-blue-light text-[20px]", vg = e => {
+        const [n, t] = Yt(gg), r = qt(), i = {
             "typing-1": [0, 200],
             "typing-2": [2e3, 166.66666666666652],
             "typing-3": [4e3, 183.33333333333357],
@@ -7078,7 +7104,7 @@ const sg = "https://bmwryv10bd.execute-api.us-east-1.amazonaws.com",
             "typing-5": [8e3, 199.9999999999993],
             "typing-6": [1e4, 233.33333333333252],
             "typing-7": [12e3, 250]
-        }, s = ct([ig, og], {
+        }, s = ct([cg, lg], {
             sprite: i
         }), [l, c] = W(void 0), [u, f] = W(!1), p = (g, m) => {
             t(g, m), s.play(Xs(Object.keys(i)))
@@ -7091,7 +7117,7 @@ const sg = "https://bmwryv10bd.execute-api.us-east-1.amazonaws.com",
             const g = Object.values(n).join("");
             let m;
             try {
-                m = await ag({
+                m = await fg({
                     params: {
                         code: g
                     }
@@ -7125,14 +7151,14 @@ const sg = "https://bmwryv10bd.execute-api.us-east-1.amazonaws.com",
             y ? y.focus() : g.blur()
         };
         return (() => {
-            const g = lg(),
+            const g = dg(),
                 m = g.firstChild,
                 h = m.firstChild,
                 y = h.nextSibling,
                 w = m.nextSibling,
                 b = w.firstChild,
                 P = d;
-            return typeof P == "function" ? $e(P, m) : d = m, D(h, S(Mt, {
+            return typeof P == "function" ? $e(P, m) : d = m, E(h, S(Mt, {
                 name: "day",
                 get value() {
                     return n.day
@@ -7142,10 +7168,10 @@ const sg = "https://bmwryv10bd.execute-api.us-east-1.amazonaws.com",
                 get disabled() {
                     return u()
                 }
-            }), null), D(h, S(St, {
+            }), null), E(h, S(St, {
                 name: "forwardSlash",
                 class: Gn
-            }), null), D(h, S(Mt, {
+            }), null), E(h, S(Mt, {
                 name: "month",
                 get value() {
                     return n.month
@@ -7155,10 +7181,10 @@ const sg = "https://bmwryv10bd.execute-api.us-east-1.amazonaws.com",
                 get disabled() {
                     return u()
                 }
-            }), null), D(h, S(St, {
+            }), null), E(h, S(St, {
                 name: "forwardSlash",
                 class: Gn
-            }), null), D(h, S(Mt, {
+            }), null), E(h, S(Mt, {
                 name: "year",
                 get value() {
                     return n.year
@@ -7168,7 +7194,7 @@ const sg = "https://bmwryv10bd.execute-api.us-east-1.amazonaws.com",
                 get disabled() {
                     return u()
                 }
-            }), null), D(y, S(Mt, {
+            }), null), E(y, S(Mt, {
                 name: "hours",
                 get value() {
                     return n.hours
@@ -7178,10 +7204,10 @@ const sg = "https://bmwryv10bd.execute-api.us-east-1.amazonaws.com",
                 get disabled() {
                     return u()
                 }
-            }), null), D(y, S(St, {
+            }), null), E(y, S(St, {
                 name: "colon",
                 class: Gn
-            }), null), D(y, S(Mt, {
+            }), null), E(y, S(Mt, {
                 name: "minutes",
                 get value() {
                     return n.minutes
@@ -7191,10 +7217,10 @@ const sg = "https://bmwryv10bd.execute-api.us-east-1.amazonaws.com",
                     return u()
                 },
                 onNextInputFocus: v
-            }), null), D(y, S(St, {
+            }), null), E(y, S(St, {
                 name: "colon",
                 class: Gn
-            }), null), D(y, S(Mt, {
+            }), null), E(y, S(Mt, {
                 name: "seconds",
                 get value() {
                     return n.seconds
@@ -7204,10 +7230,10 @@ const sg = "https://bmwryv10bd.execute-api.us-east-1.amazonaws.com",
                     return u()
                 },
                 onNextInputFocus: v
-            }), null), b.$$click = () => a(), D(b, S(se, {
+            }), null), b.$$click = () => a(), E(b, S(se, {
                 size: "terminal-md",
                 children: "ENTER"
-            })), D(w, S(Le, {
+            })), E(w, S(Le, {
                 get when() {
                     return !!l()
                 },
@@ -7220,7 +7246,7 @@ const sg = "https://bmwryv10bd.execute-api.us-east-1.amazonaws.com",
                         }
                     })
                 }
-            }), null), D(w, S(Le, {
+            }), null), E(w, S(Le, {
                 get when() {
                     return u()
                 },
@@ -7256,7 +7282,7 @@ const sg = "https://bmwryv10bd.execute-api.us-east-1.amazonaws.com",
                 r(0)
             };
         return (() => {
-            const u = cg();
+            const u = pg();
             return u.addEventListener("focus", c), u.$$click = s, u.$$keydown = l, u.$$input = i, K(f => {
                 const p = ce(xn({
                         size: "terminal-xxl"
@@ -7272,17 +7298,17 @@ const sg = "https://bmwryv10bd.execute-api.us-east-1.amazonaws.com",
         })()
     };
 Ie(["click", "input", "keydown"]);
-const dg = V('<div class="wh-full flex flex-col w-full pb-48"><button class="inline-flex w-full flex-center py-12 bg-transparent text-blue-light text-shadow-terminal disabled:invisible"></button><div class="flex-1 flex flex-col"></div><button class="inline-flex w-full flex-center py-12 bg-transparent text-blue-light text-shadow-terminal disabled:invisible">'),
+const hg = V('<div class="wh-full flex flex-col w-full pb-48"><button class="inline-flex w-full flex-center py-12 bg-transparent text-blue-light text-shadow-terminal disabled:invisible"></button><div class="flex-1 flex flex-col"></div><button class="inline-flex w-full flex-center py-12 bg-transparent text-blue-light text-shadow-terminal disabled:invisible">'),
     Li = V("<span>"),
-    pg = V('<button class="py-16 px-32 text-green text-shadow-terminal">'),
+    mg = V('<button class="py-16 px-32 text-green text-shadow-terminal">'),
     Zn = 7,
-    gg = e => {
+    _g = e => {
         const n = qt(),
             [t, r] = W(0),
             i = () => Math.ceil(pn().length / Zn),
             s = () => pn().slice(t() * Zn, t() * Zn + Zn);
         return (() => {
-            const l = dg(),
+            const l = hg(),
                 c = l.firstChild,
                 u = c.nextSibling,
                 f = u.nextSibling;
@@ -7290,11 +7316,11 @@ const dg = V('<div class="wh-full flex flex-col w-full pb-48"><button class="inl
                 ne.trackClickEvent("tape-archives", "prev-page", "terminal-tape-archives"), n.play("click", {
                     interrupt: !0
                 }), r(p => p - 1)
-            }, D(c, S(se, {
+            }, E(c, S(se, {
                 size: "terminal-md",
                 class: "-rotate-90",
                 children: ">"
-            })), D(u, S(co, {
+            })), E(u, S(co, {
                 get each() {
                     return s()
                 },
@@ -7304,23 +7330,23 @@ const dg = V('<div class="wh-full flex flex-col w-full pb-48"><button class="inl
                         d = a.split(" ")[0],
                         v = a.split(" ")[1];
                     return (() => {
-                        const g = pg();
+                        const g = mg();
                         return g.$$click = () => {
                             ne.trackClickEvent("tape-archives", "open-playlist", "terminal-tape-archives", {
                                 playlistId: p.playlistId
                             }), n.play("click", {
                                 interrupt: !0
                             }), e.onLoadPlaylist(p)
-                        }, D(g, S(se, {
+                        }, E(g, S(se, {
                             size: "terminal-md",
                             class: "flex space-x-272",
                             get children() {
                                 return [(() => {
                                     const m = Li();
-                                    return D(m, d), m
+                                    return E(m, d), m
                                 })(), " ", (() => {
                                     const m = Li();
-                                    return D(m, v), m
+                                    return E(m, v), m
                                 })()]
                             }
                         })), g
@@ -7330,7 +7356,7 @@ const dg = V('<div class="wh-full flex flex-col w-full pb-48"><button class="inl
                 ne.trackClickEvent("tape-archives", "prev-page", "terminal-tape-archives"), n.play("click", {
                     interrupt: !0
                 }), r(p => p + 1)
-            }, D(f, S(se, {
+            }, E(f, S(se, {
                 size: "terminal-md",
                 class: "rotate-90",
                 children: ">"
@@ -7345,24 +7371,24 @@ const dg = V('<div class="wh-full flex flex-col w-full pb-48"><button class="inl
         })()
     };
 Ie(["click"]);
-const vg = V('<span class="text-black">Access Security System'),
-    hg = V('<div class="wh-full flex flex-col items-center space-y-76 pt-76 "><img class="w-[872px] drop-shadow-terminal text-blue-light transform-gpu" width="873" height="621">'),
-    mg = e => {
+const yg = V('<span class="text-black">Access Security System'),
+    bg = V('<div class="wh-full flex flex-col items-center space-y-76 pt-76 "><img class="w-[872px] drop-shadow-terminal text-blue-light transform-gpu" width="873" height="621">'),
+    wg = e => {
         const n = setTimeout(() => e.setCurrentOpenApp("home"), 2e3);
         return Ae(() => clearInterval(n)), (() => {
-            const t = hg(),
+            const t = bg(),
                 r = t.firstChild;
-            return ie(r, "src", _o), D(t, S(se, {
+            return ie(r, "src", _o), E(t, S(se, {
                 size: "terminal-md",
                 class: "px-16 py-8 bg-blue-light text-blue-light shadow-terminal",
                 get children() {
-                    return vg()
+                    return yg()
                 }
             }), null), t
         })()
     },
-    _g = V('<span class="text-black">unwatched security footage'),
-    yg = V('<div class="flex-1 pt-144 pb-124 px-144"><div class="relative wh-full flex flex-col space-y-92 items-center justify-center border-x-2 border-b-2 border-purple"><div class="absolute top-0 left-0 wh-full flex items-start"><div class="flex-1 border-t-2 border-purple"></div><div class="flex-1 border-t-2 border-purple"></div></div><div class="flex space-x-184"><button><span>Dismiss</span></button><button><span>Open'),
+    Ag = V('<span class="text-black">unwatched security footage'),
+    xg = V('<div class="flex-1 pt-144 pb-124 px-144"><div class="relative wh-full flex flex-col space-y-92 items-center justify-center border-x-2 border-b-2 border-purple"><div class="absolute top-0 left-0 wh-full flex items-start"><div class="flex-1 border-t-2 border-purple"></div><div class="flex-1 border-t-2 border-purple"></div></div><div class="flex space-x-184"><button><span>Dismiss</span></button><button><span>Open'),
     Ri = An(["relative px-24 py-8", xn({
         size: "terminal-md"
     })], {
@@ -7373,7 +7399,7 @@ const vg = V('<span class="text-black">Access Security System'),
             }
         }
     }),
-    bg = e => {
+    Sg = e => {
         const n = qt(),
             [t, r] = W();
         let i;
@@ -7387,7 +7413,7 @@ const vg = V('<span class="text-black">Access Security System'),
         return Ae(() => {
             clearTimeout(i)
         }), (() => {
-            const l = yg(),
+            const l = xg(),
                 c = l.firstChild,
                 u = c.firstChild,
                 f = u.firstChild,
@@ -7395,15 +7421,15 @@ const vg = V('<span class="text-black">Access Security System'),
                 o = u.nextSibling,
                 a = o.firstChild,
                 d = a.nextSibling;
-            return D(u, S(St, {
+            return E(u, S(St, {
                 name: "securityAlert",
                 class: "px-64 -translate-y-1/2 text-blue-light text-[32px] text-shadow-terminal"
-            }), p), D(c, S(se, {
+            }), p), E(c, S(se, {
                 as: "div",
                 size: "terminal-xl",
                 class: "px-56 py-32 bg-orange text-orange shadow-terminal",
                 get children() {
-                    return _g()
+                    return Ag()
                 }
             }), o), a.$$click = () => s("dismiss"), d.$$click = () => s("open"), K(v => {
                 const g = Ri({
@@ -7420,8 +7446,8 @@ const vg = V('<span class="text-black">Access Security System'),
         })()
     };
 Ie(["click"]);
-const wg = V('<div class="realtive wh-full flex flex-col bg-terminal">'),
-    Ag = e => {
+const Tg = V('<div class="realtive wh-full flex flex-col bg-terminal">'),
+    kg = e => {
         const n = () => we.currentOpenApp.mainApp,
             t = () => we.currentOpenApp.mainApp === "terminal" ? we.currentOpenApp.terminalApp : void 0,
             r = (i, s) => {
@@ -7441,8 +7467,8 @@ const wg = V('<div class="realtive wh-full flex flex-col bg-terminal">'),
                 return n() === "terminal"
             },
             get children() {
-                return S(Rp, {
-                    src: [Lp, Bp],
+                return S(Up, {
+                    src: [zp, Np],
                     options: {
                         sprite: {
                             click: [0, 220.6122448979592],
@@ -7450,10 +7476,10 @@ const wg = V('<div class="realtive wh-full flex flex-col bg-terminal">'),
                         }
                     },
                     get children() {
-                        const i = wg();
-                        return D(i, S(tg, {}), null), D(i, S(as, {
+                        const i = Tg();
+                        return E(i, S(ig, {}), null), E(i, S(as, {
                             get fallback() {
-                                return S(mg, {
+                                return S(wg, {
                                     setCurrentOpenApp: s => we.openApp(s)
                                 })
                             },
@@ -7463,7 +7489,7 @@ const wg = V('<div class="realtive wh-full flex flex-col bg-terminal">'),
                                         return We.archive.hasNew()
                                     },
                                     get children() {
-                                        return S(bg, {
+                                        return S(Sg, {
                                             onLoadPlaylist: () => {
                                                 const s = pn()[0];
                                                 s && (ne.trackClickEvent("notification", "open-playlist", "terminal-notification-screen", {
@@ -7481,7 +7507,7 @@ const wg = V('<div class="realtive wh-full flex flex-col bg-terminal">'),
                                             title: "Security System",
                                             onBack: () => we.closeApp(),
                                             get children() {
-                                                return S(qp, {
+                                                return S(Xp, {
                                                     setCurrentOpenApp: s => we.openApp(s)
                                                 })
                                             }
@@ -7496,7 +7522,7 @@ const wg = V('<div class="realtive wh-full flex flex-col bg-terminal">'),
                                             title: "Security Tape Archives",
                                             onBack: () => we.openApp("home"),
                                             get children() {
-                                                return S(gg, {
+                                                return S(_g, {
                                                     onLoadPlaylist: s => r(s, "security-tape-archives")
                                                 })
                                             }
@@ -7511,7 +7537,7 @@ const wg = V('<div class="realtive wh-full flex flex-col bg-terminal">'),
                                             title: "Timecoder v2.1.0",
                                             onBack: () => we.openApp("home"),
                                             get children() {
-                                                return S(fg, {
+                                                return S(vg, {
                                                     onLoadPlaylist: s => r(s, "timecoder")
                                                 })
                                             }
@@ -7519,16 +7545,16 @@ const wg = V('<div class="realtive wh-full flex flex-col bg-terminal">'),
                                     }
                                 })]
                             }
-                        }), null), D(i, S(Kp, {}), null), i
+                        }), null), E(i, S(tg, {}), null), i
                     }
                 })
             }
         })
     },
-    xg = "/assets/cctv-room-2f2fa9dd.mp3",
-    Sg = "/assets/cctv-room-e0e04e21.ogg";
+    $g = "/assets/cctv-room-2f2fa9dd.mp3",
+    Ig = "/assets/cctv-room-e0e04e21.ogg";
 
-function Tg(e) {
+function Pg(e) {
     const n = ye({}, e),
         t = ye({}, e),
         r = {},
@@ -7552,7 +7578,7 @@ function Tg(e) {
         l in n && (n[l] = ai(c, [n[l]]))
     };
     return [t, (l, c) => {
-        if (Uc(l)) {
+        if (Zc(l)) {
             const u = fe(() => Object.entries(ai(l, t)));
             lr(() => {
                 for (const [f, p] of u) s(f, () => p)
@@ -7578,20 +7604,20 @@ function Nr(e) {
     }
 }
 
-function kg(e) {
+function Og(e) {
     const n = typeof e == "function",
-        [t, r] = Tg(n ? sa : Nr(e)),
+        [t, r] = Pg(n ? sa : Nr(e)),
         i = new ResizeObserver(([s]) => r(Nr(s.target)));
     return Ae(() => i.disconnect()), n ? pe(() => {
         const s = e();
         s && (r(Nr(s)), i.observe(s), Ae(() => i.unobserve(s)))
     }) : (i.observe(e), Ae(() => i.unobserve(e))), t
 }
-const $g = e => {
+const Dg = e => {
         const [n, t] = W({
             x: 0,
             y: 0
-        }), [r, i] = W(1), s = kg(e.containerRef);
+        }), [r, i] = W(1), s = Og(e.containerRef);
         return pe(() => {
             if (!e.containerRef() || s.width == null || s.height == null) return;
             const c = gs(e.position) || {
@@ -7616,10 +7642,10 @@ const $g = e => {
             scaleFactor: r
         }
     },
-    Ig = V("<div><video muted playsinline>"),
-    Pg = 7.1,
-    Og = 7.7,
-    Eg = e => {
+    Eg = V("<div><video muted playsinline>"),
+    Cg = 7.1,
+    Mg = 7.7,
+    jg = e => {
         let n;
         const [t, r] = W(void 0);
         return Gt(async () => {
@@ -7643,11 +7669,11 @@ const $g = e => {
                 n.load(), n.addEventListener("canplaythrough", () => u())
             }), await Kr(600), await n.play(), r("done"), e.onLoaded();
             const l = () => {
-                !n || n.currentTime < Pg || (e.onEnded(), n.removeEventListener("timeupdate", l))
+                !n || n.currentTime < Cg || (e.onEnded(), n.removeEventListener("timeupdate", l))
             };
             n.addEventListener("timeupdate", l);
             const c = () => {
-                n && (n.currentTime = Og, n.play())
+                n && (n.currentTime = Mg, n.play())
             };
             n.addEventListener("ended", c)
         }), pe(za(he.Supervisor.allLoaded, i => {
@@ -7655,7 +7681,7 @@ const $g = e => {
         }, {
             defer: !0
         })), (() => {
-            const i = Ig(),
+            const i = Eg(),
                 s = i.firstChild;
             s.addEventListener("error", c => {
                 console.error("Error during transition video playback, skipping transition...", c), r("error"), e.onEnded()
@@ -7683,18 +7709,18 @@ Promise.allSettled = Promise.allSettled || (e => Promise.all(e.map(n => n.then(t
     reason: t
 })))));
 var kt = [],
-    Dg = function() {
+    Bg = function() {
         return kt.some(function(e) {
             return e.activeTargets.length > 0
         })
     },
-    Cg = function() {
+    Lg = function() {
         return kt.some(function(e) {
             return e.skippedTargets.length > 0
         })
     },
     Vi = "ResizeObserver loop completed with undelivered notifications.",
-    Mg = function() {
+    Rg = function() {
         var e;
         typeof ErrorEvent == "function" ? e = new ErrorEvent("error", {
             message: Vi
@@ -7707,7 +7733,7 @@ var kt = [],
 var $t = function(e) {
         return Object.freeze(e)
     },
-    jg = function() {
+    Vg = function() {
         function e(n, t) {
             this.inlineSize = n, this.blockSize = t, $t(this)
         }
@@ -7762,7 +7788,7 @@ var $t = function(e) {
         var t = (n = e == null ? void 0 : e.ownerDocument) === null || n === void 0 ? void 0 : n.defaultView;
         return !!(t && e instanceof t.Element)
     },
-    Bg = function(e) {
+    Ng = function(e) {
         switch (e.tagName) {
             case "INPUT":
                 if (e.type !== "image") break;
@@ -7780,13 +7806,13 @@ var $t = function(e) {
     un = typeof window < "u" ? window : {},
     Yn = new WeakMap,
     zi = /auto|scroll/,
-    Lg = /^tb|vertical/,
-    Rg = /msie|trident/i.test(un.navigator && un.navigator.userAgent),
+    zg = /^tb|vertical/,
+    Ug = /msie|trident/i.test(un.navigator && un.navigator.userAgent),
     Ve = function(e) {
         return parseFloat(e || "0")
     },
     Vt = function(e, n, t) {
-        return e === void 0 && (e = 0), n === void 0 && (n = 0), t === void 0 && (t = !1), new jg((t ? n : e) || 0, (t ? e : n) || 0)
+        return e === void 0 && (e = 0), n === void 0 && (n = 0), t === void 0 && (t = !1), new Vg((t ? n : e) || 0, (t ? e : n) || 0)
     },
     Ui = $t({
         devicePixelContentBoxSize: Vt(),
@@ -7799,8 +7825,8 @@ var $t = function(e) {
         if (la(e)) return Yn.set(e, Ui), Ui;
         var t = getComputedStyle(e),
             r = bo(e) && e.ownerSVGElement && e.getBBox(),
-            i = !Rg && t.boxSizing === "border-box",
-            s = Lg.test(t.writingMode || ""),
+            i = !Ug && t.boxSizing === "border-box",
+            s = zg.test(t.writingMode || ""),
             l = !r && zi.test(t.overflowY || ""),
             c = !r && zi.test(t.overflowX || ""),
             u = r ? 0 : Ve(t.paddingTop),
@@ -7845,7 +7871,7 @@ var $t = function(e) {
                 return s
         }
     },
-    Vg = function() {
+    Hg = function() {
         function e(n) {
             var t = ca(n);
             this.target = n, this.contentRect = t.contentRect, this.borderBoxSize = $t([t.borderBoxSize]), this.contentBoxSize = $t([t.contentBoxSize]), this.devicePixelContentBoxSize = $t([t.devicePixelContentBoxSize])
@@ -7857,14 +7883,14 @@ var $t = function(e) {
         for (var n = 0, t = e.parentNode; t;) n += 1, t = t.parentNode;
         return n
     },
-    Ng = function() {
+    Fg = function() {
         var e = 1 / 0,
             n = [];
         kt.forEach(function(l) {
             if (l.activeTargets.length !== 0) {
                 var c = [];
                 l.activeTargets.forEach(function(f) {
-                    var p = new Vg(f.target),
+                    var p = new Hg(f.target),
                         o = fa(f.target);
                     c.push(p), f.lastReportedSize = ua(f.target, f.observedBox), o < e && (e = o)
                 }), n.push(function() {
@@ -7885,18 +7911,18 @@ var $t = function(e) {
             })
         })
     },
-    zg = function() {
+    Gg = function() {
         var e = 0;
-        for (Hi(e); Dg();) e = Ng(), Hi(e);
-        return Cg() && Mg(), e > 0
+        for (Hi(e); Bg();) e = Fg(), Hi(e);
+        return Lg() && Rg(), e > 0
     },
     zr, da = [],
-    Ug = function() {
+    Zg = function() {
         return da.splice(0).forEach(function(e) {
             return e()
         })
     },
-    Hg = function(e) {
+    Yg = function(e) {
         if (!zr) {
             var n = 0,
                 t = document.createTextNode(""),
@@ -7904,24 +7930,24 @@ var $t = function(e) {
                     characterData: !0
                 };
             new MutationObserver(function() {
-                return Ug()
+                return Zg()
             }).observe(t, r), zr = function() {
                 t.textContent = "".concat(n ? n-- : n++)
             }
         }
         da.push(e), zr()
     },
-    Fg = function(e) {
-        Hg(function() {
+    Wg = function(e) {
+        Yg(function() {
             requestAnimationFrame(e)
         })
     },
     Jn = 0,
-    Gg = function() {
+    qg = function() {
         return !!Jn
     },
-    Zg = 250,
-    Yg = {
+    Qg = 250,
+    Kg = {
         attributes: !0,
         characterData: !0,
         childList: !0,
@@ -7932,7 +7958,7 @@ var $t = function(e) {
         return e === void 0 && (e = 0), Date.now() + e
     },
     Ur = !1,
-    Wg = function() {
+    Jg = function() {
         function e() {
             var n = this;
             this.stopped = !0, this.listener = function() {
@@ -7941,15 +7967,15 @@ var $t = function(e) {
         }
         return e.prototype.run = function(n) {
             var t = this;
-            if (n === void 0 && (n = Zg), !Ur) {
+            if (n === void 0 && (n = Qg), !Ur) {
                 Ur = !0;
                 var r = Gi(n);
-                Fg(function() {
+                Wg(function() {
                     var i = !1;
                     try {
-                        i = zg()
+                        i = Gg()
                     } finally {
-                        if (Ur = !1, n = r - Gi(), !Gg()) return;
+                        if (Ur = !1, n = r - Gi(), !qg()) return;
                         i ? t.run(1e3) : n > 0 ? t.run(n) : t.start()
                     }
                 })
@@ -7959,7 +7985,7 @@ var $t = function(e) {
         }, e.prototype.observe = function() {
             var n = this,
                 t = function() {
-                    return n.observer && n.observer.observe(document.body, Yg)
+                    return n.observer && n.observer.observe(document.body, Kg)
                 };
             document.body ? t() : un.addEventListener("DOMContentLoaded", t)
         }, e.prototype.start = function() {
@@ -7974,14 +8000,14 @@ var $t = function(e) {
             }), this.stopped = !0)
         }, e
     }(),
-    so = new Wg,
+    so = new Jg,
     Zi = function(e) {
         !Jn && e > 0 && so.start(), Jn += e, !Jn && so.stop()
     },
-    qg = function(e) {
-        return !bo(e) && !Bg(e) && getComputedStyle(e).display === "inline"
+    Xg = function(e) {
+        return !bo(e) && !Ng(e) && getComputedStyle(e).display === "inline"
     },
-    Qg = function() {
+    ev = function() {
         function e(n, t) {
             this.target = n, this.observedBox = t || _n.CONTENT_BOX, this.lastReportedSize = {
                 inlineSize: 0,
@@ -7990,10 +8016,10 @@ var $t = function(e) {
         }
         return e.prototype.isActive = function() {
             var n = ua(this.target, this.observedBox, !0);
-            return qg(this.target) && (this.lastReportedSize = n), this.lastReportedSize.inlineSize !== n.inlineSize || this.lastReportedSize.blockSize !== n.blockSize
+            return Xg(this.target) && (this.lastReportedSize = n), this.lastReportedSize.inlineSize !== n.inlineSize || this.lastReportedSize.blockSize !== n.blockSize
         }, e
     }(),
-    Kg = function() {
+    tv = function() {
         function e(n, t) {
             this.activeTargets = [], this.skippedTargets = [], this.observationTargets = [], this.observer = n, this.callback = t
         }
@@ -8008,12 +8034,12 @@ var $t = function(e) {
     qn = function() {
         function e() {}
         return e.connect = function(n, t) {
-            var r = new Kg(n, t);
+            var r = new tv(n, t);
             Wn.set(n, r)
         }, e.observe = function(n, t, r) {
             var i = Wn.get(n),
                 s = i.observationTargets.length === 0;
-            Yi(i.observationTargets, t) < 0 && (s && kt.push(i), i.observationTargets.push(new Qg(t, r && r.box)), Zi(1), so.schedule())
+            Yi(i.observationTargets, t) < 0 && (s && kt.push(i), i.observationTargets.push(new ev(t, r && r.box)), Zi(1), so.schedule())
         }, e.unobserve = function(n, t) {
             var r = Wn.get(n),
                 i = Yi(r.observationTargets, t),
@@ -8027,7 +8053,7 @@ var $t = function(e) {
             }), r.activeTargets.splice(0, r.activeTargets.length)
         }, e
     }(),
-    Jg = function() {
+    nv = function() {
         function e(n) {
             if (arguments.length === 0) throw new TypeError("Failed to construct 'ResizeObserver': 1 argument required, but only 0 present.");
             if (typeof n != "function") throw new TypeError("Failed to construct 'ResizeObserver': The callback provided as parameter 1 is not a function.");
@@ -8047,13 +8073,13 @@ var $t = function(e) {
             return "function ResizeObserver () { [polyfill code] }"
         }, e
     }();
-const Xg = () => {
-        "ResizeObserver" in window || (window.ResizeObserver = Jg)
+const rv = () => {
+        "ResizeObserver" in window || (window.ResizeObserver = nv)
     },
-    ev = {
-        setup: Xg
+    ov = {
+        setup: rv
     },
-    tv = V('<div class="wh-full flex-center bg-black/80"><div class="w-[1100px] flex flex-col space-y-32"><div class="px-20 py-12 bg-blue-light text-black"></div><div class="bg-black p-20"><div class="flex-center flex-col space-y-32 p-24 border border-purple"><div class="flex space-x-128"><button><span>No</span></button><button><span>Yes'),
+    iv = V('<div class="wh-full flex-center bg-black/80"><div class="w-[1100px] flex flex-col space-y-32"><div class="px-20 py-12 bg-blue-light text-black"></div><div class="bg-black p-20"><div class="flex-center flex-col space-y-32 p-24 border border-purple"><div class="flex space-x-128"><button><span>No</span></button><button><span>Yes'),
     Wi = An(["relative px-144 py-2", xn({
         size: "terminal-sm"
     })], {
@@ -8064,12 +8090,12 @@ const Xg = () => {
             }
         }
     }),
-    nv = e => S(ur, {
+    sv = e => S(ur, {
         get isOpen() {
             return e.isOpen
         },
         get children() {
-            return S(rv, {
+            return S(av, {
                 onExit: () => {
                     window.location.href = "brawlstars-inbox://closeView"
                 },
@@ -8079,7 +8105,7 @@ const Xg = () => {
             })
         }
     }),
-    rv = e => {
+    av = e => {
         const [n, t] = W();
         let r;
         const i = s => {
@@ -8088,7 +8114,7 @@ const Xg = () => {
             }, 1e3)
         };
         return (() => {
-            const s = tv(),
+            const s = iv(),
                 l = s.firstChild,
                 c = l.firstChild,
                 u = c.nextSibling,
@@ -8096,10 +8122,10 @@ const Xg = () => {
                 p = f.firstChild,
                 o = p.firstChild,
                 a = o.nextSibling;
-            return D(c, S(se, {
+            return E(c, S(se, {
                 size: "terminal-md",
                 children: "STARR PARK SECURITY"
-            })), D(f, S(se, {
+            })), E(f, S(se, {
                 size: "terminal-md",
                 class: "text-purple",
                 children: "Are you sure you want to exit?"
@@ -8118,7 +8144,7 @@ const Xg = () => {
         })()
     };
 Ie(["click"]);
-const ov = V('<div class="wh-full flex-center bg-black/80"><div class="w-[1100px] flex flex-col space-y-32"><div class="px-20 py-12 bg-blue-light text-black"></div><div class="bg-black p-20"><div class="flex-center flex-col space-y-32 p-24 border border-purple"><div class="flex space-x-128"><button><span>Exit</span></button><button><span>Continue'),
+const lv = V('<div class="wh-full flex-center bg-black/80"><div class="w-[1100px] flex flex-col space-y-32"><div class="px-20 py-12 bg-blue-light text-black"></div><div class="bg-black p-20"><div class="flex-center flex-col space-y-32 p-24 border border-purple"><div class="flex space-x-128"><button><span>Exit</span></button><button><span>Continue'),
     qi = An(["relative px-96 py-2", xn({
         size: "terminal-sm"
     })], {
@@ -8129,12 +8155,12 @@ const ov = V('<div class="wh-full flex-center bg-black/80"><div class="w-[1100px
             }
         }
     }),
-    iv = () => S(ur, {
+    cv = () => S(ur, {
         get isOpen() {
             return !We.dataUsageWarningDialog.accepted()
         },
         get children() {
-            return S(sv, {
+            return S(uv, {
                 onExit: () => {
                     window.location.href = "brawlstars-inbox://closeView"
                 },
@@ -8144,7 +8170,7 @@ const ov = V('<div class="wh-full flex-center bg-black/80"><div class="w-[1100px
             })
         }
     }),
-    sv = e => {
+    uv = e => {
         const [n, t] = W();
         let r;
         const i = s => {
@@ -8153,7 +8179,7 @@ const ov = V('<div class="wh-full flex-center bg-black/80"><div class="w-[1100px
             }, 1e3)
         };
         return (() => {
-            const s = ov(),
+            const s = lv(),
                 l = s.firstChild,
                 c = l.firstChild,
                 u = c.nextSibling,
@@ -8161,10 +8187,10 @@ const ov = V('<div class="wh-full flex-center bg-black/80"><div class="w-[1100px
                 p = f.firstChild,
                 o = p.firstChild,
                 a = o.nextSibling;
-            return D(c, S(se, {
+            return E(c, S(se, {
                 size: "terminal-md",
                 children: "STARR PARK SECURITY"
-            })), D(f, S(se, {
+            })), E(f, S(se, {
                 size: "terminal-sm",
                 class: "text-purple whitespace-pre-wrap",
                 get children() {
@@ -8185,16 +8211,16 @@ const ov = V('<div class="wh-full flex-center bg-black/80"><div class="w-[1100px
         })()
     };
 Ie(["click"]);
-const av = V('<button class="absolute top-20 left-20 w-100 h-100 flex-center">'),
-    lv = V('<button class="absolute top-20 right-20 w-100 h-100 flex-center text-purple">'),
-    cv = V('<div class="wh-full"><div class="portrait:hidden absolute origin-top-left overflow-hidden"></div><div class="landscape:hidden portrait:flex wh-full flex-center"><div class="font-medium whitespace-nowrap">Portrait mode is not supported.'),
-    uv = V('<div class="absolute bottom-0 left-0 w-256">');
-ev.setup();
+const fv = V('<button class="absolute top-20 left-20 w-100 h-100 flex-center">'),
+    dv = V('<button class="absolute top-20 right-20 w-100 h-100 flex-center text-purple">'),
+    pv = V('<div class="wh-full"><div class="portrait:hidden absolute origin-top-left overflow-hidden"></div><div class="landscape:hidden portrait:flex wh-full flex-center"><div class="font-medium whitespace-nowrap">Portrait mode is not supported.'),
+    gv = V('<div class="absolute bottom-0 left-0 w-256">');
+ov.setup();
 const Hr = {
         width: 2250,
         height: 1170
     },
-    fv = () => {
+    vv = () => {
         const [e, n] = W(!1);
         let t;
         Gt(() => {
@@ -8206,11 +8232,11 @@ const Hr = {
                 f && we.currentOpenApp.mainApp === null && we.openApp(f), he.Supervisor.dispatch("go-live")
             }
         });
-        const [r, i] = W(void 0), s = $g({
+        const [r, i] = W(void 0), s = Dg({
             containerRef: r,
             bgImageSize: Hr,
             fit: "contain"
-        }), l = ct([Sg, xg], {
+        }), l = ct([Ig, $g], {
             sprite: {
                 "archive-tape-load": [0, 3016.6666666666665],
                 "logbook-close": [5e3, 382.6530612244898],
@@ -8222,49 +8248,49 @@ const Hr = {
             }
         });
         return [(() => {
-            const c = cv(),
+            const c = pv(),
                 u = c.firstChild;
-            return $e(i, c), D(u, S(Eg, {
+            return $e(i, c), E(u, S(jg, {
                 onLoaded: () => st.onVideoTransitionLoaded(),
                 onEnded: () => st.onVideoTransitionEnd()
-            }), null), D(u, S(Le, {
+            }), null), E(u, S(Le, {
                 get when() {
                     return st.currentStatus() >= Ht["video-transition"]
                 },
                 get children() {
-                    return S(Ip, {
+                    return S(Ep, {
                         roomSound: l
                     })
                 }
-            }), null), D(u, S(Le, {
+            }), null), E(u, S(Le, {
                 get when() {
                     return st.currentStatus() === Ht.done
                 },
                 get children() {
                     return [(() => {
-                        const f = av();
-                        return f.$$click = () => n(!0), D(f, S(se, {
+                        const f = fv();
+                        return f.$$click = () => n(!0), E(f, S(se, {
                             size: "terminal-lg",
                             class: "text-green leading-none inline-block pb-16",
                             children: "х"
                         })), f
                     })(), (() => {
-                        const f = lv();
+                        const f = dv();
                         return f.$$click = () => {
                             ne.trackClickEvent("instructions-modal", Tt.options.muted ? "sound-on" : "sound-off", "cctv-room"), Tt.toggleMute()
-                        }, D(f, S(yt, {
+                        }, E(f, S(yt, {
                             get name() {
                                 return Tt.options.muted ? "mute" : "unmute"
                             },
                             class: "w-72"
                         })), f
-                    })(), S(Ag, {
+                    })(), S(kg, {
                         onPlaylistLoad: () => l.play("archive-tape-load")
-                    }), S(jp, {
+                    }), S(Vp, {
                         onClose: () => l.play("logbook-close")
-                    }), S(iv, {})]
+                    }), S(cv, {})]
                 }
-            }), null), D(u, S(nv, {
+            }), null), E(u, S(sv, {
                 get isOpen() {
                     return e()
                 },
@@ -8280,13 +8306,13 @@ const Hr = {
                 _v$3: void 0
             }), c
         })(), (() => {
-            const c = uv(),
+            const c = gv(),
                 u = t;
             return typeof u == "function" ? $e(u, c) : t = c, c
         })()]
     };
 Ie(["click"]);
-cl(() => S(fv, {}), document.getElementById("root"));
+cl(() => S(vv, {}), document.getElementById("root"));
 export {
-    bn as a, Ge as c, pv as g
+    bn as a, Ge as c, mv as g
 };
